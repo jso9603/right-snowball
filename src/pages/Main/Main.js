@@ -42,7 +42,7 @@ class Main extends Component {
                 <button className="detail-button">자세히보기</button>
               </div>
               <Slider {...settings}>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -51,7 +51,7 @@ class Main extends Component {
                     <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -60,7 +60,7 @@ class Main extends Component {
                     <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -69,7 +69,7 @@ class Main extends Component {
                     <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -86,7 +86,7 @@ class Main extends Component {
                 <button className="detail-button">자세히보기</button>
               </div>
               <Slider {...settings}>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -95,7 +95,7 @@ class Main extends Component {
                     <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -104,7 +104,7 @@ class Main extends Component {
                     <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -113,7 +113,7 @@ class Main extends Component {
                     <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
-                <div onClick={this.goDetail} className="thumbnail-container">
+                <div className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
