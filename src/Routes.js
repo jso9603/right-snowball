@@ -1,10 +1,5 @@
 import React, {Component} from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch
-} from 'react-router-dom';
-import First from './pages/First/First';
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import Detail from './pages/Detail/Detail';
@@ -20,7 +15,7 @@ class Routes extends Component {
         <Router>
           <div>
             <Switch>
-              <Route exact path="/" component={First}/>
+              <Route exact path="/" render={() => (<Redirect to="/Main"/>)}/>
               <Route exact path="/Login" component={Login}/>
               <Route exact path="/Main" component={Main}/>
               <Route exact path="/Detail/:id" component={Detail}/>
