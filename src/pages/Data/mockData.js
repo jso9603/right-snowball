@@ -21,6 +21,7 @@ const alter = {
 const mock = {
     topic: [
         {
+            id: 1,
             title: '첫번째 토픽',
             content: '첫번째 토픽 내용',
             snow_cnt_total: '??',
@@ -84,6 +85,7 @@ const mock = {
             ]
         },
         {
+            id: 2,
             title: '두번째 토픽',
             content: '두번째 토픽 내용',
             snow_cnt_total: '??',
@@ -126,3 +128,7 @@ const mock = {
         }
     ]
 }
+
+export {
+    mock
+};

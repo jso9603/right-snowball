@@ -1,0 +1,54 @@
+.popup-page {
+  width: 100%;
+  height: calc(100% - 140px);
+  background-color: yellow;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+h5 {
+  position: relative;
+
+  font-size: 18px;
+  /* font-weight: bold; */
+  color: #333333;
+  text-align: center;
+  margin-top: 49px;
+  margin-bottom: 28px;
+}
+
+.close {
+  position: absolute;
+  top: 49px;
+  right: 62px;
+  width: 39px;
+  height: 39px;
+}
+
+.product-img {
+  width: 275px;
+  height: 279px;
+}
+
+.alter-product {
+  width: 150px;
+  height: 150px;
+}
+
+.alters {
+  margin-top: 38px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.title {
+  font-size: 18px;
+  color: #333;
+}
+
+.price {
+  font-size: 18px;
+  color: #333;
+}
