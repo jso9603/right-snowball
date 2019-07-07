@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     position: 'fixed',
     bottom: 0,
     width: '96%',
+    color: 'black'
   }
 });
 
