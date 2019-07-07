@@ -1,10 +1,19 @@
 .detail-page {
   margin: 30px;
 }
+
+.bookmark {
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  right: 23px;
+}
+
 .title {
   margin: 0px 30px 17px 0px;
   font-size: 38px;
   color: #333;
+  line-height: 1.29;
 }
 
 .name {
@@ -23,5 +32,18 @@
   color: #333;
   font-size: 16px;
   margin-top: 18px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+.keywords {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.one {
+  height: 35px;
+  border-radius: 18.5px;
+  padding: 2px 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
 }
