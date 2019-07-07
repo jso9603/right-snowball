@@ -24,17 +24,14 @@ export default class VerticalText extends Component {
               <span>2 불매운동</span>
             </div>
             <div>
-              <span>3 아무말 대잔치</span>
+              <span>3 갑질논란</span>
             </div>
             <div>
-              <span>4 무언가무언가</span>
+              <span>4 유해물질</span>
             </div>
-            <div>
-              <span>5 흠</span>
-            </div>
-            <div>
-              <span>6 ㅜㅜ</span>
-            </div>
+            {/*<div>*/}
+              {/*<span>5 </span>*/}
+            {/*</div>*/}
           </Slider>
         </div>
     );

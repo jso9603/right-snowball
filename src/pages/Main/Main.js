@@ -29,8 +29,8 @@ class Main extends Component {
               <button><SearchIcon/></button>
             </div>
             <div>
-              <span className="header-title">어떤 것이 </span>
-              <span className="header-title">지금 핫하니?</span>
+              <span className="header-title">요즘 약간</span>
+              <span className="header-title">핫한 이슈는?</span>
             </div>
             <VerticalText />
           </div>
