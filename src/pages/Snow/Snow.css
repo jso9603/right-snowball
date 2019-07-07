@@ -1,0 +1,132 @@
+.popup-page {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+
+h5 {
+  position: relative;
+
+  font-size: 25px;
+  /* font-weight: bold; */
+  color: #333333;
+  text-align: center;
+  margin-top: 49px;
+  margin-bottom: 28px;
+}
+
+.close {
+  position: absolute;
+  top: 40px;
+  right: 23px;
+  /* width: 39px;
+  height: 39px; */
+  background-color: transparent;
+  outline: 0;
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+}
+
+.alter-product {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 2px 6px 0 rgba(189, 189, 189, 0.5);
+}
+
+hr {
+  margin-bottom: 19px;
+}
+
+.alters {
+  /*margin: 19px 30px 20px;*/
+  margin-left: 0;
+  margin-bottom: 20px;
+  margin-right: 0;
+  display: flex;
+}
+
+.p-title {
+  font-size: 16px;
+  color: #333;
+}
+
+.price {
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/*snow-container*/
+
+.snow-container {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.snow-container .snow-title {
+  font-size: 30px;
+  /*padding-left: 30px;*/
+}
+
+.snow-container hr {
+  height: 1px;
+  color: #cecece;
+  background-color: #cecece;
+  border: none;
+}
+
+.snow-container .origin-price {
+  font-size: 18px;
+  color: #9a9a9a;
+  text-decoration: line-through;
+}
+
+.snow-container .sale-price {
+  font-size: 22px;
+}
+
+.snow-container .MuiSvgIcon-root {
+  font-size: 15px;
+}
+
+.snow-container .snow-content {
+  display: flex;
+  flex: 1;
+  color: #787878;
+}
+
+.snow-container .button-container {
+  margin-top: 15px;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.snow-container .snow-button {
+  border-radius: 5px;
+  color: #2ca2ef;
+  background-color: white;
+  border: 1px solid #2ca2ef;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.snow-container .shopping-button {
+  border-radius: 2px;
+  background-color: #2ca2ef;
+  color: white;
+  border: 1px solid #2ca2ef;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 18px;
+}

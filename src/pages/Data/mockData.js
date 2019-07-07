@@ -18,6 +18,32 @@ const alter = {
     snow_count: 0
 }
 
+const snows = {
+    snows: [
+        {
+            title: '에코 후레쉬 곰팡이 제거제',
+            origin_price : '14,500',
+            sale_price: '9,000',
+            snow_cnt: 11255,
+            img_src: 'https://eco-fresh.co.kr/web/product/medium/201905/04f714e1c35cf486d8099cea49aea0fc.jpg',
+        },
+        {
+            title: '에코트리즈 곰팡이 제거제',
+            origin_price : '8,280',
+            sale_price: '',
+            snow_cnt: 124,
+            img_src: 'https://ecotrees.co.kr/web/product/big/201707/23_shop1_407611.jpg',
+        },
+        {
+            title: '닥터데이즈 곰팡이 제거제',
+            origin_price : '22,000',
+            sale_price: '',
+            snow_cnt: 421,
+            img_src: 'http://www.dailygrid.net/news/photo/201902/122722_94528_529.jpg',
+        }
+    ]
+};
+
 const mock = {
     topic: [
         {
@@ -130,5 +156,6 @@ const mock = {
 }
 
 export {
-    mock
+    mock,
+    snows
 };

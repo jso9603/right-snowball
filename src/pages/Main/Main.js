@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Slider from "react-slick";
 import AlterIcon from '@material-ui/icons/CompareArrows';
 import SearchIcon from '@material-ui/icons/Search';
-import {mock} from '../Data/mockData';
 import './Main.css';
 import VerticalText from "./VerticalText";
 
@@ -13,8 +12,6 @@ class Main extends Component {
   };
 
   render() {
-    console.log(mock);
-
     const settings = {
       dots: false,
       infinite: true,
@@ -45,7 +42,7 @@ class Main extends Component {
                 <button className="detail-button">자세히보기</button>
               </div>
               <Slider {...settings}>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -53,8 +50,8 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹 1</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                </div>
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -62,8 +59,8 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹 2</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                </div>
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -71,8 +68,8 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹 3</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                </div>
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -80,7 +77,7 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹 4</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
+                </div>
               </Slider>
             </div>
             <div className="issue-container">
@@ -89,7 +86,7 @@ class Main extends Component {
                 <button className="detail-button">자세히보기</button>
               </div>
               <Slider {...settings}>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -97,8 +94,8 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                </div>
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -106,8 +103,8 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                </div>
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -115,8 +112,8 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
-                <button onClick={this.goDetail} className="thumbnail-container">
+                </div>
+                <div onClick={this.goDetail} className="thumbnail-container">
                   <div className="image-container">
                     <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
@@ -124,7 +121,7 @@ class Main extends Component {
                     <span className="product-title">옥시싹싹</span>
                     <button><AlterIcon/></button>
                   </div>
-                </button>
+                </div>
               </Slider>
             </div>
           </div>
