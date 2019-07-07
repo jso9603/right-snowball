@@ -7,5 +7,5 @@ html, body {
 }
 
 .slick-next {
-   right: 0px;
+   right: 0 !important;
 }

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
 import AlterIcon from '@material-ui/icons/CompareArrows';
-import mock from '../Data/mockData';
+import SearchIcon from '@material-ui/icons/Search';
+import {mock} from '../Data/mockData';
 import './Main.css';
-import HomeIcon from "../../components/Navigation/LabelBottomNavigator";
+import VerticalText from "./VerticalText";
 
 class Main extends Component {
   render() {
@@ -15,7 +16,7 @@ class Main extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      variableWidth: true
+      variableWidth: true,
     };
 
     return (
@@ -23,12 +24,13 @@ class Main extends Component {
           <div className="header">
             <div className="search-container">
               <input type="text" className="search"/>
-              <button>🧩</button>
+              <button><SearchIcon/></button>
             </div>
             <div>
               <span className="header-title">어떤 것이 </span>
               <span className="header-title">지금 핫하니?</span>
             </div>
+            <VerticalText />
           </div>
           <div className="content">
             <span className="title">이전 중요 이슈</span>
@@ -40,30 +42,39 @@ class Main extends Component {
               <Slider {...settings}>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
                   <div className="thumbnail-title">
-                    <span className="product-title">옥시싹싹</span>
-                    <button><AlterIcon /></button>
+                    <span className="product-title">옥시싹싹 1</span>
+                    <button><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹 2</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹 3</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹 4</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
               </Slider>
             </div>
@@ -75,32 +86,43 @@ class Main extends Component {
               <Slider {...settings}>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
                 <div className="thumbnail-container">
                   <div className="image-container">
-                    <img width="90" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+                    <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
                   </div>
-                  <span className="product-title">옥시싹싹</span>
+                  <div className="thumbnail-title">
+                    <span className="product-title">옥시싹싹</span>
+                    <button><AlterIcon/></button>
+                  </div>
                 </div>
               </Slider>
             </div>
           </div>
-
         </div>
     )
   }
