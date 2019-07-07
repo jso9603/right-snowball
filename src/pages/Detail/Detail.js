@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import BookmarkIcon from '@material-ui/icons/BookmarkBorder';
+import AlterIcon from '@material-ui/icons/CompareArrows';
 import './Detail.css';
 
 // JSON
@@ -14,8 +15,6 @@ class Detail extends Component {
     this.state = {
       showPopup: false
     }
-
-    this.clickPorudct = this.clickPorudct.bind(this);
   }
 
   componentWillMount() {
@@ -32,14 +31,6 @@ class Detail extends Component {
     }
   }
 
-  clickPorudct() {
-    console.log('click')
-    this.setState({ showPopup: true }, () => {
-      if (this.state.showPopup) {
-        this.props.history.push('/Product');
-      }
-    });
-  }
 
   render() {
     const { showPopup } = this.state;
@@ -54,25 +45,124 @@ class Detail extends Component {
         <p className="news">
           <span>참고기사 | </span>
           <span style={{textDecoration: 'underline'}}>TF현장] 불매운동 그 후, 대형마트에서 후…</span>
-          <span style={{color: '#9e9e9e'}}>&nbsp;2018.03.26</span>
+          <span style={{color: '#9e9e9e'}}>2018.03.26</span>
         </p>
         
         <div className="keywords">
           <hr/>
-          <span className="one" style={{ border: 'solid 1px #23a7ee', color: '#23a7ee' }}>#폐에_안좋은_제품(8)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#살균제주의(20)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#옥시_생활용품(150)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#세탁용품(21)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#방향제(4)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#제습제(7)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#탈취제(3)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#청소용품(15)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#세정제(3)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#식기세척기세제(11)</span>
-          <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#제모용품(3)</span>
+          <div style={{marginBottom: '10px', textAlign: 'center' }}>
+            <span className="one" style={{ border: 'solid 1px #23a7ee', color: '#23a7ee' }}>#폐에_안좋은_제품(8)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#살균제주의(20)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#옥시_생활용품(150)</span>
+          </div>
+          <div style={{marginBottom: '10px', textAlign: 'center' }}>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#세탁용품(21)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#방향제(4)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#제습제(7)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#청소용품(15)</span>
+          </div>
+          <div style={{marginBottom: '10px', textAlign: 'center' }}>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#세정제(3)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#식기세척기세제(11)</span>
+            <span className="one" style={{ border: 'solid 1px #979797', color: '#333333' }}>#제모용품(3)</span>
+          </div>
         </div>
 
-        <div onClick={this.clickPorudct}>제품들</div>
+          <div className="thumbnail-container">
+            <div style={{display: 'inline-block'}}>
+              <div className="image-container">
+                <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+              </div>
+
+              <div className="thumbnail-title">
+                <span className="product-title">옥시싹싹</span>
+                <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+              </div> 
+            </div>
+            
+            <div style={{display: 'inline-block'}}>
+              <div className="image-container">
+                <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+              </div>
+              <div className="thumbnail-title">
+                <span className="product-title">아토오가닉</span>
+                <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+              </div>
+            </div>
+            
+            <div style={{display: 'inline-block'}}>
+              <div className="image-container">
+                <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+              </div>
+              <div className="thumbnail-title">
+                <span className="product-title">베지터블 홈 가습기클린업</span>
+                <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+              </div>
+            </div>
+          </div>
+
+          <div className="thumbnail-container">
+            <div style={{display: 'inline-block'}}>
+              <div className="image-container">
+                <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+              </div>
+
+              <div className="thumbnail-title">
+                <span className="product-title">옥시싹싹</span>
+                <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+              </div> 
+            </div>
+            
+            <div style={{display: 'inline-block'}}>
+              <div className="image-container">
+                <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+              </div>
+              <div className="thumbnail-title">
+                <span className="product-title">아토오가닉</span>
+                <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+              </div>
+            </div>
+            
+            <div style={{display: 'inline-block'}}>
+              <div className="image-container">
+                <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+              </div>
+              <div className="thumbnail-title">
+                <span className="product-title">베지터블 홈 가습기클린업</span>
+                <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+              </div>
+            </div>
+          </div>
+
+        
+
+        {/* <div className="title-container">
+          <div className="thumbnail-container">
+            <div className="image-container">
+              <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+            </div>
+            <div className="thumbnail-title">
+              <span className="product-title">옥시싹싹</span>
+              <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+            </div>
+
+            <div className="image-container">
+              <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+            </div>
+            <div className="thumbnail-title">
+              <span className="product-title">아토오가닉</span>
+              <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+            </div>
+            
+            <div className="image-container">
+              <img width="100" src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E" alt="image1"/>
+            </div>
+            <div className="thumbnail-title">
+              <span className="product-title">베지터블 홈 가습기클린업</span>
+              <button style={{backgroundColor: 'transparent'}}><AlterIcon/></button>
+            </div>
+          </div>
+        </div> */}
       </div>
     )
   }

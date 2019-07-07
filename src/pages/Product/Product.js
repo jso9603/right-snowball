@@ -14,6 +14,10 @@ class Product extends Component {
     this.close = this.close.bind(this);
   }
 
+  componentWillMount() {
+    window.scrollTo(0, 0);
+  }
+
   close() {
     this.props.history.push('/Detail/1');
   }
@@ -59,7 +63,7 @@ class Product extends Component {
             <p className="price">34,500원</p>
           </div>
         </div>
-        <div className="alters">
+        <div className="alters" style={{marginBottom: '70px'}}>
           <hr/>
           {/* for loop */}
           <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
