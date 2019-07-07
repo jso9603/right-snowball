@@ -9,18 +9,10 @@ export default class VerticalText extends Component {
       slidesToScroll: 1,
       vertical: true,
       verticalSwiping: true,
-      centerPadding: '10px',
       slidesToShow: 3,
-      centerMode: true,
       authPlay: true,
       autoplaySpeed: 100,
       cssEase: "linear"
-      // beforeChange: function (currentSlide, nextSlide) {
-      //   console.log("before change", currentSlide, nextSlide);
-      // },
-      // afterChange: function (currentSlide) {
-      //   console.log("after change", currentSlide);
-      // }
     };
     return (
         <div className="vertical-container">
