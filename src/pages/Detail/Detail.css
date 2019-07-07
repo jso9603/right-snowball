@@ -1,0 +1,27 @@
+.detail-page {
+  margin: 30px;
+}
+.title {
+  margin: 0px 30px 17px 0px;
+  font-size: 38px;
+  color: #333;
+}
+
+.name {
+  color: #333;
+  font-size: 16px;
+  margin-top: 18px;
+}
+
+.issue {
+  color: #333;
+  font-size: 16px;
+  margin-top: 18px;
+}
+
+.news {
+  color: #333;
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 50px;
+}
