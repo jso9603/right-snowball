@@ -46,7 +46,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹 1</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
@@ -55,7 +55,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹 2</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
@@ -64,7 +64,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹 3</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
@@ -73,12 +73,12 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹 4</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
               </Slider>
             </div>
-            <div className="issue-container">
+            <div className="issue-container" style={{marginBottom: '50px'}}>
               <div className="title-container">
                 <span className="issue-title">인명 피해 가습기 살균제</span>
                 <button className="detail-button">자세히보기</button>
@@ -90,7 +90,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
@@ -99,7 +99,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
@@ -108,7 +108,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
                 <div className="thumbnail-container">
@@ -117,7 +117,7 @@ class Main extends Component {
                   </div>
                   <div className="thumbnail-title">
                     <span className="product-title">옥시싹싹</span>
-                    <button><AlterIcon/></button>
+                    <button onClick={_ => this.props.history.push('/Product')}><AlterIcon/></button>
                   </div>
                 </div>
               </Slider>
