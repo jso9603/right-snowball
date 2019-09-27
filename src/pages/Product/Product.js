@@ -4,8 +4,6 @@ import CloseIcon from '@material-ui/icons/Close'
 import './Product.css';
 
 // JSON
-import { mock } from '../Data/mockData';
-const result = mock;
 
 class Product extends Component {
   constructor(props) {
@@ -35,6 +33,7 @@ class Product extends Component {
       <div className="product">
         <div style={{textAlign: 'center'}}>
         <img
+          alt=""
           className="product-img"
           src="https://t1.daumcdn.net/cfile/tistory/230C2A435874E30F1E"
         >
@@ -45,7 +44,7 @@ class Product extends Component {
           <hr/>
           {/* for loop */}
           <div style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: '30px'}}>
-            <img className="alter-product" src={require('./1.jpg')}></img>
+            <img className="alter-product" src={require('./1.jpg')} alt="" />
           </div>
           <div style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: '20px'}}>
             <p className="p-title">산소가득표백</p>
@@ -56,7 +55,7 @@ class Product extends Component {
           <hr/>
           {/* for loop */}
           <div style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: '30px'}}>
-            <img className="alter-product" src={require('./2.jpg')}></img>
+            <img className="alter-product" src={require('./2.jpg')} alt="" />
           </div>
           <div style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: '20px'}}>
             <p className="p-title">비트살균표백제</p>
@@ -67,7 +66,7 @@ class Product extends Component {
           <hr/>
           {/* for loop */}
           <div style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: '30px'}}>
-            <img className="alter-product" src={require('./3.jpg')}></img>
+            <img className="alter-product" src={require('./3.jpg')} alt="" />
           </div>
           <div style={{display: 'inline-block', verticalAlign: 'middle', marginLeft: '20px'}}>
             <p className="p-title">산소크린</p>

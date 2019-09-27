@@ -1,22 +1,5 @@
-const topic = {
-    title: '',
-    content: '',
-    snow_cnt_total: '??',
-    products: []
-}
 
-const product = {
-    title: '',
-    img_src: '',
-    alters: [],
-    search: '옥시'      //[]
-}
 
-const alter = {
-    title: '',
-    img_src: '',
-    snow_count: 0
-}
 
 const snows = {
     snows: [
@@ -80,7 +63,7 @@ const mock = {
                 {
                     title: '첫번째 토픽의 두번째 제품',
                     img_src: '',
-                    alters: [,
+                    alters: [
                         {
                             title: '첫번째 토픽의 두번째 제품 첫번째 대체재',
                             img_src: '',

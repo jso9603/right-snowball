@@ -18,15 +18,13 @@ class Detail extends Component {
   }
 
   componentWillMount() {
-    let { match: { params: { id } }, history } = this.props;
-    let detailContent;
+    let { match: { params: { id } } } = this.props;
 
     console.log('id: ', id);
 
     for (let i = 0; i<result.topic.length; i++) {
       if (result.topic[i].id === Number(id)) {
         console.log('detailContent: ', result.topic[i]);
-        detailContent = result.topic[i].products;
       }
     }
   }

@@ -7,8 +7,6 @@ import './Snow.css';
 // JSON
 import {snows} from '../Data/mockData';
 
-// const result = snows;
-
 class Snow extends Component {
 
   state = {
@@ -45,7 +43,7 @@ class Snow extends Component {
                     <div key={index}>
                       <div className="alters">
                         <div style={{display: 'inline-block', verticalAlign: 'middle'}}>
-                          <img className="alter-product" src={value.img_src}/>
+                          <img className="alter-product" src={value.img_src} alt="" />
                         </div>
                         <div style={{flex: 1}}>
                           <div style={{display: 'flex', flexDirection: 'column', marginLeft: '20px'}}>
@@ -73,6 +71,7 @@ class Snow extends Component {
                     </div>
                 )
               }
+              return null;
             })
           }
         </div>
