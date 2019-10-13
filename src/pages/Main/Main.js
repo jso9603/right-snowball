@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
 import AlterIcon from '@material-ui/icons/CompareArrows';
-import VerticalText from "./VerticalText";
 import './Main.css';
 
 class Main extends Component {
@@ -11,7 +10,7 @@ class Main extends Component {
 
   render() {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -21,14 +20,10 @@ class Main extends Component {
 
     return (
         <div className="main">
-          <div className="header">
-            <div>
-              <span className="header-title">요즘 약간</span>
-              <span className="header-title">핫한 이슈는?</span>
-            </div>
-            <VerticalText />
+          <div className="hot-issue-container">
+            <div className="hot-issue-title">지금 가장 뜨거운 눈덩이</div>
           </div>
-          <div className="content">
+          {/* <div className="content">
             <span className="title">이전 중요 이슈</span>
             <div className="issue-container">
               <div className="title-container">
@@ -117,8 +112,8 @@ class Main extends Component {
                   </div>
                 </div>
               </Slider>
-            </div>
-          </div>
+            </div>s
+          </div> */}
         </div>
     )
   }
