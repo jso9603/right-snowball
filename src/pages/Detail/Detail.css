@@ -1,95 +1,95 @@
-.detail-page {
-  margin: 30px 30px 40px 30px;
-}
-
-.bookmark {
-  background-color: transparent;
-  position: absolute;
-  top: 30px;
-  right: 23px;
-}
-
-.title {
-  margin: 0px 30px 17px 0px;
-  font-size: 38px;
-  color: #333;
-  line-height: 1.29;
-}
-
-.name {
-  color: #333;
-  font-size: 14px;
-  margin-top: 18px;
-}
-
-.issue {
-  color: #333;
-  font-size: 14px;
-  margin-top: 18px;
-}
-
-.news {
-  color: #333;
-  font-size: 14px;
-  margin-top: 18px;
-  margin-bottom: 25px;
-}
-
-.keywords {
-  margin-bottom: 25px;
-  font-size: 10px;
-}
-
-.one {
-  height: 35px;
-  border-radius: 18.5px;
-  padding: 2px 5px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-}
-
-.title-container {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-}
-
-.thumbnail-title {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  width: 100px;
-}
-
-.thumbnail-container .MuiSvgIcon-root{
-  background-color: #2ca2ef;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: white;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  font-size: 1rem;
-  width: 25px;
-}
-
-.thumbnail-container {
-  margin-left: 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-
-.image-container {
-  width: 100px !important;
-  box-shadow: 0 2px 6px 0 rgba(189, 189, 189, 0.5);
-  background-color: #ffffff;
-  margin-bottom: 10px;
-  display: inline-block;
-  text-align: center;
-}
-
-.product-title {
+.slider-wrap {
   position: relative;
+}
+
+.like {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.like-count {
+  position: absolute;
   top: 3px;
+  right: 30px;
+  font-size: 15px;
+}
+
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  bottom: -20px;
+}
+
+.slick-slide {
+  transition: transform 0.2s ease-in;
+}
+
+.slick-slide.slick-active {
+  transition: transform 0.2s ease-in;
+  margin: 0;
+}
+
+.slick-slide:not(.slick-active) {
+  /* transform: scale(0.87); */
+  visibility: hidden;
+}
+
+.portfolio-card {
+  position: relative;
+  margin: 10px 0;
+  padding: 20px 15px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.company-info {
+  padding: 20px 30px;
+}
+
+.company-name {
+  display: inline-block;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.share {
+  display: inline-block;
+  float: right;
+}
+
+.company-tag {
+  font-size: 15px;
+}
+
+.company-description {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.btn-product-list {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 55px;
+  background-color: #51abf3;
+  border: solid 1px #51abf3;
+  color: #fff;
+  border-radius: 55px;
+  font-size: 17px;
+}
+
+.btn-news {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 55px;
+  background-color: #fff;
+  border: solid 1px #51abf3;
+  color: #51abf3;
+  border-radius: 55px;
+  font-size: 17px;
 }
