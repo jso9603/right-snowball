@@ -11,13 +11,12 @@ class Main extends Component {
     this.props.history.push('/Detail/1');
   };
 
-  test = () => {
-    console.log('!!!!!');
-    fetch('http://localhost:3050/api/test', {
-      method: 'GET'
-    })
-    .then((response) => console.log('SUCCESS'));
-  }
+  // test = () => {
+  //   fetch('http://localhost:3050/api/test', {
+  //     method: 'GET'
+  //   })
+  //   .then((response) => console.log('SUCCESS'));
+  // }
 
   render() {
     const settings = {
@@ -37,7 +36,7 @@ class Main extends Component {
               <button><SearchIcon/></button>
             </div>
             <div>
-              <span className="header-title" onClick={this.test}>요즘 약간</span>
+              <span className="header-title">요즘 약간</span>
               <span className="header-title">핫한 이슈는?</span>
             </div>
             <VerticalText />

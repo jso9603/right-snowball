@@ -5,7 +5,7 @@ const db = require('../../nedb');
 let test1 = { name: 'world', today: new Date(), fruites: ['apple', 'orange', 'pear']};
 
 router.get('/test', function (req, res) {
-    console.log("?????");
+    console.log("call '/api/test'");
     db.snows.insert([test1], function (err, newDoc) {
     res.send('end');
     });
