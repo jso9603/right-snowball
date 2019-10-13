@@ -1,22 +1,13 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
 import AlterIcon from '@material-ui/icons/CompareArrows';
-import SearchIcon from '@material-ui/icons/Search';
-import './Main.css';
 import VerticalText from "./VerticalText";
+import './Main.css';
 
 class Main extends Component {
-
   goDetail = () => {
     this.props.history.push('/Detail/1');
   };
-
-  // test = () => {
-  //   fetch('http://localhost:3050/api/test', {
-  //     method: 'GET'
-  //   })
-  //   .then((response) => console.log('SUCCESS'));
-  // }
 
   render() {
     const settings = {
@@ -31,10 +22,6 @@ class Main extends Component {
     return (
         <div className="main">
           <div className="header">
-            <div className="search-container">
-              <input type="text" className="search"/>
-              <button><SearchIcon/></button>
-            </div>
             <div>
               <span className="header-title">요즘 약간</span>
               <span className="header-title">핫한 이슈는?</span>
@@ -136,5 +123,12 @@ class Main extends Component {
     )
   }
 }
+
+// const test = () => {
+//   fetch('http://localhost:3050/api/test', {
+//     method: 'GET'
+//   })
+//   .then((response) => console.log('SUCCESS'));
+// }
 
 export default Main;

@@ -1,0 +1,89 @@
+.header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    background-color: white;
+    height: 54px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.header-container .header-icon-menu {
+    font-size: 30px;
+    color: black;
+}
+
+.header-container .header-icon-logo {
+    font-size: 35px;
+    color: #23a7ee;
+}
+
+.header-container .header-icon-search {
+    font-size: 30px;
+    color: #606060;
+}
+
+.nav-container {
+    width: 230px;
+}
+
+.nav-container .nav-icon-close { 
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 30px;
+    color: black;
+}
+
+.nav-container .nav-button-container {
+    margin-top: 15px;
+}
+
+.nav-container hr {
+    width: 25px;
+    border-width: 1px;
+    border-color: black;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.nav-container .MuiListItemText-primary {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-container .nav-accounts {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-container .account-button {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.nav-container .nav-footer {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-container .nav-icon-snow { 
+    font-size: 25px;
+    color: #23a7ee;
+    font-weight: bold;
+}
+
+.nav-container .nav-logo-title {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}

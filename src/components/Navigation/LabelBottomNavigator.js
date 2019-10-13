@@ -31,7 +31,6 @@ export default function LabelBottomNavigation() {
         <BottomNavigationAction value="home" icon={<HomeIcon />} component={Link} to={NavigationPath[0]}/>
         <BottomNavigationAction value="member" icon={<CameraIcon />} component={Link} to={NavigationPath[2]}/>
         <BottomNavigationAction value="snow" icon={<SnowIcon />} component={Link} to={NavigationPath[1]}/>
-        
         {/*<BottomNavigationAction label="Folder" value="folder" icon={<Icon>folder</Icon>} />*/}
       </BottomNavigation>
   );
