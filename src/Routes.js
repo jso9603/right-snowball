@@ -5,7 +5,6 @@ import Main from './pages/Main/Main';
 import Detail from './pages/Detail/Detail';
 import Setting from './pages/Setting/Setting';
 import Product from './pages/Product/Product';
-import LabelBottomNavigation from "./components/Navigation/LabelBottomNavigator";
 import Snow from "./pages/Snow/Snow";
 import Member from "./pages/Member/Member";
 import LabelHeader from './components/Navigation/LabelHeader';
@@ -26,7 +25,6 @@ class Routes extends Component {
               <Route exact path="/Snow" component={Snow}/>
               <Route exact path="/Member" component={Member}/>
             </Switch>
-            {/* <LabelBottomNavigation/> */}
           </div>
         </Router>
     )
