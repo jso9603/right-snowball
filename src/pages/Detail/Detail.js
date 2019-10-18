@@ -7,19 +7,16 @@ import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Detail.css';
-import { send } from 'q';
 
 const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   centerMode: true,
   infinite: true,
-  arrows: false,
-  firstLike: false,
-  secondLike: false,
-  thirdLike: false,
-  likeIdx: 0
+  arrows: false
 };
+
+let likeList = [false, false, false];
 
 class Detail extends Component {
   constructor(props) {
@@ -58,19 +55,8 @@ class Detail extends Component {
   }
 
   fullLike = (i) => {
-    switch(i) {
-      case 0: 
-        this.setState({ firstLike: true, likeIdx: i + 1 });
-        break;
-      case 1:
-        this.setState({ secondLike: true, likeIdx: i + 1 });
-        break;
-      case 2:
-        this.setState({ thirdLike: true, likeIdx: i + 1 });
-        break;
-      default:
-        break;
-    }
+    likeList[i] = !likeList[i];
+    this.forceUpdate();
   }
 
   render() {
@@ -79,11 +65,7 @@ class Detail extends Component {
       selectedItem,
       cardData,
       tags,
-      description,
-      firstLike,
-      secondLike,
-      thirdLike,
-      likeIdx
+      description
     } = this.state;
 
     return (
@@ -101,7 +83,7 @@ class Detail extends Component {
                   {el.title}
                   <span className="like" onClick={_ => this.fullLike(idx)}>
                     <span className="like-count">{el.like}</span>
-                    {(firstLike || secondLike || thirdLike) && idx === likeIdx - 1 ? (
+                    {likeList[idx] ? (
                       <FavoriteIcon style={{color: 'red'}} />
                     ) : (
                       <FavoriteBorder style={{color: 'red'}} />
