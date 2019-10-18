@@ -2,17 +2,23 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import Slider from "react-slick";
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Detail.css';
+import { send } from 'q';
 
 const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   centerMode: true,
   infinite: true,
-  arrows: false
+  arrows: false,
+  firstLike: false,
+  secondLike: false,
+  thirdLike: false,
+  likeIdx: 0
 };
 
 class Detail extends Component {
@@ -51,13 +57,33 @@ class Detail extends Component {
     this.slider.slickGoTo(idx-1);
   }
 
+  fullLike = (i) => {
+    switch(i) {
+      case 0: 
+        this.setState({ firstLike: true, likeIdx: i + 1 });
+        break;
+      case 1:
+        this.setState({ secondLike: true, likeIdx: i + 1 });
+        break;
+      case 2:
+        this.setState({ thirdLike: true, likeIdx: i + 1 });
+        break;
+      default:
+        break;
+    }
+  }
+
   render() {
     const {
       showPopup,
       selectedItem,
       cardData,
       tags,
-      description
+      description,
+      firstLike,
+      secondLike,
+      thirdLike,
+      likeIdx
     } = this.state;
 
     return (
@@ -73,12 +99,17 @@ class Detail extends Component {
               return (
                 <div key={idx} className="portfolio-card">
                   {el.title}
-                  <span className="like">
+                  <span className="like" onClick={_ => this.fullLike(idx)}>
                     <span className="like-count">{el.like}</span>
-                    <FavoriteBorder style={{color: 'red'}} />
+                    {(firstLike || secondLike || thirdLike) && idx === likeIdx - 1 ? (
+                      <FavoriteIcon style={{color: 'red'}} />
+                    ) : (
+                      <FavoriteBorder style={{color: 'red'}} />
+                    )}
                   </span>
                 </div>
-            )})}
+              )
+            })}
           </Slider>
 
           <ul className="slick-dots">
