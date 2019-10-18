@@ -1,0 +1,17 @@
+.result-search {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-data-area {
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.result-company-name {
+  text-align: left;
+}
+
+.result-company-tag {
+  font-size: 15px;
+}
