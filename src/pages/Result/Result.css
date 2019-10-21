@@ -1,6 +1,7 @@
 .result-search {
   margin-top: 20px;
   text-align: center;
+  font-size: 25px;
 }
 
 .result-data-area {
@@ -14,4 +15,15 @@
 
 .result-company-tag {
   font-size: 15px;
+}
+
+.result-horizontal-line {
+  display: block;
+  height: 1px;
+  border-top: solid 1px #ccc;
+  margin: 10px 0;
+}
+
+.result-company-image {
+  border-radius: 25px;
 }
