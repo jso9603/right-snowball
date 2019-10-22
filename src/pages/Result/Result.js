@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import Slider from "react-slick";
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CardSlider from '../../components/CardSlider/CardSlider';
 import './Result.css';
 
 class Result extends Component {
@@ -13,6 +8,22 @@ class Result extends Component {
     super(props);
 
     this.state = {
+      cardData: [{
+        recommend: true,
+        title: '1',
+        description: 'No.1',
+        like: 13
+      },{
+        recommend: false,
+        title: '2',
+        description: 'No.2',
+        like: 7
+      },{
+        recommend: false,
+        title: '3',
+        description: 'No.3',
+        like: 2
+      }],
       search: '식품',
       result: [
         {
@@ -46,12 +57,14 @@ class Result extends Component {
 
   render() {
     const {
+      cardData,
       search,
       result
     } = this.state;
 
     return (
       <div className="result-page">
+        <CardSlider data={cardData} />
         <h6 className="result-search">'{search}'와 관련된 기업 정보에요</h6>
 
         <div className="result-data-area">
