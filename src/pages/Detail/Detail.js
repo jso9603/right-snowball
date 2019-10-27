@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import Slider from "react-slick";
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CardSlider from '../../components/CardSlider/CardSlider';
 import './Detail.css';
-
-const settings = {
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerMode: true,
-  infinite: true,
-  arrows: false
-};
 
 class Detail extends Component {
   constructor(props) {
@@ -21,7 +10,6 @@ class Detail extends Component {
 
     this.state = {
       showPopup: false,
-      selectedItem: 1,
       cardData: [{
         recommend: true,
         title: '1',
@@ -43,18 +31,9 @@ class Detail extends Component {
     }
   }
 
-  handleClickDot(idx) {
-    if (idx === this.state.selectedItem) return;
-
-    this.setState({ selectedItem: idx });
-
-    this.slider.slickGoTo(idx-1);
-  }
-
   render() {
     const {
       showPopup,
-      selectedItem,
       cardData,
       tags,
       description
@@ -62,34 +41,7 @@ class Detail extends Component {
 
     return (
       <div className="detail-page">
-        <div className="slider-wrap">
-          <Slider 
-            ref={slider => (this.slider = slider)}
-            initialSlide={selectedItem}
-            afterChange={current=>this.handleClickDot(current)}
-            {...settings}
-          >
-            {cardData.map((el, idx) => {
-              return (
-                <div key={idx} className="portfolio-card">
-                  {el.title}
-                  <span className="like">
-                    <span className="like-count">{el.like}</span>
-                    <FavoriteBorder style={{color: 'red'}} />
-                  </span>
-                </div>
-            )})}
-          </Slider>
-
-          <ul className="slick-dots">
-            {cardData.map((el, idx) => (
-              <li key={idx} className={`${selectedItem === idx ? 'slick-active' : ''} `}>
-                <button />
-              </li>
-            ))}
-          </ul>
-        </div>
-
+        <CardSlider data={cardData} />
         <div className="company-info">
           <div style={{width: '100%', marginTop: '25px'}}>
             <h5 className="company-name">OO기업</h5>
