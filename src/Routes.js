@@ -8,6 +8,7 @@ import Product from './pages/Product/Product';
 import Snow from "./pages/Snow/Snow";
 import Member from "./pages/Member/Member";
 import Result from "./pages/Result/Result";
+import Search from "./pages/Search/Search";
 import LabelHeader from './components/Navigation/LabelHeader';
 
 class Routes extends Component {
@@ -26,6 +27,7 @@ class Routes extends Component {
               <Route exact path="/Snow" component={Snow}/>
               <Route exact path="/Member" component={Member}/>
               <Route exact path="/Result" component={Result}/>
+              <Route exact path="/Search" component={Search}/>
             </Switch>
           </div>
         </Router>
