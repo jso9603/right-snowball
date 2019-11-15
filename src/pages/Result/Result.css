@@ -1,0 +1,47 @@
+.result-search {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.result-data-area {
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.result-company-name {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.result-company-tag {
+  font-size: 15px;
+}
+
+.result-horizontal-line {
+  display: block;
+  height: 1px;
+  border-top: solid 1px #ccc;
+  margin: 20px 0;
+}
+
+.noneBorder {
+  border-top: none;
+}
+
+.result-company-image {
+  border-radius: 25px;
+}
+
+.result-like {
+  float: right;
+  position: relative;
+  bottom: 40px;
+}
+
+.result-like-count {
+  position: absolute;
+  top: 3px;
+  right: 30px;
+  font-size: 15px;
+}
