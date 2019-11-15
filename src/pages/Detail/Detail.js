@@ -53,7 +53,6 @@ class Detail extends Component {
 
   render() {
     const {
-      showPopup,
       selectedItem,
       cardData,
       tags,

@@ -28,7 +28,7 @@ html, body, #root {
 }
 
 .main .hot-issue-container {
-  padding: 20px 30px;
+  padding: 15px 25px;
 }
 
 .main .hot-issue-title {
@@ -37,11 +37,11 @@ html, body, #root {
   font-weight: bold;
 }
 
-.main .content {
+.main > .content {
   padding-top: 30px;
 }
 
-.main .content .title {
+.main > .content .title {
   font-size: 30px;
   margin-left: 30px;
 }
@@ -142,4 +142,49 @@ html, body, #root {
   color: #333333;
   margin-right: 30px;
   font-weight: 300;
+}
+
+.main .category-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 10px 20px;
+}
+
+.main .category-container .category-info {
+  position: relative;
+  width: 25%; /* 원하는 가로크기 */
+  padding: 5px;
+} 
+
+.main .category-container .category-info:before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* 1:1 비율 */
+} 
+
+.main .category-container .category-info .category-info-box { 
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  bottom: 15%;
+  left: 15%;
+  border: 1px solid gray;
+  border-radius: 25%;
+}
+
+.main .category-container .category-info .content { 
+  display: flex;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .category-container .category-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
 }
