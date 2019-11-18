@@ -33,8 +33,6 @@ class Detail extends Component {
 
   render() {
     const {
-      selectedItem,
-      showPopup,
       cardData,
       tags,
       description

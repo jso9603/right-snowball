@@ -1,12 +1,11 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import SnowIcon from '@material-ui/icons/AcUnitOutlined';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
+import NavRouteData from './NavRouteData';
 import './LabelHeader.css';
 
 export default function LabelHeader() {
@@ -27,17 +26,17 @@ export default function LabelHeader() {
     <div
       className="nav-container"
       role="presentation"
-    //   onKeyDown={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
     >
         <CloseIcon className="nav-icon-close" onClick={toggleDrawer(false)} />
         <div className="nav-button-container">
-            <List>
-                {['나의눈덩이', '공지사항', '고객센터'].map((text, index) => (
-                    <ListItem button key={text} onClick={() => console.log(text)}>
-                        <ListItemText className="nav-button-text" primary={text} />
-                    </ListItem>
+            <div className="nav-menus">
+                {NavRouteData.map((value) => (
+                    <NavLink to={`/${value.routeName}`}>
+                        <div className="menu-button">{value.text}</div>
+                    </NavLink>
                 ))}
-            </List>
+            </div>
             <hr />
             <div className="nav-accounts">
                 <div className="account-button">로그인</div>
@@ -54,8 +53,16 @@ export default function LabelHeader() {
     return (
         <div className="header-container">
             <div onClick={toggleDrawer(true)}><MenuIcon className="header-icon-menu" /></div>
-            <div><SnowIcon className="header-icon-logo" /></div>
-            <div><SearchIcon className="header-icon-search" /></div>
+            <div>
+                <NavLink to="/Main">
+                    <SnowIcon className="header-icon-logo" />
+                </NavLink>
+            </div>
+            <div>
+                <NavLink to="/Search">
+                    <SearchIcon className="header-icon-search" />
+                </NavLink>
+            </div>
             <Drawer open={state.showNav} onClose={toggleDrawer(false)}>
                 {nav('left')}
             </Drawer>

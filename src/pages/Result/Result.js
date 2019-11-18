@@ -45,8 +45,6 @@ class Result extends Component {
   }
 
   fullLike = (i) => {
-    const { result } = this.state;
-
     likeList[i] = !likeList[i];
     this.forceUpdate();
   }
