@@ -32,7 +32,7 @@ export default function LabelHeader() {
         <div className="nav-button-container">
             <div className="nav-menus">
                 {NavRouteData.map((value) => (
-                    <NavLink to={`/${value.routeName}`}>
+                    <NavLink to={`/${value.routeName}`} key={value}>
                         <div className="menu-button">{value.text}</div>
                     </NavLink>
                 ))}

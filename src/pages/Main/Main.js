@@ -14,26 +14,31 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   centerMode: true,
+  centerPadding: '0',
   infinite: true,
-  arrows: false
+  arrows: false,
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 2000,
+  cssEase: "linear"
 };
 
 const renderCategoryIcon = (code) => {
   switch (code) {
     case 'a':
-      return <ChatOutlined style={{color: '#484d69', fontSize: 45}} />
+      return <ChatOutlined style={{color: 'black', fontSize: 30}} />
     case 'b':
-      return <LocalPharmacyOutlinedIcon style={{color: '#484d69', fontSize: 45}} />
+      return <LocalPharmacyOutlinedIcon style={{color: 'black', fontSize: 30}} />
     case 'c':
-      return <PublicOutlinedIcon style={{color: '#484d69', fontSize: 45}} />
+      return <PublicOutlinedIcon style={{color: 'black', fontSize: 30}} />
     case 'd':
-      return <WcOutlinedIcon style={{color: '#484d69', fontSize: 45}} />
+      return <WcOutlinedIcon style={{color: 'black', fontSize: 30}} />
     case 'e':
-      return <ThumbsUpDownOutlinedIcon style={{color: '#484d69', fontSize: 45}} />
+      return <ThumbsUpDownOutlinedIcon style={{color: 'black', fontSize: 30}} />
     case 'f':
-      return <PetsOutlinedIcon style={{color: '#484d69', fontSize: 45}} />
+      return <PetsOutlinedIcon style={{color: 'black', fontSize: 30}} />
     case 'g':
-      return <BubbleChartOutlinedIcon style={{color: '#484d69', fontSize: 45}} />
+      return <BubbleChartOutlinedIcon style={{color: 'black', fontSize: 30}} />
     default:
       console.log('There is no Icon for this code');
   }  
@@ -121,34 +126,40 @@ class Main extends Component {
           <div className="hot-issue-container">
             <div className="hot-issue-title">지금 가장 뜨거운 눈덩이</div>
           </div>
-          <Slider 
-            ref={slider => (this.slider = slider)}
-            initialSlide={selectedItem}
-            afterChange={current=>this.handleClickDot(current)}
-            {...settings}
-          >
-            {cardData.map((el, idx) => {
-              return (
-                <div key={idx} className="portfolio-card">
-                  {el.title}
-                  <span className="like">
-                    <span className="like-count">{el.like}</span>
-                    <FavoriteBorder style={{color: 'red'}} />
-                  </span>
-                </div>
-            )})}
-          </Slider>
+          <div style={{borderWidth: 1, padding: 10}}>
+            <Slider 
+              ref={slider => (this.slider = slider)}
+              initialSlide={selectedItem}
+              afterChange={current=>this.handleClickDot(current)}
+              {...settings}
+            >
+              {cardData.map((el, idx) => {
+                return (
+                  <div key={idx} className="portfolio-card">
+                    {el.title}
+                    <span className="like">
+                      <span className="like-count">{el.like}</span>
+                      <FavoriteBorder style={{color: 'red'}} />
+                    </span>
+                  </div>
+              )})}
+            </Slider>
+          </div>
           <div className="category-container">
             <div className="category-info">
-              <div className="category-info-box">
-                <div className="content">이슈별<br />키워드</div>
+              <div className="category-info-box" style={{backgroundColor: '#23a7ee'}}>
+                <div className="content"  style={{color: 'white'}}>이슈별<br />키워드</div>
               </div>
             </div>
             {categories.map((item, index) => {
               return(
-                <div className="category-button" key={index}>
-                  {renderCategoryIcon(item.code)}
-                  <span>{item.title}</span>
+                <div className="category-info" key={index}>
+                  <div className="category-info-box">
+                    <div className="content">
+                      {renderCategoryIcon(item.code)}
+                      <span style={{marginTop: 10}}>{item.title}</span>
+                    </div>
+                  </div>
                 </div>
               )
             })}

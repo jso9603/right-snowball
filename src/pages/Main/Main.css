@@ -79,8 +79,8 @@ html, body, #root {
   margin-top: 20px;
 }
 
-.main .issue-container .slick-slider {
-  margin-left: 20px;
+.main .slick-slider {
+  margin-bottom: 10px;
 }
 
 .main .issue-title {
@@ -165,17 +165,18 @@ html, body, #root {
 
 .main .category-container .category-info .category-info-box { 
   position: absolute;
-  top: 15%;
-  right: 15%;
-  bottom: 15%;
-  left: 15%;
-  border: 1px solid gray;
-  border-radius: 25%;
+  top: 6%;
+  right: 6%;
+  bottom: 6%;
+  left: 6%;
+  border-radius: 15%;
+  box-shadow: 0 2px 6px 0 rgba(189, 189, 189, 0.5);
 }
 
 .main .category-container .category-info .content { 
   display: flex;
   flex: 1;
+  flex-direction: column;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -186,5 +187,12 @@ html, body, #root {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 20%;
+  margin: 8px;
+  border-radius: 25%;
+}
+
+.main .category-container .category-title {
+  margin-top: 10px;
+  color: #333333;
 }
