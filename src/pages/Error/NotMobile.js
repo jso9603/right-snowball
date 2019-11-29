@@ -7,7 +7,9 @@ import './NotMobile.css';
 const NotMobile = () => {
     return(
         <div className="not-mobile-container">
-            <SnowIcon className="nav-icon-snow" />
+            <div className="icon-container">
+                <SnowIcon className="nav-icon-snow" />
+            </div>
             <div className="title">
                 현재 바른눈덩이 서비스는<br />
                 <span className="bold">모바일만</span> 지원하고 있어요
