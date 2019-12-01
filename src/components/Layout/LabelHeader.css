@@ -9,7 +9,25 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    z-index: 10000;
     box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.16);
+}
+
+.header-container .main-button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.header-container .center-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.header-container .right-container {
+    position: absolute;
+    right: 20px;
 }
 
 .header-container .header-icon-menu {
@@ -23,7 +41,7 @@
 }
 
 .header-container .header-icon-search {
-    font-size: 30px;
+    font-size: 25px;
     color: #606060;
 }
 
@@ -93,7 +111,7 @@
 }
 
 .nav-container .nav-icon-snow { 
-    font-size: 25px;
+    font-size: 40px;
     color: #23a7ee;
     font-weight: bold;
 }

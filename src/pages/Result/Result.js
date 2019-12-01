@@ -59,7 +59,7 @@ class Result extends Component {
 
     return (
       <div className="result-page">
-        <h6 className="result-search">'{search}'와 관련된 기업 정보에요</h6>
+        <div className="result-search">'{search}'와 관련된 기업 정보에요</div>
 
         <div className="result-data-area">
           {this.state.result.map((data, idx) => (
@@ -76,7 +76,7 @@ class Result extends Component {
               </span>
 
               <h5 className="result-company-name">{data.companyName}</h5>
-              {this.showTags(idx)}
+              <div className="result-company-tags">{this.showTags(idx)}</div>
               <div className={`result-horizontal-line ${idx === (resultCtn-1) ?' noneBorder' : ''}`}></div>
             </div>
           ))}

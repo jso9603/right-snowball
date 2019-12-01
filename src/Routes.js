@@ -9,7 +9,8 @@ import Snow from "./pages/Snow/Snow";
 import Member from "./pages/Member/Member";
 import Result from "./pages/Result/Result";
 import Search from "./pages/Search/Search";
-import LabelHeader from './components/Navigation/LabelHeader';
+import LabelHeader from './components/Layout/LabelHeader';
+import LabelFooter from './components/Layout/LabelFooter';
 
 class Routes extends Component {
   render() {
@@ -29,6 +30,7 @@ class Routes extends Component {
               <Route exact path="/Result" component={Result}/>
               <Route exact path="/Search" component={Search}/>
             </Switch>
+            <LabelFooter />
           </div>
         </Router>
     )

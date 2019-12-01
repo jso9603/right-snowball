@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
-import MenuIcon from '@material-ui/icons/Menu';
+// import MenuIcon from '@material-ui/icons/Menu';
 import SnowIcon from '@material-ui/icons/AcUnitOutlined';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
@@ -52,17 +52,20 @@ export default function LabelHeader() {
 
     return (
         <div className="header-container">
-            <div onClick={toggleDrawer(true)}><MenuIcon className="header-icon-menu" /></div>
-            <div>
-                <NavLink to="/Main">
-                    <SnowIcon className="header-icon-logo" />
-                </NavLink>
-            </div>
-            <div>
+            {/* Naivgation disable */}
+            {/* <div onClick={toggleDrawer(true)}><MenuIcon className="header-icon-menu" /></div> */}
+
+            <NavLink className="main-button" to="/Main">
+                <SnowIcon className="header-icon-logo" />
+                <img src={require('./logo.png')} alt="right-snowball-logo" height={25} />
+            </NavLink>
+
+            <div className="right-container">
                 <NavLink to="/Search">
                     <SearchIcon className="header-icon-search" />
                 </NavLink>
             </div>
+
             <Drawer open={state.showNav} onClose={toggleDrawer(false)}>
                 {nav('left')}
             </Drawer>

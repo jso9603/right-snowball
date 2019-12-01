@@ -1,0 +1,15 @@
+.footer-container {
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    margin-top: 15px;
+    padding: 20px;
+    background-color: #efefef;
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+}
+
+.footer-container .footer-link{
+    margin-right: 10px;
+}

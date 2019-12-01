@@ -1,16 +1,15 @@
 .result-search {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 25px;
+  margin: 15px 20px 0px 20px;
+  font-size: 18px;
 }
 
 .result-data-area {
   width: 100%;
-  padding: 20px 30px;
+  padding: 15px 20px 0px 20px;
 }
 
 .result-company-name {
-  margin: 10px 0;
+  margin: 10px 7px;
   text-align: left;
 }
 
@@ -30,13 +29,15 @@
 }
 
 .result-company-image {
-  border-radius: 25px;
+  border-radius: 15px;
+  width: 100%;
 }
 
 .result-like {
   float: right;
   position: relative;
   bottom: 40px;
+  right: 13px;
 }
 
 .result-like-count {
