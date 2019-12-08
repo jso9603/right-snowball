@@ -90,6 +90,10 @@ class Main extends Component {
     window.scroll({top: 0, left: 0, behavior: 'smooth' });
   }
 
+  clickCategory = (code) => {
+    this.props.history.push(`/Category/${code}`)
+  }
+
   render() {
     const {
       categories,
@@ -116,7 +120,7 @@ class Main extends Component {
               return (
                 <div className="category-info" key={index}>
                   <div className="category-info-box">
-                    <div className="content">
+                    <div className="content" onClick={() => this.clickCategory(item.code)}>
                       {renderCategoryIcon(item.code)}
                       <span style={{marginTop: 10}}>{item.title}</span>
                     </div>
