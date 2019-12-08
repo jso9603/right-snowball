@@ -3,11 +3,15 @@
     width: 100%;
     bottom: 0;
     margin-top: 15px;
-    padding: 20px;
+    padding: 15px;
     background-color: #efefef;
     justify-content: space-between;
     align-items: center;
     color: gray;
+}
+
+.footer-container * {
+    font-size: 12px;
 }
 
 .footer-container .footer-link{

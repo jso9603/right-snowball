@@ -1,5 +1,5 @@
 {
-    "금복주": {
+    "1": {
         "name": "금복주",
         "categories": ["성차별", "갑질/언행", "채용/노동"],
         "tags": ["상납"],
@@ -8,7 +8,7 @@
         "journalUrl": "https://www.google.com/search?q=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&oq=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&aqs=chrome..69i57j69i61l2.8948j0j4&sourceid=chrome&ie=UTF-8",
         "imgs": ["http://www.iworldtoday.com/news/photo/201603/189922_64196_2050.png", "http://www.dgy.co.kr/data/newsThumb/1490176521ADD_thumb580.jpg"]
     },
-    "남양유업": {
+    "2": {
         "name": "남양유업",
         "categories": ["성차별", "갑질/언행", "채용/노동", "마약"],
         "tags": ["분유", "음료", "밀어내기", "폭언", "불매", "오너리스크","강매", "식품"],
@@ -17,7 +17,7 @@
         "journalUrl": "https://www.google.com/search?biw=866&bih=714&sxsrf=ACYBGNS98jcieq9_DEnAl0BxUtMbCpTVnw%3A1570933305207&ei=OYqiXZKhDJWVr7wPsoez2A0&q=%EB%82%A8%EC%96%91%EC%9C%A0%EC%97%85+%EA%B0%91%EC%A7%88+%EC%84%B1%EC%B0%A8%EB%B3%84&oq=%EB%82%A8%EC%96%91%EC%9C%A0%EC%97%85+%EA%B0%91%EC%A7%88+%EC%84%B1%EC%B0%A8%EB%B3%84&gs_l=psy-ab.3..35i39.2735.6731..6977...7.0..0.281.3196.0j13j5......0....1..gws-wiz.......0i67j0j0i20i263j0i30j0i8i30j33i160j35i304i39.fy53TBKYGSM&ved=0ahUKEwjSof3MlpjlAhWVyosBHbLDDNs4ChDh1QMICw&uact=5",
         "imgs": ["http://www.everynews.co.kr/news/photo/201406/26387_12018_2210.jpg", "https://i.ytimg.com/vi/7T9FvmhWOPA/hqdefault.jpg"]
     },
-    "대한항공": {
+    "3": {
         "name": "대한항공",
         "categories": ["갑질/언행"],
         "tags": ["총수일가","조현민","조현아","조양호","이명희","오너리스크","땅콩","물컵","한진"],
@@ -26,7 +26,7 @@
         "journalUrl": "https://www.google.com/search?q=%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5+%EC%B4%9D%EC%88%98%EC%9D%BC%EA%B0%80&sxsrf=ACYBGNRdkgEPYexmgyKldUu0i5RU71WyuQ:1570939958864&tbas=0&source=lnt&sa=X&ved=0ahUKEwjhptixr5jlAhWhBKYKHZ-kAwIQpwUIKA&biw=960&bih=714",
         "imgs": ["http://img.hani.co.kr/imgdb/resize/2018/0419/00503269_20180419.JPG", "http://mblogthumb1.phinf.naver.net/MjAxODA0MjRfMjE4/MDAxNTI0NTU2NjAyMzgz.gI02zNZ9pcxT8oM_x0iEIs8gsE5NOAdeiL-Y4AEuS24g.Sh1aYAK5snKFb3AkShkWLUJ5b6KPOWUbdo3DiLw0VpYg.PNG.newlks2/%EB%8C%80%ED%95%9C%ED%95%AD%EA%B3%B5.png?type=w800"]
     },
-    "미스터피자": {
+    "4": {
         "name": "미스터피자",
         "categories": ["갑질/언행"],
         "tags": ["오너리스크", "횡령", "보복출점", "치즈통행세", "폭행"],
@@ -35,7 +35,7 @@
         "journalUrl": "https://www.google.com/search?q=%EB%AF%B8%EC%8A%A4%ED%84%B0%ED%94%BC%EC%9E%90+%EA%B0%91%EC%A7%88&oq=%EB%AF%B8%EC%8A%A4%ED%84%B0%ED%94%BC%EC%9E%90+%EA%B0%91%EC%A7%88&aqs=chrome..69i57j0l3j69i61l2.8122j0j4&sourceid=chrome&ie=UTF-8",
         "imgs": ["https://img.kbs.co.kr/kbs/620/nsimg.kbs.co.kr/data/news/2016/04/04/3258997_70.jpg", "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F227EF736594B3E5417"]
     },
-    "옥시": {
+    "5": {
         "name": "옥시",
         "categories": ["환경오염"],
         "tags": ["가습기살균제"],
@@ -44,7 +44,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNQgR9bUlx0UjnagcePW6D_Ftg6K4w%3A1572150929866&ei=kR61Xf_HNMf7wQOi_YG4AQ&q=옥시+가습기+살균제+사건&oq=옥시+가습기+살균제+사건&gs_l=psy-ab.3..35i39j0l2.1041.1041..1245...0.0..0.168.168.0j1......0....1..gws-wiz.v_TEFhNiMQg&ved=0ahUKEwi_1NTNzrvlAhXHfXAKHaJ-ABcQ4dUDCAs&uact=5",
         "imgs": ["http://img.tf.co.kr/article/home/2015/10/16/201556121444953531.jpg","http://cdn.pressian.com/data/photos/20160417/art_1461560733.jpg"]
     },
-    "위디스크(파일노리)": {
+    "6": {
         "name": "위디스크(파일노리)",
         "categories": ["성차별", "갑질/언행", "기타"],
         "tags": ["양진호","한국미래기술","폭행","몰카","불법음란물","오너리스크","파일노리","위디스크"],
@@ -53,7 +53,7 @@
         "journalUrl": "ttps://www.google.com/search?biw=960&bih=714&tbs=qdr%3Am&sxsrf=ACYBGNSU2uPAiXTd6AFleqe-Vl1O5riRLA%3A1570938211750&ei=Y52iXeq2LbHFmAXhhqfoCw&q=%EC%9C%84%EB%94%94%EC%8A%A4%ED%81%AC+%ED%8F%AD%ED%96%89&oq=%EC%9C%84%EB%94%94%EC%8A%A4%ED%81%AC+%ED%8F%AD%ED%96%89&gs_l=psy-ab.3...405997.409970..410163...0.0..0.117.986.0j9......0....1..gws-wiz.hXxNOzcMnJk&ved=0ahUKEwiq9MzwqJjlAhWxIqYKHWHDCb0Q4dUDCAs&uact=5",
         "imgs": ["https://t1.daumcdn.net/cfile/tistory/99133A415BD911A72C", "https://image.chosun.com/sitedata/image/201108/08/2011080800024_0.jpg"]
     },
-    "위메프": {
+    "7": {
         "name": "위메프",
         "categories": ["채용/노동"],
         "tags": ["열정페이", "수습사원", "해고"],
@@ -62,7 +62,7 @@
         "journalUrl": "https://www.google.com/search?q=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&oq=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&aqs=chrome..69i57j69i61l2.8948j0j4&sourceid=chrome&ie=UTF-8",
         "imgs": ["https://dimg.donga.com/wps/NEWS/IMAGE/2015/01/08/68980135.2.jpg", "https://image.ytn.co.kr/general/jpg/2015/0108/201501081554538540_t.jpg"]
     },
-    "조선일보": {
+    "8": {
         "name": "조선일보",
         "categories": ["갑질/언행"],
         "tags": ["TV조선","운전기사","해고","손녀","오너리스크","폭언","조선미디어"],
@@ -71,7 +71,7 @@
         "journalUrl": "https://www.google.com/search?q=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&oq=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&aqs=chrome..69i57j69i61l2.8948j0j4&sourceid=chrome&ie=UTF-8",
         "imgs": ["https://post-phinf.pstatic.net/MjAxODExMjNfMTc5/MDAxNTQyOTIxMTYxOTMx.KDw9b7BbSqdoU6gITw1hxDyTPYmVIhVU5R82SvsAfZQg.5npGuSxbcVSgpZHtIbE0okevRlXuWvJS622Yb8eBzCsg.JPEG/C1B6BCB1C0%CF%BAB8_BC%D5%B3E0_C6F8BEF0_B3ECC3EBB7CF.jpg?type=w1200", "http://img.hani.co.kr/imgdb/resize/2018/1204/154381352291_20181204.PNG"]
     },
-    "종근당": {
+    "9": {
         "name": "종근당",
         "categories": ["갑질/언행"],
         "tags": ["제약","운전기사","불법운전","오너리스크"],
@@ -80,7 +80,7 @@
         "journalUrl": "https://www.google.com/search?q=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&oq=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&aqs=chrome..69i57j69i61l2.8948j0j4&sourceid=chrome&ie=UTF-8",
         "imgs": ["http://www.newstown.co.kr/news/photo/201707/292203_174944_581.jpg", "http://archivenew.vop.co.kr/images/c1e8a000473957b8c5d51542c4c75e0c/2017-07/14104714_IMG_7715.jpg"]
     },
-    "총각네 야채가게": {
+    "10": {
         "name": "총각네 야채가게",
         "categories": ["갑질/언행", "채용/노동"],
         "tags": ["열정페이","똥개교육","오너리스크"],
@@ -89,7 +89,7 @@
         "journalUrl": "https://www.google.com/search?q=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&oq=%EA%B8%88%EB%B3%B5%EC%A3%BC+%EC%84%B1%EC%B0%A8%EB%B3%84+%EC%83%81%EB%82%A9&aqs=chrome..69i57j69i61l2.8948j0j4&sourceid=chrome&ie=UTF-8",
         "imgs": ["http://www.newspost.kr/news/photo/201707/56124_60668_1735.jpg", "http://cliimage.commutil.kr/phpwas/restmb_allidxmake.php?idx=3&simg=20170727001133078502d12411ff9587970114.jpg"]
     },
-    "케어": {
+    "11": {
         "name": "케어",
         "categories": ["동물"],
         "tags": ["안락사","동물보호단체"],
@@ -98,7 +98,7 @@
         "journalUrl": "https://www.google.com/search?biw=1011&bih=723&sxsrf=ACYBGNTRbECgqoeEe7ru9sRzHp_DkrZwmQ%3A1575178372092&ei=hFDjXYKiBcLT-Qb2lrCQBA&q=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&oq=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&gs_l=psy-ab.3..0j0i8i30.1057046.1057934..1058138...1.0..1.166.1879.0j12......0....1..gws-wiz.......35i39j0i20i263j0i30.dSChroYzZkQ&ved=0ahUKEwiC9M3a3JPmAhXCad4KHXYLDEI4ChDh1QMICw&uact=5https://www.google.com/search?biw=1011&bih=723&sxsrf=ACYBGNTRbECgqoeEe7ru9sRzHp_DkrZwmQ%3A1575178372092&ei=hFDjXYKiBcLT-Qb2lrCQBA&q=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&oq=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&gs_l=psy-ab.3..0j0i8i30.1057046.1057934..1058138...1.0..1.166.1879.0j12......0....1..gws-wiz.......35i39j0i20i263j0i30.dSChroYzZkQ&ved=0ahUKEwiC9M3a3JPmAhXCad4KHXYLDEI4ChDh1QMICw&uact=5",
         "imgs": ["http://www.shinailbo.co.kr/news/photo/201901/1135176_414791_2243.jpg", "https://i.ytimg.com/vi/3C7d8_KZm2Y/maxresdefault.jpg"]
     },
-    "포스코": {
+    "12": {
         "name": "포스코",
         "categories": ["환경오염"],
         "tags": ["조업정지","유독화학물질","과징금","대기오염","토양오염"],
@@ -107,7 +107,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNQWZuTLdPjjgVQpCWF_TjSqNHweJA%3A1575172653929&ei=LTrjXYuUOIeGoATHg5jgBw&q=%EA%B3%A0%EB%A1%9C%EA%B0%80%EC%8A%A4+%ED%8F%AC%EC%8A%A4%EC%BD%94+%EB%B8%8C%EB%A6%AC%EB%8D%94&oq=%EA%B3%A0%EB%A1%9C%EA%B0%80%EC%8A%A4+%ED%8F%AC%EC%8A%A4%EC%BD%94+%EB%B8%8C%EB%A6%AC%EB%8D%94&gs_l=psy-ab.3...3899.5434..5614...6.0..2.142.1215.0j11......0....1..gws-wiz.......35i39j33i160.QL3K7EIm5hA&ved=0ahUKEwjL3vyzx5PmAhUHA4gKHccBBnwQ4dUDCAs&uact=5",
         "imgs": ["http://n612.ndsoftnews.com/news/photo/201906/183008_148163_247.jpg", "http://www.namdonews.com/news/photo/201903/515926_136295_5658.jpg"]
     },
-    "현대제철": {
+    "13": {
         "name": "현대제철",
         "categories": ["환경오염"],
         "tags": ["조업정지","유독화학물질","과징금","대기오염"],
@@ -116,7 +116,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNQbzFUFbmJFndrwvvfljeHAjpFiMw%3A1575172660396&ei=NDrjXevrF4zg-Aa6h46ICQ&q=%EA%B3%A0%EB%A1%9C%EA%B0%80%EC%8A%A4+%ED%98%84%EB%8C%80%EC%A0%9C%EC%B2%A0+%EB%B8%8C%EB%A6%AC%EB%8D%94&oq=%EA%B3%A0%EB%A1%9C%EA%B0%80%EC%8A%A4+%ED%98%84%EB%8C%80%EC%A0%9C%EC%B2%A0+%EB%B8%8C%EB%A6%AC%EB%8D%94&gs_l=psy-ab.3...7622.8668..8815...2.0..1.116.1471.1j13......0....1..gws-wiz.......35i39.WSg9Vnp9Nzc&ved=0ahUKEwjr1Ye3x5PmAhUMMN4KHbqDA5EQ4dUDCAs&uact=5",
         "imgs": ["https://post-phinf.pstatic.net/MjAxOTA2MDVfMjMx/MDAxNTU5NzAyODgyNDY4.ErNHT1szSDogvPofItKBp7KajWtjmvB6b3hwjogdO68g.tyCL5NT8nzgaUJOWitPZOkgwjBKiSgWosVStH1qLAMEg.JPEG/51254_41241_251.jpg?type=w1200", "http://www.idjnews.kr/news/photo/201903/61184_42399_4039.jpg"]
     },
-    "호식이두마리치킨": {
+    "14": {
         "name": "호식이두마리치킨",
         "categories": ["성차별/성범죄"],
         "tags": ["성추행","치킨","오너리스크"],
@@ -125,7 +125,7 @@
         "journalUrl": "https://www.google.com/search?q=%ED%98%B8%EC%8B%9D%EC%9D%B4%EB%91%90%EB%A7%88%EB%A6%AC%EC%B9%98%ED%82%A8+%EC%84%B1%EC%B6%94%ED%96%89&sxsrf=ACYBGNSM2k9T5bWr-1uCmcIsNn3MTnadMw:1571534994957&ei=krirXcGBOtqUr7wP07y1qAY&start=0&sa=N&ved=0ahUKEwjBkoGJ2KnlAhVayosBHVNeDWU4KBDy0wMIfQ&biw=894&bih=744",
         "imgs": ["https://dimg.donga.com/egc/CDB/VODA/Article/CA1/WPG2130093D/59/36/17/41/5936174120f10.jpg", "https://post-phinf.pstatic.net/MjAxNzA2MDdfMTM3/MDAxNDk2ODE4NjI1MTA3.h9QwpOJKknn1UW2hhYteU2qLb03xLlOk6IVUvIAff6Ag.tvQtAhtkdLxoQaYDAXUxCeyFNXILMFgRsCAjUK9S9pwg.PNG/3m653T391W2p66c6mMg68BRcWHXbC31YvBIIjyUW-1496801614.png?type=w1200"]
     },
-    "YG엔터테인먼트": {
+    "15": {
         "name": "YG엔터테인먼트",
         "categories": ["마약", "성차별/성범죄"],
         "tags": ["탈세","성매매알선","버닝썬게이트","몰카","정경유착","버닝썬"],
@@ -134,7 +134,7 @@
         "journalUrl": "https://www.google.com/search?biw=1315&bih=714&sxsrf=ACYBGNRK0R1LGzPMRSHSEghOLDf6TbKl6w%3A1570940889928&ei=2aeiXYWlOP6Nr7wP2tSI2Ag&q=yg+%EB%B2%84%EB%8B%9D%EC%8D%AC+%EC%A0%95%EB%A6%AC&oq=yg+%EB%B2%84%EB%8B%9D%EC%8D%AC+%EC%A0%95%EB%A6%AC&gs_l=psy-ab.3...104684.108468..108655...2.0..0.134.2012.0j17......0....1..gws-wiz.......35i39j0i19j0i67j0i131i20i263j0j0i8i30j0i30j33i160.fRKXgbE1UOE&ved=0ahUKEwjF9dPtspjlAhX-xosBHVoqAosQ4dUDCAs&uact=5",
         "imgs": ["https://file.mk.co.kr/meet/neds/2019/06/image_readtop_2019_419680_15604978413788581.jpg", "https://dimg.donga.com/wps/NEWS/IMAGE/2019/04/13/95034842.2.jpg"]
     },
-    "광주은행": {
+    "16": {
         "name": "광주은행",
         "categories": ["채용/노동"],
         "tags": ["은행채용비리"],
@@ -143,7 +143,7 @@
         "journalUrl": "https://www.google.com/search?q=%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&aqs=chrome..69i57j0l5.3272j0j8&sourceid=chrome&ie=UTF-8",
         "imgs": ["http://img.hani.co.kr/imgdb/resize/2018/0419/00503055_20180419.JPG","http://archivenew.vop.co.kr/images/c1e8a000473957b8c5d51542c4c75e0c/2017-07/14104714_IMG_7715.jpg"]
     },
-    "대구은행": {
+    "17": {
         "name": "대구은행",
         "categories": ["채용/노동"],
         "tags": ["은행채용비리"],
@@ -152,7 +152,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNRe6bSGmMhOHRgPLk4c99_r3p33xQ%3A1571538532451&ei=ZMarXcWWG66Jr7wPzIarsAc&q=%EB%8C%80%EA%B5%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EB%8C%80%EA%B5%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i39.9736.10049..10228...1.0..1.168.619.0j4......0....1..gws-wiz.......35i304i39.eIyqf-Vrve4&ved=0ahUKEwjF2Oif5anlAhWuxIsBHUzDCnYQ4dUDCAs&uact=5",
         "imgs": ["http://news.imaeil.com/inc/photos/2018/04/18/2018041817363960713_l.jpg","https://pds.joins.com/news/component/JTBC/201803/29/201803290727078293.jpg"]
     },
-    "부산은행": {
+    "18": {
         "name": "부산은행",
         "categories": ["채용/노동"],
         "tags": ["은행채용비리"],
@@ -161,7 +161,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNSBBrFDoLsDZY0iMy9lmS0A57L3OA%3A1571538543947&ei=b8arXcC1OYK9mAWDhbbgCg&q=%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..0.5040.5478..5661...1.0..1.181.808.0j5......0....1..gws-wiz.......35i304i39.mRdS8IpMveE&ved=0ahUKEwiAqaal5anlAhWCHqYKHYOCDawQ4dUDCAs&uact=5",
         "imgs": ["https://img.insight.co.kr/static/2018/09/17/700/74ja56sr932348bwx384.jpg","http://www.busan.com/nas/data/content/image/2018/10/04/20181004000191_0.jpg"]
     },
-    "신한은행": {
+    "19": {
         "name": "신한은행",
         "categories": ["채용/노동", "성차별/성범죄"],
         "tags": ["은행채용비리", "성차별"],
@@ -170,7 +170,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNTAOtkWQynbCuGEWr-SCnWLA03qWw%3A1571538550737&ei=dsarXeTRLM-ImAWUmITgBQ&q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i304i39.5168.6585..6735...3.0..2.167.1085.0j7......0....1..gws-wiz.WlJkmTz9KPQ&ved=0ahUKEwjk5MSo5anlAhVPBKYKHRQMAVwQ4dUDCAs&uact=5",
         "imgs": ["https://img8.yna.co.kr/photo/cms/2018/05/11/09/C0A8CA3C000001634DEED5D10001E12F_P2.jpeg", "https://i.ytimg.com/vi/URCcDrv77cg/maxresdefault.jpg"]
     },
-    "우리은행": {
+    "20": {
         "name": "우리은행",
         "categories": ["채용/노동"],
         "tags": ["은행채용비리"],
@@ -179,7 +179,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNT8NOY4R17W6giELW3_L4J4zOmwBQ%3A1571538558534&ei=fsarXeelIO-umAWX5YnwAg&q=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i39j0i30.4530.5594..6511...1.0..1.183.1311.0j8......0....1..gws-wiz.......35i304i39.hKP-WjWvkdU&ved=0ahUKEwjn3KCs5anlAhVvF6YKHZdyAi4Q4dUDCAs&uact=5",
         "imgs": ["https://img.sbs.co.kr/newimg/news/20171017/201103573_1280.jpg", "https://img.sbs.co.kr/newimg/news/20171024/201106082_500.jpg"]
     },
-    "하나은행": {
+    "21": {
         "name": "하나은행",
         "categories": ["채용/노동", "성차별/성범죄"],
         "tags": ["은행채용비리", "성차별"],
@@ -188,7 +188,7 @@
         "journalUrl": "https://www.google.com/search?sxsrf=ACYBGNRVVl1LvEiV1P40opQHe9e_dfu02g%3A1571538565942&ei=hcarXbWIOe-4mAW9pp3AAw&q=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i39j0i30.4509.4794..4994...1.0..1.166.634.0j4......0....1..gws-wiz.......35i304i39j0i13i30.quQuR-XgH8c&ved=0ahUKEwj13uSv5anlAhVvHKYKHT1TBzgQ4dUDCAs&uact=5",
         "imgs": ["http://www.mediasr.co.kr/news/photo/201802/47574_6034_1136.png", "https://pds.joins.com//news/component/htmlphoto_mmdata/201802/05/89a55668-3fb4-4db9-9fd8-c542c9f7509d.jpg"]
     },
-    "KB국민은행": {
+    "22": {
         "name": "KB국민은행",
         "categories": ["채용/노동", "성차별/성범죄"],
         "tags": ["은행채용비리", "성차별"],

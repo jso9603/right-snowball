@@ -148,7 +148,7 @@ html, body, #root {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 10px 20px;
+  padding: 15px 20px 5px 20px;
 }
 
 .main .category-container .category-info {

@@ -2,59 +2,53 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import CardSlider from '../../components/CardSlider/CardSlider';
+import enterprises from '../Data/enterprise.json';
 import './Detail.css';
 
 class Detail extends Component {
-  constructor(props) {
-    super(props);
+  componentWillMount() {
+    window.scrollTo(0, 0)
 
-    this.state = {
-      showPopup: false,
-      cardData: [{
-        recommend: true,
-        title: '1',
-        description: 'No.1',
-        like: 13
-      },{
-        recommend: false,
-        title: '2',
-        description: 'No.2',
-        like: 7
-      },{
-        recommend: false,
-        title: '3',
-        description: 'No.3',
-        like: 2
-      }],
-      tags: ['갑질', '성차별', '강매', '식품', '대리점'],
-      description: '2019년 OO기업은 대리점 상대 상품 강매 논란으로 이슈가 되었다.'
+    const entId = this.props.match.params.id;
+    const entObject = enterprises[entId];
+    
+    this.setState({...entObject})
+  }
+
+  renderTags = () => {
+    const { tags } = this.state;
+    let arrHTML = [];
+
+    for (let i = 0; i < tags.length; i++) {
+      arrHTML.push(
+        <span key={i} className="result-company-tag">#{tags[i]}&nbsp;</span>
+      );
     }
+
+    return arrHTML;
   }
 
   render() {
     const {
-      cardData,
-      tags,
-      description
+      name,
+      desc,
+      imgs,
+      journalUrl,
+      productUrl,
     } = this.state;
 
     return (
       <div className="detail-page">
-        <CardSlider data={cardData} />
+        <CardSlider data={imgs} />
         <div className="company-info">
-          <div style={{width: '100%', marginTop: '25px'}}>
-            <h5 className="company-name">OO기업</h5>
+          <div style={{width: '100%'}}>
+            <h5 className="company-name">{name}</h5>
             <div className="share"><ShareOutlinedIcon /></div>
           </div>
-          <div>
-            {tags.map((tag, idx) => (
-              <span key={idx} className="company-tag">#{tag}&nbsp;</span>
-            ))}
-          </div>
-          <p className="company-description">{description}</p>
-
-          <button className="btn-product-list">제품 리스트로 이동하기</button>
-          <button className="btn-news">관련 기사 페이지로 이동</button>
+          <div className="result-company-tags">{this.renderTags()}</div>
+          <p className="company-description">{desc}</p>
+          <button className="btn-product-list" onClick={()=> window.open(productUrl, "_blank")}>제품 리스트로 이동하기</button>
+          <button className="btn-news news-last" onClick={()=> window.open(journalUrl, "_blank")}>관련 기사 페이지로 이동</button>
         </div>
       </div>
     )

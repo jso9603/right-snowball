@@ -1,5 +1,5 @@
 .company-info {
-  padding: 20px 30px;
+  padding: 15px 25px;
 }
 
 .company-name {
@@ -19,7 +19,7 @@
 }
 
 .company-description {
-  margin: 15px 0;
+  margin: 18px 0;
   font-size: 16px;
 }
 
@@ -43,4 +43,28 @@
   color: #51abf3;
   border-radius: 55px;
   font-size: 17px;
+}
+
+.news-last {
+  margin-bottom: 3px;
+}
+
+.detail-page {
+  padding-top: 15px;
+}
+
+.detail-page .result-company-tags {
+  white-space: normal;
+}
+
+.detail-page .result-company-tag {
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  white-space: normal;
+  font-size: 13px;
+  color: #464646;
 }

@@ -78,8 +78,8 @@ class Main extends Component {
     this.slider.slickGoTo(idx-1);
   }
 
-  goDetail = () => {
-    this.props.history.push('/Detail/1');
+  goDetail = param => {
+    this.props.history.push(`/Detail/${param}`);
   };
 
   handleClickShowMore = () => {
@@ -113,7 +113,7 @@ class Main extends Component {
               </div>
             </div>
             {categories.map((item, index) => {
-              return(
+              return (
                 <div className="category-info" key={index}>
                   <div className="category-info-box">
                     <div className="content">
@@ -131,7 +131,7 @@ class Main extends Component {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
               return (
                 <div key={idx} className="result-idx">
-                  <img src={img} className="result-company-image" alt="company" />
+                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
 
                   <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
                     <span className="result-like-count">{result[key].like}</span>
@@ -145,7 +145,7 @@ class Main extends Component {
                   <div className="result-data-header">
                     {/* not designed yet */}
                     {/* <span>{result[key].categories}</span> */}
-                    <h5 className="result-company-name">{result[key].name}</h5>
+                    <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
                   </div>
                   <div className="result-company-tags">{this.showTags(key)}</div>
                   <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>

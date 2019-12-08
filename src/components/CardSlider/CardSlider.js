@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import Slider from "react-slick";
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './CardSlider.css';
+// import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   centerMode: true,
   infinite: true,
-  arrows: false
+  arrows: false,
+  centerPadding: '20px'
 };
 
 let likeList = [false, false, false];
@@ -22,7 +23,7 @@ class CardSlider extends Component {
     super(props);
 
     this.state = {
-      selectedItem: 1
+      selectedItem: 0
     }
   }
 
@@ -55,14 +56,16 @@ class CardSlider extends Component {
             {data.map((el, idx) => {
               return (
                 <div key={idx} className="portfolio-card">
-                  {el.title}
-                  <span className="like" onClick={_ => this.fullLike(idx)}>
-                    <span className="like-count">{el.like}</span>
-                    {likeList[idx] ? (
-                      <FavoriteIcon style={{color: 'red'}} />
-                    ) : (
-                      <FavoriteBorder style={{color: 'red'}} />
-                    )}
+                  <img src={el} className="result-company-image" alt="company" />
+                  {/* {el.title} */}
+                  {/* <span className="like" onClick={_ => this.fullLike(idx)}> */}
+                  <span className="like">
+                    {/* <span className="like-count">{el.like}</span> */}
+                    {/* {likeList[idx] ? ( */}
+                    {/* <FavoriteIcon style={{color: 'red'}} /> */}
+                    {/* ) : ( */}
+                    <FavoriteBorder style={{color: 'red'}} />
+                    {/* )} */}
                   </span>
                 </div>
               )
