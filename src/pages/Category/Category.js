@@ -12,7 +12,8 @@ class Category extends Component {
 
     this.state = {
       itemsToShow: 7,
-      result: []
+      result: [],
+      selectedCategory: '',
     }
   }
 
@@ -53,6 +54,7 @@ class Category extends Component {
         }
 
         this.setState({ result });
+        this.setState({ selectedCategory });
       }
     }
   }
@@ -77,12 +79,13 @@ class Category extends Component {
   }
 
   render() {
-    const { result, itemsToShow } = this.state;
+    const { result, itemsToShow, selectedCategory } = this.state;
     const resultCtn = Object.keys(result).length;
 
     return (
       <div className="category-page">
         <div className="result-data-area">
+          <div className="title"><span className="bold">{`'${selectedCategory}'`}</span> 과 관련된 결과입니다</div>
             {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
               return (

@@ -1,3 +1,12 @@
+.category-page .title {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.category-page .title .bold {
+  font-weight: 700
+}
+
 .show-more-container {
   width: 100%;
   padding: 20px;
