@@ -24,6 +24,15 @@
   margin: 20px 0;
 }
 
+.result-page .title {
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+div.title .border {
+  font-weight: 700;
+}
+
 .noneBorder {
   border-top: none;
 }

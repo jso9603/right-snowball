@@ -29,7 +29,7 @@ class Routes extends Component {
               <Route exact path="/Product" component={Product} />
               <Route exact path="/Snow" component={Snow}/>
               <Route exact path="/Member" component={Member}/>
-              <Route exact path="/Result" component={Result}/>
+              <Route exact path="/Result/:search" component={Result}/>
               <Route exact path="/Search" component={Search}/>
             </Switch>
             <LabelFooter />
