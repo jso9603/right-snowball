@@ -68,3 +68,10 @@
   font-size: 13px;
   color: #464646;
 }
+
+.detail-page .chart-title {
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: black;
+}

@@ -39,6 +39,7 @@ class Category extends Component {
         break;
       case 'f':
         selectedCategory = '동물';
+        break;
       case 'g':
         selectedCategory = '기타';
         break;
