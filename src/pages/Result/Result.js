@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import enterpriseData from '../Data/enterprise.json';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import './Result.css';
@@ -11,21 +11,39 @@ class Result extends Component {
     super(props);
 
     this.state = {
-      search: '식품',
-      result: [
-        {
-          companyName: 'oo기업',
-          tags: ['갑질', '성차별', '강매', '식품', '대리점'],
-          img: 'http://placehold.it/320x200',
-          like: 1665
-        },
-        {
-          companyName: 'xx기업',
-          tags: ['뭘까', '뭐지', '뭐야'],
-          img: 'http://placehold.it/320x200',
-          like: 10
+      itemsToShow: 7,
+      result: [],
+      search: ''
+    }
+  }
+
+  componentWillMount() {
+    let search = this.props.match.params.search
+    let result = [];
+
+    const jsonCnt = Object.keys(enterpriseData).length
+
+    this.setState({ search });
+
+    for (const i in enterpriseData) {
+      for (let j = 0; j < enterpriseData[i].categories.length; j++) {
+        // if (search === enterpriseData[i].categories[j]) {
+        if (enterpriseData[i].categories[j].includes(search, 0)) {
+          console.log(enterpriseData[i])
+          result.push(enterpriseData[i]);
         }
-      ]
+      }
+
+      for (let j = 0; j < enterpriseData[i].tags.length; j++) {
+        if (enterpriseData[i].tags[j].includes(search, 0)) {
+          console.log('1, ', enterpriseData[i])
+          result.push(enterpriseData[i]);
+        }
+      }
+
+      if (jsonCnt - 1 === enterpriseData[i].cnt) {
+        this.setState({ result });
+      }
     }
   }
 
@@ -51,6 +69,7 @@ class Result extends Component {
 
   render() {
     const {
+      itemsToShow,
       search,
       result
     } = this.state;
@@ -59,31 +78,45 @@ class Result extends Component {
 
     return (
       <div className="result-page">
-        <div className="result-search">'{search}'와 관련된 기업 정보에요</div>
-
         <div className="result-data-area">
-          {this.state.result.map((data, idx) => (
-            <div key={idx} className="result-idx">
-              <img src={data.img} className="result-company-image" alt="company" />
+          <div className="title"><span style={{fontWeight: 700}}>{`'${search}'`}</span> 과 관련된 결과입니다</div>
+            {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
+              const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
+              return (
+                <div key={idx} className="result-idx">
+                  <img src={img} className="result-company-image" alt="company" />
 
-              <span className="result-like" onClick={_ => this.fullLike(idx)}>
-                <span className="result-like-count">{data.like}</span>
-                {likeList[idx] ? (
-                  <FavoriteIcon style={{color: 'red'}} />
-                ) : (
-                  <FavoriteBorder style={{color: 'red'}} />
-                )}
-              </span>
+                  <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
+                    <span className="result-like-count">{result[key].like}</span>
+                    {likeList[idx] ? (
+                      <FavoriteIcon style={{color: 'red'}} />
+                    ) : (
+                      <FavoriteBorder style={{color: 'red'}} />
+                    )}
+                  </span>
 
-              <h5 className="result-company-name">{data.companyName}</h5>
-              <div className="result-company-tags">{this.showTags(idx)}</div>
-              <div className={`result-horizontal-line ${idx === (resultCtn-1) ?' noneBorder' : ''}`}></div>
-            </div>
-          ))}
+                  <div className="result-data-header">
+                    {/* not designed yet */}
+                    {/* <span>{result[key].categories}</span> */}
+                    <h5 className="result-company-name">{result[key].name}</h5>
+                  </div>
+                  <div className="result-company-tags">{this.showTags(key)}</div>
+                  <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
+                </div>
+              )})
+            }
         </div>
+
+        {(itemsToShow < resultCtn) &&
+          <div className="show-more-container">
+            <button className="show-more-button" onClick={this.handleClickShowMore}>
+              <span className="show-more-text">더보기</span>
+            </button>
+          </div>
+        }
       </div>
     )
   }
 }
 
-export default withRouter(Result);
+export default Result;
