@@ -24,17 +24,22 @@ const BarChart =({ chartData }) => {
         if (index === indexArray.length - 1) {
             revenueAvg = revenueAvg / indexArray.length;
             profitAvg = profitAvg / indexArray.length;
+            diffRatio = Math.round((revenueAvg - profitAvg) / 2);
 
-            if (highestProfit > (revenueAvg - profitAvg * 3)) {
+            if (highestProfit > diffRatio) {
                 diffRatio = highestProfit + 50;
             }
         }
     })
 
     indexArray.forEach((item, index) => {
+        const revenue = chartData.revenueData[index] < diffRatio
+            ? chartData.revenueData[index]
+            : chartData.revenueData[index] - diffRatio;
+
         processedData.push({
             year: item.toString(), 
-            매출액: (chartData.revenueData[index] - diffRatio).toString(),
+            매출액: revenue.toString(),
             영업이익: chartData.profitData[index].toString()
         })
     })
