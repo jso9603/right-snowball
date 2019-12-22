@@ -67,6 +67,10 @@ class Result extends Component {
     this.forceUpdate();
   }
 
+  goDetail = param => {
+    this.props.history.push(`/Detail/${+param+1}`);
+  };
+
   render() {
     const {
       itemsToShow,
@@ -84,7 +88,7 @@ class Result extends Component {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
               return (
                 <div key={idx} className="result-idx">
-                  <img src={img} className="result-company-image" alt="company" />
+                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
 
                   <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
                     <span className="result-like-count">{result[key].like}</span>
