@@ -4,7 +4,7 @@ import { rangeArr } from '../../utils/array';
 import { numberWithCommas } from '../../utils/number';
 
 const BarChart = ({ chartData }) => {
-  const colors = { 매출액: 'lightGray', 영업이익: 'gray', 이슈매출액: '#51abf3', 이슈영업이익: '#1f6aa7' };
+  const colors = { 매출액: 'rgba(81, 170, 243, 0.1)', 영업이익: 'rgba(81, 170, 243, 0.5)', 이슈매출액: 'rgba(243, 213, 81, 0.5)', 이슈영업이익: 'rgba(243, 213, 81, 1)' };
   const indexArray = rangeArr(chartData.startYear, chartData.endYear);
 
   let processedData = [];
@@ -62,27 +62,27 @@ const BarChart = ({ chartData }) => {
         axisRight={null}
         axisLeft={null}
         axisBottom={{
-          legend: '(단위: 억원)',
+          legend: `(단위: ${chartData.unit})`,
           legendPosition: 'end',
           legendOffset: 20,
           tickSize: 0,
           tickPadding: 0
         }}
         enableGridY={false}
-        markers={[
-          {
-            axis: 'y',
-            value: diffRatio,
-            lineStyle: { stroke: '#ffc440', strokeWidth: 3 },
-            legendOrientation: 'vertical',
-          },
-        ]}
+        // markers={[
+        //   {
+        //     axis: 'y',
+        //     value: diffRatio,
+        //     lineStyle: { stroke: '#ffc440', strokeWidth: 3 },
+        //     legendOrientation: 'vertical',
+        //   },
+        // ]}
         labelSkipWidth={0}
         labelSkipHeight={0}
         labelTextColor={'black'}
         labelFormat={d => {
           const value = (d < diffRatio) ? d : parseInt(d) + diffRatio;
-          return <tspan y={20}>{numberWithCommas(value)}</tspan>
+          return <tspan y={-10}>{numberWithCommas(value)}</tspan>
         }}
         legends={[
           {
