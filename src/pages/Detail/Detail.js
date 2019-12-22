@@ -50,7 +50,7 @@ class Detail extends Component {
           <div className="result-company-tags">{this.renderTags()}</div>
           <p className="company-description">{desc}</p>
           <p className="chart-title">매출액/영업이익 추이</p>
-          <div style={{height: '300px', width: '100%', marginBottom: '15px'}}>
+          <div style={{height: '320px', width: '100%', marginBottom: '15px'}}>
             <BarChart chartData={chartData} />
           </div>
           <button className="btn-product-list" onClick={()=> window.open(productUrl, "_blank")}>제품 리스트로 이동하기</button>
