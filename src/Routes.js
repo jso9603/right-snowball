@@ -7,7 +7,7 @@ import Detail from './pages/Detail/Detail';
 import Setting from './pages/Setting/Setting';
 import Product from './pages/Product/Product';
 import Snow from "./pages/Snow/Snow";
-import Member from "./pages/Member/Member";
+import AboutUs from "./pages/AboutUs/AboutUs";
 import Result from "./pages/Result/Result";
 import Search from "./pages/Search/Search";
 import LabelHeader from './components/Layout/LabelHeader';
@@ -28,7 +28,7 @@ class Routes extends Component {
               <Route exact path="/Setting" component={Setting}/>
               <Route exact path="/Product" component={Product} />
               <Route exact path="/Snow" component={Snow}/>
-              <Route exact path="/Member" component={Member}/>
+              <Route exact path="/AboutUs" component={AboutUs}/>
               <Route exact path="/Result/:search" component={Result}/>
               <Route exact path="/Search" component={Search}/>
             </Switch>

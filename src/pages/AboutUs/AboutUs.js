@@ -10,4 +10,4 @@ class AboutUs extends Component {
   }
 }
 
-export default Member;
+export default AboutUs;
