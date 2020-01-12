@@ -7,8 +7,8 @@ const LabelFooter = () => {
         <div className="footer-container">
             <span>팀 빅걸스 💪😎</span>
             <div>
-                <span className="footer-link">About us</span>
-                <span className="footer-link">Contact</span>
+                <span className="footer-link" onClick={() => this.props}>About us</span>
+                <a className="footer-link" href="mailto:verybiggirls@gmail.com">Contact</a>
             </div>
         </div>
     )
