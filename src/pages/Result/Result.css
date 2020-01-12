@@ -13,8 +13,21 @@
   text-align: left;
 }
 
+.result-company-tags {
+  white-space: normal;
+  margin: 0px 7px;
+}
+
 .result-company-tag {
-  font-size: 15px;
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  white-space: normal;
+  font-size: 13px;
+  color: #464646;
 }
 
 .result-horizontal-line {
