@@ -7,7 +7,7 @@ import "App.css";
 class App extends Component {
   render() {
     return ( isMobileSize() ? (
-        <div>
+        <div style={{height: '100%'}}>
           <Routes />
         </div> 
       ) : (
