@@ -47,7 +47,7 @@ class Category extends Component {
         console.log('not matched');
         break;
     }
-    
+
     for (const i in enterpriseData) {
       for (let j = 0; j < enterpriseData[i].categories.length; j++) {
         if (selectedCategory === enterpriseData[i].categories[j]) {
@@ -59,6 +59,11 @@ class Category extends Component {
       }
     }
   }
+
+  goDetail = param => {
+    const id = this.state.result[param].cnt
+    this.props.history.push(`/Detail/${id}`);
+  };
 
   showTags = (i) => {
     const { result } = this.state;
@@ -91,7 +96,7 @@ class Category extends Component {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
               return (
                 <div key={idx} className="result-idx">
-                  <img src={img} className="result-company-image" alt="company" />
+                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
 
                   <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
                     <span className="result-like-count">{result[key].like}</span>
