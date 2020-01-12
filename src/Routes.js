@@ -17,7 +17,7 @@ class Routes extends Component {
   render() {
     return (
         <Router>
-          <div>
+          <div style={{minHeight: '100%', display: 'grid', gridTemplateRows: 'auto 1fr auto', gridTemplateColumns: '100%'}}>
             <LabelHeader />
             <Switch>
               <Route exact path="/" render={() => (<Redirect to="/Main"/>)}/>
