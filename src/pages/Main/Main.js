@@ -133,25 +133,30 @@ class Main extends Component {
           <div className="result-data-area">
             {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
+              console.log(idx);
               return (
-                <div key={idx} className="result-idx">
-                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
+                <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`} >
+                  <div className="result-company-image-wrapper">
+                    <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
+                  </div>
 
-                  <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
+                  {/* <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
                     <span className="result-like-count">{result[key].like}</span>
                     {likeList[idx] ? (
                       <FavoriteIcon style={{color: 'red'}} />
                     ) : (
                       <FavoriteBorder style={{color: 'red'}} />
                     )}
-                  </span>
+                  </span> */}
 
-                  <div className="result-data-header">
+                  <div className="result-right-wrapper">
                     {/* not designed yet */}
-                    {/* <span>{result[key].categories}</span> */}
-                    <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
+                    <div className="result-category">{result[key].categories}</div>
+                    <div className="result-data-header">
+                      <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
+                    </div>
+                    <div className="result-company-tags">{this.showTags(key)}</div>
                   </div>
-                  <div className="result-company-tags">{this.showTags(key)}</div>
                   <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
                 </div>
               )})
