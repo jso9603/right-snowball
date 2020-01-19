@@ -133,7 +133,6 @@ class Main extends Component {
           <div className="result-data-area">
             {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
-              console.log(idx);
               return (
                 <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`} >
                   <div className="result-company-image-wrapper">
