@@ -15,13 +15,9 @@
 
 .result-company-tags {
   white-space: normal;
-  margin: 0px 7px;
 }
 
 .result-company-tag {
-  background-color: #efefef;
-  border-radius: 5px;
-  padding: 4px;
   margin-right: 5px;
   margin-bottom: 5px;
   display: inline-block;

@@ -7,14 +7,20 @@
 }
 
 .company-info {
-  padding: 15px 25px;
+  padding: 15px 20px;
+}
+
+.header-card {
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .company-name {
   display: inline-block;
   text-align: left;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .share {
@@ -27,8 +33,9 @@
 }
 
 .company-description {
-  margin: 18px 0;
+  margin: 25px 0;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 .btn-product-list {
@@ -36,7 +43,7 @@
   width: 100%;
   height: 55px;
   background-color: #51abf3;
-  border: solid 1px #51abf3;
+  border: solid 1px #51abf3; 
   color: #fff;
   border-radius: 55px;
   font-size: 17px;
@@ -61,19 +68,35 @@
   padding-top: 15px;
 }
 
-.detail-page .result-company-tags {
+.detail-page .result-company-tags,
+.detail-page .result-company-categories {
   white-space: normal;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
-.detail-page .result-company-tag {
+.detail-page .result-company-category {
+  display: inline-block;
+  white-space: normal;
+  font-size: 13px;
+  color: black;
   background-color: #efefef;
   border-radius: 5px;
   padding: 4px;
   margin-right: 5px;
-  margin-bottom: 5px;
+}
+
+.check-icon {
+  color: #23a7ee;
+  position: relative;
+  top: 3px;
+}
+
+.detail-page .result-company-tag {
+  margin-right: 5px;
   display: inline-block;
   white-space: normal;
-  font-size: 13px;
+  font-size: 14px;
   color: #464646;
 }
 
