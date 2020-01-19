@@ -238,6 +238,9 @@ html, body, #root {
 
 .main .result-category {
   margin-left: 8px;
+}
+
+.main .result-category-name {
   color: rgb(163, 169, 177);
 }
 

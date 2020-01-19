@@ -43,13 +43,13 @@ class Main extends Component {
       itemsToShow: 7,
       result: enterpriseData,
       categories: [
-        {code: 'a',title: '갑질/언행'},
-        {code: 'b',title: '마약'},
-        {code: 'c',title: '환경오염'},
-        {code: 'd',title: '성차별/성범죄'},
-        {code: 'e',title: '채용/노동'},
-        {code: 'f',title: '동물'},
-        {code: 'g',title: '기타'},
+        {code: 'a', title: '갑질/언행'},
+        {code: 'b', title: '마약'},
+        {code: 'c', title: '환경오염'},
+        {code: 'd', title: '성차별'},
+        {code: 'e', title: '채용/노동'},
+        {code: 'f', title: '동물'},
+        {code: 'g', title: '기타'},
       ],
     }
   }
@@ -150,7 +150,33 @@ class Main extends Component {
 
                   <div className="result-right-wrapper">
                     {/* not designed yet */}
-                    <div className="result-category">{result[key].categories}</div>
+                    <div className="result-category">
+                      {result[key].categories.map((item, index) => {
+                        let categoryObject;
+                        categories.forEach(i => {
+                          if (i.title === item) {
+                            categoryObject = i;
+                            return;
+                          }
+                        })
+                        if (index > 1) return null;
+                        if (index > 0) {
+                          return (
+                            <span className="result-category-name">
+                              외 {result[key].categories.length - 1}개
+                            </span>
+                            )
+                        }
+                        return (
+                          <span 
+                            className="result-category-name"
+                            onClick={() => this.clickCategory(categoryObject.code)}
+                          >
+                          {`${item} `}
+                          </span>
+                        )
+                      })}
+                    </div>
                     <div className="result-data-header">
                       <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
                     </div>
