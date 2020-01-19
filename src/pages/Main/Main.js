@@ -40,7 +40,7 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      itemsToShow: 7,
+      itemsToShow: (window.history.state && window.history.state.itemsToShow) || 7,
       result: enterpriseData,
       categories: [
         {code: 'a', title: '갑질/언행'},
@@ -83,7 +83,9 @@ class Main extends Component {
   };
 
   handleClickShowMore = () => {
-    this.setState((prevState, props) => ({itemsToShow: prevState.itemsToShow + 7}))
+    this.setState((prevState, props) => ({itemsToShow: prevState.itemsToShow + 7}), () => {
+      window.history.replaceState({itemsToShow: this.state.itemsToShow}, '')
+    })
   }
   
   clickScrollToTop = () => {

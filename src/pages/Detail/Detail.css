@@ -33,7 +33,7 @@
 }
 
 .company-description {
-  margin: 25px 0;
+  margin: 15px 0 25px 0;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -71,7 +71,7 @@
 .detail-page .result-company-tags,
 .detail-page .result-company-categories {
   white-space: normal;
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
@@ -105,4 +105,18 @@
   font-weight: bold;
   margin-top: 30px;
   color: black;
+}
+
+.detail-page .back-container {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 7px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.detail-page .back-title {
+  font-size: 14px;
+  color: gray;
+  font-weight: bold;
 }

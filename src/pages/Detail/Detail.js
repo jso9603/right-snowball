@@ -4,6 +4,8 @@ import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import CheckIcon from '@material-ui/icons/Check';
 import enterprises from '../Data/enterprise.json';
 import BarChart from '../../components/Chart/BarChart';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
+
 import './Detail.css';
 
 class Detail extends Component {
@@ -56,10 +58,15 @@ class Detail extends Component {
       productUrl,
       chartData,
     } = this.state;
+    console.log(this.props);
 
     return (
       <div className="detail-page">
         {/* <CardSlider data={imgs} /> */}
+        <div className="back-container" onClick={() => this.props.history.goBack()}>
+          <ArrowBackIos style={{fontSize: 'large', color: 'gray'}} />
+          <span className="back-title">돌아가기</span>
+        </div>
         <div className="company-imgs">
           <img src={imgs} alt="company-img" />
         </div>
