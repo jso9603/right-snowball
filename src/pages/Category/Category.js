@@ -34,7 +34,7 @@ class Category extends Component {
         selectedCategory = '환경오염';
         break;
       case 'd':
-        selectedCategory = '성차별';
+        selectedCategory = '성차별/성범죄';
         break;
       case 'e':
         selectedCategory = '채용/노동';

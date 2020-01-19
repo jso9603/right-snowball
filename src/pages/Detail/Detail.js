@@ -12,7 +12,7 @@ const categoriesWithCode = [
   {code: 'a', title: '갑질/언행'},
   {code: 'b', title: '마약'},
   {code: 'c', title: '환경오염'},
-  {code: 'd', title: '성차별'},
+  {code: 'd', title: '성차별/성범죄'},
   {code: 'e', title: '채용/노동'},
   {code: 'f', title: '동물'},
   {code: 'g', title: '기타'},
