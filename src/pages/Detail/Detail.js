@@ -41,7 +41,10 @@ class Detail extends Component {
 
     return (
       <div className="detail-page">
-        <CardSlider data={imgs} />
+        {/* <CardSlider data={imgs} /> */}
+        <div className="company-imgs">
+          <img src={imgs} alt="company-img" />
+        </div>
         <div className="company-info">
           <div style={{width: '100%'}}>
             <h5 className="company-name">{name}</h5>
