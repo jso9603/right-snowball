@@ -58,7 +58,6 @@ class Detail extends Component {
       productUrl,
       chartData,
     } = this.state;
-    console.log(this.props);
 
     return (
       <div className="detail-page">

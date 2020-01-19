@@ -257,9 +257,9 @@ html, body, #root {
 }
 
 .main .result-company-tag {
-  background-color: #efefef;
+  background-color: #f2f2f2;
   border-radius: 5px;
-  padding: 4px;
+  padding: 2px;
   margin-right: 5px;
   margin-bottom: 5px;
   display: inline-block;

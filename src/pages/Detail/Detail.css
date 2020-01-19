@@ -110,7 +110,7 @@
 .detail-page .back-container {
   display: flex;
   margin-left: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 15px;
   justify-content: flex-start;
   align-items: center;
 }

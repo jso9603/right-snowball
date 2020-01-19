@@ -6,13 +6,10 @@ import WcOutlinedIcon from '@material-ui/icons/WcOutlined';
 import PetsOutlinedIcon from '@material-ui/icons/PetsOutlined';
 import ThumbsUpDownOutlinedIcon from '@material-ui/icons/ThumbsUpDownOutlined';
 import BubbleChartOutlinedIcon from '@material-ui/icons/BubbleChartOutlined';
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import CheckIcon from '@material-ui/icons/Check';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import enterpriseData from '../Data/enterprise.json';
 import './Main.css';
-
-let likeList = [false, false];
 
 const renderCategoryIcon = (code) => {
   switch (code) {
@@ -62,7 +59,10 @@ class Main extends Component {
 
     for (let i = 0; i < tags.length; i++) {
       arrHTML.push(
-        <span key={i} className="result-company-tag">#{tags[i]}&nbsp;</span>
+        <span key={i} className="result-company-tag">
+          <CheckIcon className="check-icon" style={{fontSize: 'medium', marginRight: 2}} />
+          {tags[i]}&nbsp;
+        </span>
       );
     }
 
@@ -154,13 +154,6 @@ class Main extends Component {
                     {/* not designed yet */}
                     <div className="result-category">
                       {result[key].categories.map((item, index) => {
-                        let categoryObject;
-                        categories.forEach(i => {
-                          if (i.title === item) {
-                            categoryObject = i;
-                            return;
-                          }
-                        })
                         if (index > 1) return null;
                         if (index > 0) {
                           return (
@@ -170,11 +163,8 @@ class Main extends Component {
                             )
                         }
                         return (
-                          <span 
-                            className="result-category-name"
-                            onClick={() => this.clickCategory(categoryObject.code)}
-                          >
-                          {`${item} `}
+                          <span className="result-category-name">
+                            {`${item} `}
                           </span>
                         )
                       })}
