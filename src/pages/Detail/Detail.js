@@ -8,6 +8,16 @@ import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 
 import './Detail.css';
 
+const categoriesWithCode = [
+  {code: 'a', title: '갑질/언행'},
+  {code: 'b', title: '마약'},
+  {code: 'c', title: '환경오염'},
+  {code: 'd', title: '성차별'},
+  {code: 'e', title: '채용/노동'},
+  {code: 'f', title: '동물'},
+  {code: 'g', title: '기타'},
+];
+
 class Detail extends Component {
   componentWillMount() {
     window.scrollTo(0, 0)
@@ -18,13 +28,27 @@ class Detail extends Component {
     this.setState({...entObject})
   }
 
+  clickCategory = (code) => {
+    this.props.history.push(`/Category/${code}`)
+  }
+
   renderCategories = () => {
     const { categories } = this.state;
     let arrCategories = [];
 
     for(let i = 0; i< categories.length; i++) {
+      let code;
+      categoriesWithCode.forEach(item => {
+        if (categories[i] === item.title) {
+          code = item.code;
+        }
+      })
+
       arrCategories.push(
-        <span key={i} className="result-company-category">
+        <span key={i} 
+          className="result-company-category" 
+          onClick={() => this.clickCategory(code)}
+        >
           &nbsp;{categories[i]}&nbsp;
         </span>
       );

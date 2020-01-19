@@ -18,6 +18,8 @@ class Category extends Component {
   }
 
   componentWillMount() {
+    window.scroll({top: 0, left: 0, behavior: 'smooth' });
+    
     let result = []
     let selectedCategory = '';
 
@@ -32,7 +34,7 @@ class Category extends Component {
         selectedCategory = '환경오염';
         break;
       case 'd':
-        selectedCategory = '성차별/성범죄';
+        selectedCategory = '성차별';
         break;
       case 'e':
         selectedCategory = '채용/노동';
