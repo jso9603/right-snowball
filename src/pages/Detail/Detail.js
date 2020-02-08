@@ -39,7 +39,7 @@ class Detail extends Component {
     
     this.setState({
       ...entObject,
-      isShowModal: false,
+      isModalShow: false,
       isAfterCopy: false
     })
   }
@@ -90,7 +90,7 @@ class Detail extends Component {
   
   toggleModal = () => {
     this.setState(prevState => ({
-      isShowModal: !prevState.isShowModal,
+      isModalShow: !prevState.isModalShow,
     }))
   }
 
@@ -118,13 +118,13 @@ class Detail extends Component {
       journalUrl,
       productUrl,
       chartData,
-      isShowModal,
+      isModalShow,
       isAfterCopy
     } = this.state;
 
     return (
       <div className="detail-page">
-        <div className={`overlay ${isShowModal? 'show-modal' : ''}`}/>
+        <div className={`overlay ${isModalShow? 'show-modal' : ''}`}/>
         {/* <CardSlider data={imgs} /> */}
         <div className="back-container" onClick={() => this.props.history.goBack()}>
           <ArrowBackIos style={{fontSize: 'large', color: 'gray'}} />
@@ -157,10 +157,10 @@ class Detail extends Component {
           )}
           
           <button className="btn-product-list" onClick={()=> window.open(productUrl, "_blank")}>제품 리스트로 이동하기</button>
-          <button className="btn-news news-last" onClick={()=> window.open(journalUrl, "_blank")}>관련 기사 페이지로 이동</button>
+          <button className="btn-news news-last" onClick={()=> window.open(journalUrl, "_blank")}>구글 검색결과 보러가기</button>
         </div>
         
-        <div className={`share-container ${isShowModal? 'show-modal' : ''}`}>
+        <div className={`share-container ${isModalShow? 'show-modal' : ''}`}>
           <div className="title">
             <span>공유하기</span>
             <CloseIcon className="close-icon" onClick={this.toggleModal} />

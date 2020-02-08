@@ -9,6 +9,7 @@ import BubbleChartOutlinedIcon from '@material-ui/icons/BubbleChartOutlined';
 import CheckIcon from '@material-ui/icons/Check';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import enterpriseData from '../Data/enterprise.json';
+import SnowIcon from '@material-ui/icons/AcUnitOutlined';
 import './Main.css';
 
 const renderCategoryIcon = (code) => {
@@ -48,6 +49,7 @@ class Main extends Component {
         {code: 'f', title: '동물'},
         {code: 'g', title: '기타'},
       ],
+      isModalShow: true,
     }
   }
 
@@ -96,17 +98,39 @@ class Main extends Component {
     this.props.history.push(`/Category/${code}`)
   }
 
+  toggleModal = () => {
+    this.setState(prevState => ({
+      isModalShow: !prevState.isModalShow,
+    }))
+  }
+  
   render() {
     const {
       categories,
       result,
-      itemsToShow
+      itemsToShow,
+      isModalShow
     } = this.state;
 
     const resultCtn = Object.keys(result).length;
 
     return (
         <div className="main">
+          <div className={`modal-container ${isModalShow? 'show-modal' : ''}`}>
+            <div className="overlay" />
+            <div className="modal-content">
+              <div>
+                <SnowIcon className="snow-icon rotating" />
+                <p><b style={{color: '#2ca2ef'}}>바른 눈덩이</b>는</p>
+                <p>다양한 논란이 있었던<br />🏢기업과 📰이슈,</p>
+                <p>그리고 사건 이후 소비자들이<br /> 어떤 변화를 만들어가는지 🚶‍♀️🏃‍♀️ <br />알려주고 있어요!</p>
+              </div>
+              <button type="button" className="modal-button" onClick={this.toggleModal}>
+                알겠어요
+              </button>
+              <div className="never-shown-button">다음에 안볼래요</div>
+            </div>
+          </div>
 
           <div className="go-to-top-button" onClick={this.clickScrollToTop}>
             <ExpandLess style={{color: 'black', fontSize: 30}} />
@@ -133,7 +157,7 @@ class Main extends Component {
           </div>
 
           <div className="result-data-area">
-            {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
+            {Object.keys(result).reverse().slice(0, itemsToShow).map((key, idx) => {
               const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
               return (
                 <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`} >
