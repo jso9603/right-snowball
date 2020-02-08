@@ -5,6 +5,16 @@ import CheckIcon from '@material-ui/icons/Check';
 import enterprises from '../Data/enterprise.json';
 import BarChart from '../../components/Chart/BarChart';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
+import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
+import CloseIcon from '@material-ui/icons/Close';
+import {
+  FacebookShareButton,
+  KakaoShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  KakaoIcon,
+  TwitterIcon
+} from 'react-share-kakao';
 
 import './Detail.css';
 
@@ -19,13 +29,19 @@ const categoriesWithCode = [
 ];
 
 class Detail extends Component {
+  currentUrl = window.location.href;
+
   componentWillMount() {
     window.scrollTo(0, 0)
 
     const entId = this.props.match.params.id;
     const entObject = enterprises[entId];
     
-    this.setState({...entObject})
+    this.setState({
+      ...entObject,
+      isShowModal: false,
+      isAfterCopy: false
+    })
   }
 
   clickCategory = (code) => {
@@ -71,6 +87,28 @@ class Detail extends Component {
 
     return arrTags;
   }
+  
+  toggleModal = () => {
+    this.setState(prevState => ({
+      isShowModal: !prevState.isShowModal,
+    }))
+  }
+
+  handleClickCopy = () => {
+    this.setState({ isAfterCopy: true })
+
+    setTimeout(() => {
+      this.setState({ isAfterCopy: false })
+    }, 2000);
+
+    var tempElem = document.createElement('textarea');
+    tempElem.value = this.currentUrl;  
+    document.body.appendChild(tempElem);
+
+    tempElem.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempElem);
+  }
 
   render() {
     const {
@@ -80,10 +118,13 @@ class Detail extends Component {
       journalUrl,
       productUrl,
       chartData,
+      isShowModal,
+      isAfterCopy
     } = this.state;
 
     return (
       <div className="detail-page">
+        <div className={`overlay ${isShowModal? 'show-modal' : ''}`}/>
         {/* <CardSlider data={imgs} /> */}
         <div className="back-container" onClick={() => this.props.history.goBack()}>
           <ArrowBackIos style={{fontSize: 'large', color: 'gray'}} />
@@ -95,11 +136,15 @@ class Detail extends Component {
         <div className="header-card" style={{width: '100%'}}>
           <div className="result-company-categories">{this.renderCategories()}</div>
           <h5 className="company-name">{name}</h5>
-          <div className="share"><ShareOutlinedIcon /></div>
+          <div className="share" onClick={this.toggleModal}><ShareOutlinedIcon /></div>
         </div>
         <div className="company-info">
           <div className="result-company-tags">{this.renderTags()}</div>
-          <p className="company-description">{desc}</p>
+          <p className="company-description">
+            {desc.split('\n').map((item, key) => {
+              return <p className="desc-paragraph"key={key}>{item}<br/></p>
+            })}
+          </p>
           {chartData ? (
             <div>
               <p className="chart-title">매출액/영업이익 추이</p>
@@ -113,6 +158,57 @@ class Detail extends Component {
           
           <button className="btn-product-list" onClick={()=> window.open(productUrl, "_blank")}>제품 리스트로 이동하기</button>
           <button className="btn-news news-last" onClick={()=> window.open(journalUrl, "_blank")}>관련 기사 페이지로 이동</button>
+        </div>
+        
+        <div className={`share-container ${isShowModal? 'show-modal' : ''}`}>
+          <div className="title">
+            <span>공유하기</span>
+            <CloseIcon className="close-icon" onClick={this.toggleModal} />
+          </div>
+          <hr />
+          <div className="button-container">
+            <div className="button-wrapper" onClick={this.handleClickCopy}>
+              <div className="copy-icon-wrapper">
+                {isAfterCopy
+                  ? <CheckIcon className="copy-icon" />
+                  : <FileCopyIcon className="copy-icon" />
+                }
+              </div>
+              <span className="icon-title">
+                {isAfterCopy
+                  ? <span className="icon-title">복사완료!</span>
+                  : <span className="icon-title">링크복사</span>
+                }
+              </span>
+            </div>
+            <FacebookShareButton
+              url={this.currentUrl}
+              children={
+                <div className="button-wrapper">
+                  <FacebookIcon size={50} round={true} />
+                  <span className="icon-title">페이스북</span>
+                </div>
+              }
+            />
+            <KakaoShareButton
+              url={this.currentUrl}
+              children={
+                <div className="button-wrapper">
+                  <KakaoIcon size={50} round={true} />
+                  <span className="icon-title">카카오톡</span>
+                </div>
+              }
+            />
+            <TwitterShareButton
+              url={this.currentUrl}
+              children={
+                <div className="button-wrapper">
+                  <TwitterIcon size={50} round={true} />
+                  <span className="icon-title">트위터</span>
+                </div>
+              }
+            />
+          </div>
         </div>
       </div>
     )

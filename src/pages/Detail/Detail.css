@@ -68,6 +68,10 @@
   padding-top: 15px;
 }
 
+.detail-page .desc-paragraph {
+  margin-top: 13px;
+}
+
 .detail-page .result-company-tags,
 .detail-page .result-company-categories {
   white-space: normal;
@@ -119,4 +123,93 @@
   font-size: 14px;
   color: gray;
   font-weight: bold;
+}
+
+.detail-page .share-container {
+  visibility: hidden;
+  padding: 15px 20px;
+  height: 0px;
+  bottom: 0;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 100%;
+  transition: all 0.15s ease-in-out;
+}
+
+.detail-page .share-container.show-modal {
+  visibility: visible;
+  height: 180px;
+}
+
+.detail-page .share-container .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.detail-page .share-container .button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-page .share-container hr {
+  margin-top: 15px;
+  border: 0;
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.detail-page .share-container .copy-icon-wrapper {
+  color: gray;
+  background-color: rgb(184, 184, 184);
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-page .share-container .copy-icon {
+  color: white;
+}
+
+.detail-page .share-container .title {
+  font-size: 17px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-page .close-icon {
+  color: gray;
+  width: 20px;
+}
+
+.detail-page .share-container .icon-title {
+  font-size: 13px;
+  margin-top: 10px;
+  color: rgb(89, 89, 89);
+}
+
+.detail-page .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 1000;
+  visibility: hidden;
+  transition: all 0.15s ease-in-out;
+}
+
+.detail-page .overlay.show-modal {
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.2);
 }
