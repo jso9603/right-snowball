@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import enterpriseData from '../Data/enterprise.json';
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import CheckIcon from '@material-ui/icons/Check';
 import './Result.css';
 
 let likeList = [false, false];
@@ -55,7 +54,10 @@ class Result extends Component {
 
     for (let i = 0; i < tags.length; i++) {
       arrHTML.push(
-        <span key={i} className="result-company-tag">#{tags[i]}&nbsp;</span>
+        <span key={i} className="result-company-tag">
+          <CheckIcon className="check-icon" style={{fontSize: 'medium', marginRight: 2}} />
+          {tags[i]}&nbsp;
+        </span>
       );
     }
 
@@ -72,43 +74,53 @@ class Result extends Component {
   };
 
   render() {
-    const {
-      itemsToShow,
-      search,
-      result
-    } = this.state;
+    const { itemsToShow, search, result } = this.state;
 
     const resultCtn = result.length;
 
     return (
       <div className="result-page">
         <div className="result-data-area">
-          <div className="title"><span style={{fontWeight: 700}}>{`'${search}'`}</span> 과 관련된 결과입니다</div>
-            {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
-              const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
-              return (
-                <div key={idx} className="result-idx">
+          <div className="title">
+            <span style={{fontWeight: 700}}>{`'${search}'`}</span>
+            과 관련된 결과입니다
+          </div>
+          {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
+            const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
+            return (
+              <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`}>
+                <div key={idx} className="result-company-image-wrapper">
                   <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
+                </div>
 
-                  <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
-                    <span className="result-like-count">{result[key].like}</span>
-                    {likeList[idx] ? (
-                      <FavoriteIcon style={{color: 'red'}} />
-                    ) : (
-                      <FavoriteBorder style={{color: 'red'}} />
-                    )}
-                  </span>
-
+                <div className="result-right-wrapper">
+                  {/* not designed yet */}
+                  <div className="result-category">
+                    {result[key].categories.map((item, index) => {
+                      if (index > 1) return null;
+                      if (index > 0) {
+                        return (
+                          <span className="result-category-name" key={index}>
+                            외 {result[key].categories.length - 1}개
+                          </span>
+                          )
+                      }
+                      return (
+                        <span className="result-category-name" key={index}>
+                          {`${item} `}
+                        </span>
+                      )
+                    })}
+                  </div>
                   <div className="result-data-header">
-                    {/* not designed yet */}
-                    {/* <span>{result[key].categories}</span> */}
-                    <h5 className="result-company-name">{result[key].name}</h5>
+                    <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
                   </div>
                   <div className="result-company-tags">{this.showTags(key)}</div>
-                  <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
                 </div>
-              )})
-            }
+                <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
+              </div>
+            )})
+          }
         </div>
 
         {(itemsToShow < resultCtn) &&
@@ -124,3 +136,13 @@ class Result extends Component {
 }
 
 export default Result;
+
+/* 로그인 기능 관련
+<span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
+  <span className="result-like-count">{result[key].like}</span>
+  {likeList[idx] ? (
+    <FavoriteIcon style={{color: 'red'}} />
+  ) : (
+    <FavoriteBorder style={{color: 'red'}} />
+  )}
+</span> */

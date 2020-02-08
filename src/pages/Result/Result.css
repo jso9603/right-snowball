@@ -46,9 +46,72 @@ div.title .border {
   border-top: none;
 }
 
-.result-company-image {
+.result-page .result-company-image {
   border-radius: 15px;
   width: 100%;
+}
+
+.result-page .result-company-image-wrapper {
+  width: 120px;
+}
+
+.result-page .result-company-image {
+  display: block;
+  /* width: 100%; */
+  /* height: auto; */
+  height: 100px;
+  width: 120px;
+  object-fit: contain;
+}
+
+
+.result-page .result-right-wrapper {
+  margin-left: 10px;
+}
+
+.result-page .result-category {
+  margin-left: 8px;
+}
+
+.result-page .result-category-name {
+  color: rgb(163, 169, 177);
+}
+
+.result-page .result-data-header {
+  /* display: flex; */
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-page .result-company-tags {
+  white-space: normal;
+  margin: 0px 7px;
+}
+
+.result-page .result-company-tag {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 2px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+  white-space: normal;
+  font-size: 12px;
+  color: #464646;
+}
+
+.result-page .result-idx {
+  display: flex;
+  flex-direction: row;
+  border-bottom-color: lightgray;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding: 15px 0;
+}
+
+.result-page .result-idx.noneBorderBottom {
+  border-bottom-width: 0px;
 }
 
 .result-like {
