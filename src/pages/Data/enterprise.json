@@ -377,4 +377,32 @@
             "unit": "조원"
         }
     }
-}
+    "23": {
+        "cnt": 23,
+        "name": "임블리(부건에프엔씨)",
+        "categories": ["기타"],
+        "tags": ["부건에프엔씨","블리블리","인플루언서"],
+        "desc": "• 19년 4월 쇼핑몰 임블리에서 곰팡이 핀 호박즙이 판매되었고, 임블리 측에서 소비자의 게시글을 삭제하고, 이미 먹은 것은 어쩔 수 없다며 환불 불가하다는 입장을 밝혔어요. 무책임한 대처에 음식, 의류, 화장품까지 피해를 본 소비자들의 증언이 이어지며 임블리 논란이 시작되었습니다. /n•의류에서는 명품 카피&품질 불량&과도한 가격 책정, 화장품에서는 품질 불량으로 인한 피해, 무성의한 CS, 탈세 등의 다양한 문제가 있었어요.",
+        "productUrl": "http://imvely.com/",
+        "journalUrl": "https://www.google.com/search?q=%EC%9E%84%EB%B8%94%EB%A6%AC+%EC%82%AC%EA%B1%B4&source=lmns&bih=744&biw=883&hl=ko&ved=2ahUKEwjMlb-OqMHnAhUYA6YKHXKZB9gQ_AUoAHoECAEQAA",
+        "imgs": ["http://imvely.com/SkinImg/logo/logo.jpg"],
+            "chartData": {
+            "startYear": 2016,
+            "endYear": 2018,
+            "issuedYear": "",
+            "revenueData": [721,661,970],
+            "profitData": [97,23,100],
+            "unit": "억원"
+        }
+    }
+    "24": {
+        "cnt": 24,
+        "name": "하늘하늘",
+        "categories": ["기타", "갑질/언행"],
+        "tags": ["인플루언서","학교폭력"],
+        "desc": "• 2020년 1월, 속옷 쇼핑몰과 화장품 업체를 운영하는 하늘이 크레딧잡의 엄청난 퇴사율(무려 91%)로 이슈가 되었어요. 직원의 머리를 볼펜으로 때리는 등 갑질을 일삼았다고 해요. 그후 과거 학교 폭력과 삥(!)뜯기 등 화려했던 과거가 밝혀졌어요.",
+        "productUrl": "http://www.hn-hn.co.kr/",
+        "journalUrl": "https://www.google.com/search?q=%ED%95%98%EB%8A%98%ED%95%98%EB%8A%98+%EB%85%BC%EB%9E%80&oq=%ED%95%98%EB%8A%98%ED%95%98%EB%8A%98+%EB%85%BC%EB%9E%80&aqs=chrome..69i57j0j69i61.4829j0j7&sourceid=chrome&ie=UTF-8",
+        "imgs": ["http://skysky9301.diskn.com/common_info/logo/JK1_Co_anamist.png"]
+        }
+    }
