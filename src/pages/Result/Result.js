@@ -71,7 +71,7 @@ class Result extends Component {
   }
 
   goDetail = param => {
-    this.props.history.push(`/Detail/${+param+1}`);
+    this.props.history.push(`/Detail/${param}`);
   };
 
   render() {
@@ -79,7 +79,6 @@ class Result extends Component {
 
     const resultCtn = result.length;
 
-    console.log(result);
     return (
       <div className="result-page">
         <div className="result-data-area">
@@ -92,7 +91,7 @@ class Result extends Component {
             return (
               <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`}>
                 <div key={idx} className="result-company-image-wrapper">
-                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
+                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(result[key].cnt)} />
                 </div>
 
                 <div className="result-right-wrapper">
@@ -115,7 +114,7 @@ class Result extends Component {
                     })}
                   </div>
                   <div className="result-data-header">
-                    <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
+                    <h5 className="result-company-name" onClick={() => this.goDetail(result[key].cnt)}>{result[key].name}</h5>
                   </div>
                   <div className="result-company-tags">{this.showTags(key)}</div>
                 </div>
