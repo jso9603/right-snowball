@@ -110,7 +110,6 @@ const BarChart = ({ chartData }) => {
             justify: false,
             translateY: -30,
             itemWidth: 65,
-            itemHeight: -20,
           }
         ]}
         animate={true}
