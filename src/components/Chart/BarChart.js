@@ -10,34 +10,35 @@ const BarChart = ({ chartData }) => {
   let processedData = [];
   let revenueAvg = 0;
   let profitAvg = 0;
+  let revenueSum = 0;
+  let profitSum = 0;
   let diffRatio = 0;
   let highestProfit = 0;
   let maxValue = 0;
   let minValue = 0;
 
   indexArray.forEach((item, index) => {
-    revenueAvg += chartData.revenueData[index];
-    profitAvg += chartData.profitData[index];
+    revenueSum += chartData.revenueData[index];
+    profitSum += chartData.profitData[index];
 
     if (chartData.profitData[index] > highestProfit) {
       highestProfit = chartData.profitData[index];
     }
 
     if (index === indexArray.length - 1) {
-      revenueAvg = revenueAvg / indexArray.length;
-      profitAvg = profitAvg / indexArray.length;
+      revenueAvg = revenueSum / indexArray.length;
+      profitAvg = profitSum / indexArray.length;
       diffRatio = Math.round((revenueAvg - profitAvg) / 2);
 
       if (highestProfit > diffRatio) {
+        console.log('highestProfit > diffRatio');
         diffRatio = highestProfit + 50;
       }
     }
   })
 
   indexArray.forEach((item, index) => {
-    const revenue = chartData.revenueData[index] < diffRatio
-      ? chartData.revenueData[index]
-      : chartData.revenueData[index] - diffRatio;
+    const revenue = chartData.revenueData[index];
 
     processedData.push({
       year: item.toString(),
@@ -49,13 +50,11 @@ const BarChart = ({ chartData }) => {
     if ((indexArray.length - 1) === index) {
       for (let i = 0; i < processedData.length; i++) {
         if (+processedData[i].매출액 > maxValue) {
-          const digit = processedData[i].매출액.toString().length;
-         
-          maxValue = +processedData[i].매출액 + 100;
+          maxValue = +processedData[i].매출액;
         }
 
         if (+processedData[i].영업이익 < minValue) {
-          minValue = +processedData[i].영업이익 - 100;
+          minValue = +processedData[i].영업이익;
         }
       }
     }
@@ -100,8 +99,8 @@ const BarChart = ({ chartData }) => {
         labelSkipHeight={0}
         labelTextColor={'black'}
         labelFormat={d => {
-          const value = (d < diffRatio) ? d : parseInt(d) + diffRatio;
-          return <tspan y={-10}>{numberWithCommas(value)}</tspan>
+          // const value = (d < diffRatio) ? d : parseInt(d) + diffRatio;
+          return <tspan y={-10}>{numberWithCommas(d)}</tspan>
         }}
         legends={[
           {
@@ -111,10 +110,9 @@ const BarChart = ({ chartData }) => {
             justify: false,
             translateY: -30,
             itemWidth: 65,
-            itemHeight: 20,
+            itemHeight: -20,
           }
         ]}
-        tooltipFormat={() => { }}
         animate={true}
         motionStiffness={90}
         motionDamping={15}

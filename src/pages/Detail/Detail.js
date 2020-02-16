@@ -142,7 +142,7 @@ class Detail extends Component {
           <div className="result-company-tags">{this.renderTags()}</div>
           <p className="company-description">
             {desc.split('\n').map((item, key) => {
-              return <p className="desc-paragraph"key={key}>{item}<br/></p>
+              return <span className="desc-paragraph"key={key}>{item}<br/></span>
             })}
           </p>
           {chartData ? (
