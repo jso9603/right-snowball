@@ -33,9 +33,16 @@
 }
 
 .company-description {
-  margin: 15px 0 25px 0;
+  margin: 30px 0 25px 0;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.company-issue,
+.company-after-issue {
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
 }
 
 .btn-product-list {
@@ -77,6 +84,15 @@
   white-space: normal;
   margin-top: 5px;
   margin-bottom: 15px;
+}
+
+.detail-page a:link,
+.detail-page a:visited,
+.detail-page a:hover,
+.detail-page a:focus,
+.detail-page a:active {
+  color: black;
+  text-decoration: underline;
 }
 
 .detail-page .result-company-category {

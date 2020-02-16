@@ -114,6 +114,7 @@ class Detail extends Component {
     const {
       name,
       desc,
+      afterIssued,
       imgs,
       journalUrl,
       productUrl,
@@ -140,10 +141,16 @@ class Detail extends Component {
         </div>
         <div className="company-info">
           <div className="result-company-tags">{this.renderTags()}</div>
+          <div className="company-description">
+            <div className="company-issue">무슨 일이 있었을까요?</div>
+              {/* {desc.split('\n').map((item, key) => {
+                return <p className="desc-paragraph"key={key}>{item}<br/></p>
+              })} */}
+              <div dangerouslySetInnerHTML={ {__html: desc} }></div>
+          </div>
           <p className="company-description">
-            {desc.split('\n').map((item, key) => {
-              return <p className="desc-paragraph"key={key}>{item}<br/></p>
-            })}
+            <div className="company-after-issue">이후에는 어떤 일이 있었나요?</div>
+              <div dangerouslySetInnerHTML={ {__html: afterIssued} }></div>
           </p>
           {chartData ? (
             <div>
