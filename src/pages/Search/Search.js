@@ -15,7 +15,9 @@ class Search extends Component {
 
   allDelete = () => {
     sessionStorage.removeItem('search');
-    this.state.search = null;
+    this.setState({
+      search: null
+    })
     this.forceUpdate();
   }
 

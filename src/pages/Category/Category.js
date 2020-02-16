@@ -3,8 +3,6 @@ import enterpriseData from '../Data/enterprise.json';
 import CheckIcon from '@material-ui/icons/Check';
 import './Category.css';
 
-let likeList = [false, false];
-
 class Category extends Component {
   constructor(props) {
     super(props);
