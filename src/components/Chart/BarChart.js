@@ -12,6 +12,8 @@ const BarChart = ({ chartData }) => {
   let profitAvg = 0;
   let diffRatio = 0;
   let highestProfit = 0;
+  let maxValue = 0;
+  let minValue = 0;
 
   indexArray.forEach((item, index) => {
     revenueAvg += chartData.revenueData[index];
@@ -42,6 +44,21 @@ const BarChart = ({ chartData }) => {
       매출액: revenue.toString(),
       영업이익: chartData.profitData[index].toString()
     })
+
+    // calulate max, min value
+    if ((indexArray.length - 1) === index) {
+      for (let i = 0; i < processedData.length; i++) {
+        if (+processedData[i].매출액 > maxValue) {
+          const digit = processedData[i].매출액.toString().length;
+         
+          maxValue = +processedData[i].매출액 + 100;
+        }
+
+        if (+processedData[i].영업이익 < minValue) {
+          minValue = +processedData[i].영업이익 - 100;
+        }
+      }
+    }
   })
 
   return (
@@ -57,6 +74,8 @@ const BarChart = ({ chartData }) => {
           if (d.indexValue === chartData.issuedYear.toString()) return colors[`이슈${d.id}`]
           return colors[d.id]
         }}
+        maxValue={maxValue}
+        minValue={minValue}
         borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
         axisTop={null}
         axisRight={null}
