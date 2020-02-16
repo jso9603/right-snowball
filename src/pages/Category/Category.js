@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as moment from 'moment';
 import enterpriseData from '../Data/enterprise.json';
 import CheckIcon from '@material-ui/icons/Check';
 import './Category.css';
@@ -86,6 +87,15 @@ class Category extends Component {
     this.setState((prevState, props) => ({itemsToShow: prevState.itemsToShow + 7}))
   }
 
+  uploadDate = (date) => {
+    let todayDate = moment(new Date()).format('YYYY-MM-DD')
+    let uploadAfterMonthDate = moment(date).add(1, 'months').format('YYYY-MM-DD');
+
+    if (moment(uploadAfterMonthDate).isAfter(todayDate, 'day')) {
+      return <div className="new-tag">NEW</div>
+    }
+  }
+
   render() {
     const { result, itemsToShow, selectedCategory } = this.state;
     const resultCtn = Object.keys(result).length;
@@ -103,6 +113,7 @@ class Category extends Component {
               <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`}>
                 <div key={idx} className="result-company-image-wrapper">
                   <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
+                  {this.uploadDate(result[key].uploadDate)}
                 </div>
 
                 <div className="result-right-wrapper">

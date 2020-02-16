@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import * as moment from 'moment';
 import ChatOutlined from '@material-ui/icons/ChatOutlined';
 import LocalPharmacyOutlinedIcon from '@material-ui/icons/LocalPharmacyOutlined';
 import PublicOutlinedIcon from '@material-ui/icons/PublicOutlined';
@@ -124,6 +125,15 @@ class Main extends Component {
       isModalShow: !prevState.isModalShow,
     }))
   }
+
+  uploadDate = (date) => {
+    let todayDate = moment(new Date()).format('YYYY-MM-DD')
+    let uploadAfterMonthDate = moment(date).add(1, 'months').format('YYYY-MM-DD');
+
+    if (moment(uploadAfterMonthDate).isAfter(todayDate, 'day')) {
+      return <div className="new-tag">NEW</div>
+    }
+  }
   
   render() {
     const {
@@ -189,6 +199,7 @@ class Main extends Component {
                 <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`} >
                   <div className="result-company-image-wrapper">
                     <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
+                    {this.uploadDate(result[key].uploadDate)}
                   </div>
 
                   {/* <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>

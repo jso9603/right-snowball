@@ -256,6 +256,7 @@ html, body, #root {
 }
 
 .main .result-company-image-wrapper {
+  position: relative;
   width: 120px;
 }
 
@@ -266,6 +267,16 @@ html, body, #root {
   height: 100px;
   width: 120px;
   object-fit: contain;
+}
+
+.main .new-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 3px 9px;
+  background-color: #ffe000;
+  color: white;
+  font-size: 11px;
 }
 
 .main .result-right-wrapper {
