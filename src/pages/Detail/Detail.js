@@ -148,10 +148,10 @@ class Detail extends Component {
               })} */}
               <div dangerouslySetInnerHTML={ {__html: desc} }></div>
           </div>
-          <p className="company-description">
+          <div className="company-description">
             <div className="company-after-issue">이후에는 어떤 일이 있었나요?</div>
               <div dangerouslySetInnerHTML={ {__html: afterIssued} }></div>
-          </p>
+          </div>
           {chartData ? (
             <div>
               <p className="chart-title">매출액/영업이익 추이</p>
