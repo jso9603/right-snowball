@@ -11,6 +11,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import enterpriseData from '../Data/enterprise.json';
 import SnowIcon from '@material-ui/icons/AcUnitOutlined';
 import './Main.css';
+import { getCookie, setCookie, decodeCookieData } from '../../utils/cookie.js';
 
 const renderCategoryIcon = (code) => {
   switch (code) {
@@ -49,7 +50,22 @@ class Main extends Component {
         {code: 'f', title: '동물'},
         {code: 'g', title: '기타'},
       ],
-      isModalShow: true,
+      isModalShow: false,
+    }
+  }
+
+  componentWillMount() {
+    const result = getCookie('isPopupHide');
+
+    if (result) {
+      const data = decodeCookieData(result);
+      this.setState({
+        isModalShow: data !== 'true'
+      })
+    } else {
+      this.setState({
+        isModalShow: true
+      })
     }
   }
 
@@ -88,6 +104,11 @@ class Main extends Component {
     this.setState((prevState, props) => ({itemsToShow: prevState.itemsToShow + 7}), () => {
       window.history.replaceState({itemsToShow: this.state.itemsToShow}, '')
     })
+  }
+
+  handleClickModalHide = () => {
+    setCookie('isPopupHide', 'true');
+    this.toggleModal();
   }
   
   clickScrollToTop = () => {
@@ -128,7 +149,12 @@ class Main extends Component {
               <button type="button" className="modal-button" onClick={this.toggleModal}>
                 알겠어요
               </button>
-              <div className="never-shown-button">다음에 안볼래요</div>
+              <div 
+                className="never-shown-button" 
+                onClick={() => this.handleClickModalHide()}
+              >
+                다음에 안볼래요
+              </div>
             </div>
           </div>
 

@@ -4,10 +4,6 @@ import { withRouter } from 'react-router';
 import './LabelFooter.css';
 
 class LabelFooter extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     aboutus = () => {
         this.props.history.push('/AboutUs');
     }
