@@ -66,7 +66,15 @@ class Search extends Component {
 
     return (
       <div className="search-page">
-        <input className="search-keyword" type="text" name="text" placeholder="키워드를 입력하세요." onChange={this.handleChange} onKeyPress={this.handleKeyPress} />
+        <input 
+          className="search-keyword" 
+          type="text"
+          name="text" 
+          placeholder="키워드를 입력하세요." 
+          onChange={this.handleChange} 
+          onKeyPress={this.handleKeyPress} 
+          autoFocus
+        />
         {search === null ? (
           <div>
             <div className="search-recent-box">

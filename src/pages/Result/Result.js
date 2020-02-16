@@ -18,7 +18,7 @@ class Result extends Component {
 
   componentWillMount() {
     let search = this.props.match.params.search
-    let result = [];
+    let result = {};
 
     const jsonCnt = Object.keys(enterpriseData).length
 
@@ -26,18 +26,19 @@ class Result extends Component {
 
     for (const i in enterpriseData) {
       for (let j = 0; j < enterpriseData[i].categories.length; j++) {
-        // if (search === enterpriseData[i].categories[j]) {
         if (enterpriseData[i].categories[j].includes(search, 0)) {
-          console.log(enterpriseData[i])
-          result.push(enterpriseData[i]);
+          result[enterpriseData[i].name] = enterpriseData[i];
         }
       }
 
       for (let j = 0; j < enterpriseData[i].tags.length; j++) {
         if (enterpriseData[i].tags[j].includes(search, 0)) {
-          console.log('1, ', enterpriseData[i])
-          result.push(enterpriseData[i]);
+          result[enterpriseData[i].name] = enterpriseData[i];
         }
+      }
+
+      if (enterpriseData[i].name.includes(search)) {
+        result[enterpriseData[i].name] = enterpriseData[i];
       }
 
       if (jsonCnt - 1 === enterpriseData[i].cnt) {
@@ -78,6 +79,7 @@ class Result extends Component {
 
     const resultCtn = result.length;
 
+    console.log(result);
     return (
       <div className="result-page">
         <div className="result-data-area">
@@ -136,13 +138,3 @@ class Result extends Component {
 }
 
 export default Result;
-
-/* 로그인 기능 관련
-<span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
-  <span className="result-like-count">{result[key].like}</span>
-  {likeList[idx] ? (
-    <FavoriteIcon style={{color: 'red'}} />
-  ) : (
-    <FavoriteBorder style={{color: 'red'}} />
-  )}
-</span> */
