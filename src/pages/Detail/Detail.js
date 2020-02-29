@@ -9,7 +9,6 @@ import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';
 import CloseIcon from '@material-ui/icons/Close';
 import {
   FacebookShareButton,
-  KakaoShareButton,
   TwitterShareButton,
   FacebookIcon,
   KakaoIcon,
@@ -42,6 +41,10 @@ class Detail extends Component {
       isModalShow: false,
       isAfterCopy: false
     })
+  }
+
+  componentDidMount() {
+    window.Kakao.init('4d760b3793452051bd4dd9df81c0b63c');// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
   }
 
   clickCategory = (code) => {
@@ -108,6 +111,30 @@ class Detail extends Component {
     tempElem.select();
     document.execCommand("copy");
     document.body.removeChild(tempElem);
+  }
+ 
+  handleClickKakaoShare = () => {
+    window.Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: document.title,
+        description: '가치소비, 불매운동, 바른눈덩이',
+        imageUrl: 'https://barun-snowball-static-web.s3.ap-northeast-2.amazonaws.com/fb.png',
+        link: {
+          webUrl: window.location.href,
+          mobileWebUrl: window.location.href
+        }
+      },
+      buttons: [
+        {
+          title: '반가워요!',
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href
+          }
+        }  
+      ]
+    });
   }
 
   render() {
@@ -197,15 +224,12 @@ class Detail extends Component {
                 </div>
               }
             />
-            <KakaoShareButton
-              url={this.currentUrl}
-              children={
-                <div className="button-wrapper">
-                  <KakaoIcon size={50} round={true} />
-                  <span className="icon-title">카카오톡</span>
-                </div>
-              }
-            />
+            <div onClick={this.handleClickKakaoShare} >
+              <div className="button-wrapper">
+                <KakaoIcon size={50} round={true} />
+                <span className="icon-title">카카오톡</span>
+              </div>
+            </div>
             <TwitterShareButton
               url={this.currentUrl}
               children={

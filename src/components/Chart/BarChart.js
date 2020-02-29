@@ -12,7 +12,7 @@ const BarChart = ({ chartData }) => {
   let profitAvg = 0;
   let revenueSum = 0;
   let profitSum = 0;
-  let diffRatio = 0;
+  // let diffRatio = 0;
   let highestProfit = 0;
   let maxValue = 0;
   let minValue = 0;
@@ -31,7 +31,7 @@ const BarChart = ({ chartData }) => {
       // diffRatio = Math.round((revenueAvg - profitAvg) / 2);
 
       if (revenueAvg / profitAvg > 10) {
-        diffRatio = Math.round(revenueAvg / profitAvg);
+        // diffRatio = Math.round(revenueAvg / profitAvg);
       }
 
       // if (highestProfit > diffRatio) {
