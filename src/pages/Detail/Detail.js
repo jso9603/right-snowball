@@ -114,10 +114,12 @@ class Detail extends Component {
   }
  
   handleClickKakaoShare = () => {
+    const { name } = this.state;
+
     window.Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
-        title: document.title,
+        title: `${document.title} - ${name}`,
         description: '가치소비, 불매운동, 바른눈덩이',
         imageUrl: 'https://barun-snowball-static-web.s3.ap-northeast-2.amazonaws.com/fb.png',
         link: {
@@ -127,7 +129,7 @@ class Detail extends Component {
       },
       buttons: [
         {
-          title: '반가워요!',
+          title: '보러가기 🙂',
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href
