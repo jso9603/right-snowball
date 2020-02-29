@@ -28,17 +28,28 @@ const BarChart = ({ chartData }) => {
     if (index === indexArray.length - 1) {
       revenueAvg = revenueSum / indexArray.length;
       profitAvg = profitSum / indexArray.length;
-      diffRatio = Math.round((revenueAvg - profitAvg) / 2);
+      // diffRatio = Math.round((revenueAvg - profitAvg) / 2);
 
-      if (highestProfit > diffRatio) {
-        console.log('highestProfit > diffRatio');
-        diffRatio = highestProfit + 50;
+      if (revenueAvg / profitAvg > 10) {
+        diffRatio = Math.round(revenueAvg / profitAvg);
       }
+
+      // if (highestProfit > diffRatio) {
+      //   // console.log('highestProfit > diffRatio');
+      //   diffRatio = highestProfit + 50;
+      // }
     }
   })
 
   indexArray.forEach((item, index) => {
-    const revenue = chartData.revenueData[index];
+    let revenue = chartData.revenueData[index];
+
+    // if (diffRatio.toString() > 0) {
+    //   console.log(revenue);
+    //   revenue = revenueBN.dividedBy(diffRatioBN).multipliedBy(2).toFixed(1);
+    //   console.log(revenue.toString());
+    //   // revenue = chartData.revenueData[index] / diffRatio / 2;
+    // }
 
     processedData.push({
       year: item.toString(),
@@ -58,6 +69,10 @@ const BarChart = ({ chartData }) => {
         }
       }
     }
+    // console.log('maxValue', maxValue);
+    // console.log('maxProfitValue', maxProfitValue);
+    // console.log('minValue', minValue);
+    // console.log('minRevenueValue', minRevenueValue);
   })
 
   return (
@@ -110,6 +125,7 @@ const BarChart = ({ chartData }) => {
             justify: false,
             translateY: -30,
             itemWidth: 65,
+            itemHeight: -20,
           }
         ]}
         animate={true}
