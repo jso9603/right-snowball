@@ -44,7 +44,10 @@ class Detail extends Component {
   }
 
   componentDidMount() {
-    window.Kakao.init('4d760b3793452051bd4dd9df81c0b63c');// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    // console.log(window.Kakao);
+    if (!window.Kakao.isInitialized()) {
+      window.Kakao.init('4d760b3793452051bd4dd9df81c0b63c');// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    }
   }
 
   clickCategory = (code) => {
