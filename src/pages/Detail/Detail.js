@@ -142,6 +142,11 @@ class Detail extends Component {
     });
   }
 
+  handleClickGoBack = () => {
+    this.props.history.goBack();
+    this.props.history.replace('/');
+  }
+
   render() {
     const {
       name,
@@ -159,7 +164,7 @@ class Detail extends Component {
       <div className="detail-page">
         <div className={`overlay ${isModalShow? 'show-modal' : ''}`}/>
         {/* <CardSlider data={imgs} /> */}
-        <div className="back-container" onClick={() => this.props.history.goBack()}>
+        <div className="back-container" onClick={this.handleClickGoBack}>
           <ArrowBackIos style={{fontSize: 'large', color: 'gray'}} />
           <span className="back-title">돌아가기</span>
         </div>
