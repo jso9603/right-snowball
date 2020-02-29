@@ -1,4 +1,7 @@
 .category-page .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 19px;
   margin-bottom: 15px;
 }

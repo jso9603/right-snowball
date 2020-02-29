@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as moment from 'moment';
 import enterpriseData from '../Data/enterprise.json';
 import CheckIcon from '@material-ui/icons/Check';
+import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import './Category.css';
 
 class Category extends Component {
@@ -104,6 +105,9 @@ class Category extends Component {
       <div className="category-page">
         <div className="result-data-area">
           <div className="title">
+            <div className="back-container" onClick={() => this.props.history.goBack()}>
+              <ArrowBackIos style={{fontSize: '20px', color: 'gray', marginRight: 5, marginTop: 3}} />
+            </div>
             <span className="bold">{`'${selectedCategory}'`}</span>
             과 관련된 결과입니다
           </div>

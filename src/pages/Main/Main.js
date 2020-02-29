@@ -56,10 +56,25 @@ class Main extends Component {
   }
 
   componentWillMount() {
-    const result = getCookie('isPopupHide');
+    const popupCookie = getCookie('isPopupHide');
+    const arrayData = Object.values(enterpriseData);
 
-    if (result) {
-      const data = decodeCookieData(result);
+    for (let i = 0; i < Object.keys(enterpriseData).length; i ++) {
+      let todayDate = moment(new Date()).format('YYYY-MM-DD')
+      let uploadAfterMonthDate = moment(arrayData[i].uploadDate).add(1, 'months').format('YYYY-MM-DD');
+  
+      if (moment(uploadAfterMonthDate).isAfter(todayDate, 'day')) {      
+        arrayData.splice(i, 1);
+        arrayData.unshift(enterpriseData[i + 1]);
+      }
+    }
+
+    this.setState({
+      arrayData
+    });
+
+    if (popupCookie) {
+      const data = decodeCookieData(popupCookie);
       this.setState({
         isModalShow: data !== 'true'
       })
@@ -71,9 +86,9 @@ class Main extends Component {
   }
 
   showTags = (i) => {
-    const { result } = this.state;
+    const { arrayData } = this.state;
 
-    const tags = result[i].tags;
+    const tags = arrayData[i].tags;
     let arrHTML = [];
 
     for (let i = 0; i < tags.length; i++) {
@@ -138,12 +153,13 @@ class Main extends Component {
   render() {
     const {
       categories,
-      result,
       itemsToShow,
-      isModalShow
+      isModalShow,
+      arrayData
     } = this.state;
 
-    const resultCtn = Object.keys(result).length;
+    // const resultCtn = Object.keys(result).length;
+    const arrayCtn = arrayData.length;
 
     return (
         <div className="main">
@@ -193,17 +209,17 @@ class Main extends Component {
           </div>
 
           <div className="result-data-area">
-            {Object.keys(result).reverse().slice(0, itemsToShow).map((key, idx) => {
-              const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
+            {arrayData.length > 0 && arrayData.slice(0, itemsToShow).map((key, idx) => {
+              const img = (arrayData[idx].imgs && arrayData[idx].imgs[0]) || 'http://placehold.it/320x200';
               return (
-                <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`} >
+                <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === arrayCtn-1) ?' noneBorderBottom' : ''}`} >
                   <div className="result-company-image-wrapper">
-                    <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
-                    {this.uploadDate(result[key].uploadDate)}
+                    <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(arrayData[idx].cnt)} />
+                    {this.uploadDate(arrayData[idx].uploadDate)}
                   </div>
 
                   {/* <span className="result-like" onClick={() => {alert('로그인 기능은 준비중입니다.')}}>
-                    <span className="result-like-count">{result[key].like}</span>
+                    <span className="result-like-count">{arrayData[idx].like}</span>
                     {likeList[idx] ? (
                       <FavoriteIcon style={{color: 'red'}} />
                     ) : (
@@ -212,14 +228,13 @@ class Main extends Component {
                   </span> */}
 
                   <div className="result-right-wrapper">
-                    {/* not designed yet */}
                     <div className="result-category">
-                      {result[key].categories.map((item, index) => {
+                      {arrayData[idx].categories.map((item, index) => {
                         if (index > 1) return null;
                         if (index > 0) {
                           return (
                             <span className="result-category-name" key={index}>
-                              외 {result[key].categories.length - 1}개
+                              외 {arrayData[idx].categories.length - 1}개
                             </span>
                             )
                         }
@@ -231,17 +246,17 @@ class Main extends Component {
                       })}
                     </div>
                     <div className="result-data-header">
-                      <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
+                      <h5 className="result-company-name" onClick={() => this.goDetail(arrayData[idx].cnt)}>{arrayData[idx].name}</h5>
                     </div>
-                    <div className="result-company-tags">{this.showTags(key)}</div>
+                    <div className="result-company-tags">{this.showTags(idx)}</div>
                   </div>
-                  <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
+                  <div className={`${(idx === (itemsToShow-1) || idx === arrayCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
                 </div>
               )})
             }
             </div>
             
-            {(itemsToShow < resultCtn) &&
+            {(itemsToShow < arrayCtn) &&
               <div className="show-more-container">
                 <button className="show-more-button" onClick={this.handleClickShowMore}>
                   <span className="show-more-text">더보기</span>
