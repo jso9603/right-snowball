@@ -9,7 +9,7 @@ import ThumbsUpDownOutlinedIcon from '@material-ui/icons/ThumbsUpDownOutlined';
 import BubbleChartOutlinedIcon from '@material-ui/icons/BubbleChartOutlined';
 import CheckIcon from '@material-ui/icons/Check';
 import ExpandLess from '@material-ui/icons/ExpandLess';
-import enterpriseData from '../Data/enterprise.json';
+import enterpriseData from '../Data/enterprise.js';
 import SnowIcon from '@material-ui/icons/AcUnitOutlined';
 import './Main.css';
 import { getCookie, setCookie, decodeCookieData } from '../../utils/cookie.js';

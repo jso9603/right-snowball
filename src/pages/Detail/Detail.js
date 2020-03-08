@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import CheckIcon from '@material-ui/icons/Check';
-import enterprises from '../Data/enterprise.json';
+import enterprises from '../Data/enterprise.js';
 import BarChart from '../../components/Chart/BarChart';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import FileCopyIcon from '@material-ui/icons/FileCopyOutlined';

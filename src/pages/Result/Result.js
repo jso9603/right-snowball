@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import enterpriseData from '../Data/enterprise.json';
+import enterpriseData from '../Data/enterprise.js';
 import CheckIcon from '@material-ui/icons/Check';
 import './Result.css';
 

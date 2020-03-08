@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import * as moment from 'moment';
-import enterpriseData from '../Data/enterprise.json';
+import enterpriseData from '../Data/enterprise.js';
 import CheckIcon from '@material-ui/icons/Check';
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import './Category.css';
@@ -13,13 +13,13 @@ class Category extends Component {
       itemsToShow: 7,
       result: [],
       selectedCategory: '',
-    }
+    };
   }
 
   componentWillMount() {
-    window.scroll({top: 0, left: 0, behavior: 'smooth' });
-    
-    let result = []
+    window.scroll({top: 0, left: 0, behavior: 'smooth'});
+
+    let result = [];
     let selectedCategory = '';
 
     switch (this.props.match.params.title) {
@@ -55,19 +55,19 @@ class Category extends Component {
           result.push(enterpriseData[i]);
         }
 
-        this.setState({ result });
-        this.setState({ selectedCategory });
+        this.setState({result});
+        this.setState({selectedCategory});
       }
     }
   }
 
-  goDetail = param => {
-    const id = this.state.result[param].cnt
+  goDetail = (param) => {
+    const id = this.state.result[param].cnt;
     this.props.history.push(`/Detail/${id}`);
   };
 
   showTags = (i) => {
-    const { result } = this.state;
+    const {result} = this.state;
 
     const tags = result[i].tags;
     let arrHTML = [];
@@ -75,90 +75,134 @@ class Category extends Component {
     for (let i = 0; i < tags.length; i++) {
       arrHTML.push(
         <span key={i} className="result-company-tag">
-          <CheckIcon className="check-icon" style={{fontSize: 'medium', marginRight: 2}} />
+          <CheckIcon
+            className="check-icon"
+            style={{fontSize: 'medium', marginRight: 2}}
+          />
           {tags[i]}&nbsp;
-        </span>
+        </span>,
       );
     }
 
     return arrHTML;
-  }
+  };
 
   handleClickShowMore = () => {
-    this.setState((prevState, props) => ({itemsToShow: prevState.itemsToShow + 7}))
-  }
+    this.setState((prevState, props) => ({
+      itemsToShow: prevState.itemsToShow + 7,
+    }));
+  };
 
   uploadDate = (date) => {
-    let todayDate = moment(new Date()).format('YYYY-MM-DD')
-    let uploadAfterMonthDate = moment(date).add(1, 'months').format('YYYY-MM-DD');
+    let todayDate = moment(new Date()).format('YYYY-MM-DD');
+    let uploadAfterMonthDate = moment(date)
+      .add(1, 'months')
+      .format('YYYY-MM-DD');
 
     if (moment(uploadAfterMonthDate).isAfter(todayDate, 'day')) {
-      return <div className="new-tag">NEW</div>
+      return <div className="new-tag">NEW</div>;
     }
-  }
+  };
 
   render() {
-    const { result, itemsToShow, selectedCategory } = this.state;
+    const {result, itemsToShow, selectedCategory} = this.state;
     const resultCtn = Object.keys(result).length;
 
     return (
       <div className="category-page">
         <div className="result-data-area">
           <div className="title">
-            <div className="back-container" onClick={() => this.props.history.goBack()}>
-              <ArrowBackIos style={{fontSize: '20px', color: 'gray', marginRight: 5, marginTop: 3}} />
+            <div
+              className="back-container"
+              onClick={() => this.props.history.goBack()}>
+              <ArrowBackIos
+                style={{
+                  fontSize: '20px',
+                  color: 'gray',
+                  marginRight: 5,
+                  marginTop: 3,
+                }}
+              />
             </div>
-            <span className="bold">{`'${selectedCategory}'`}</span>
-            과 관련된 결과입니다
+            <span className="bold">{`'${selectedCategory}'`}</span>과 관련된
+            결과입니다
           </div>
-          {Object.keys(result).slice(0, itemsToShow).map((key, idx) => {
-            const img = (result[key].imgs && result[key].imgs[0]) || 'http://placehold.it/320x200';
-            return (
-              <div key={idx} className={`result-idx ${(idx === 0) ? 'nonePaddingTop' : ''} ${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorderBottom' : ''}`}>
-                <div key={idx} className="result-company-image-wrapper">
-                  <img src={img} className="result-company-image" alt="company" onClick={() => this.goDetail(key)} />
-                  {this.uploadDate(result[key].uploadDate)}
-                </div>
+          {Object.keys(result)
+            .slice(0, itemsToShow)
+            .map((key, idx) => {
+              const img =
+                (result[key].imgs && result[key].imgs[0]) ||
+                'http://placehold.it/320x200';
+              return (
+                <div
+                  key={idx}
+                  className={`result-idx ${idx === 0 ? 'nonePaddingTop' : ''} ${
+                    idx === itemsToShow - 1 || idx === resultCtn - 1
+                      ? ' noneBorderBottom'
+                      : ''
+                  }`}>
+                  <div key={idx} className="result-company-image-wrapper">
+                    <img
+                      src={img}
+                      className="result-company-image"
+                      alt="company"
+                      onClick={() => this.goDetail(key)}
+                    />
+                    {this.uploadDate(result[key].uploadDate)}
+                  </div>
 
-                <div className="result-right-wrapper">
-                  {/* not designed yet */}
-                  <div className="result-category">
-                    {result[key].categories.map((item, index) => {
-                      if (index > 1) return null;
-                      if (index > 0) {
+                  <div className="result-right-wrapper">
+                    {/* not designed yet */}
+                    <div className="result-category">
+                      {result[key].categories.map((item, index) => {
+                        if (index > 1) return null;
+                        if (index > 0) {
+                          return (
+                            <span className="result-category-name" key={index}>
+                              외 {result[key].categories.length - 1}개
+                            </span>
+                          );
+                        }
                         return (
                           <span className="result-category-name" key={index}>
-                            외 {result[key].categories.length - 1}개
+                            {`${item} `}
                           </span>
-                          )
-                      }
-                      return (
-                        <span className="result-category-name" key={index}>
-                          {`${item} `}
-                        </span>
-                      )
-                    })}
+                        );
+                      })}
+                    </div>
+                    <div className="result-data-header">
+                      <h5
+                        className="result-company-name"
+                        onClick={() => this.goDetail(key)}>
+                        {result[key].name}
+                      </h5>
+                    </div>
+                    <div className="result-company-tags">
+                      {this.showTags(key)}
+                    </div>
                   </div>
-                  <div className="result-data-header">
-                    <h5 className="result-company-name" onClick={() => this.goDetail(key)}>{result[key].name}</h5>
-                  </div>
-                  <div className="result-company-tags">{this.showTags(key)}</div>
+                  <div
+                    className={`${
+                      idx === itemsToShow - 1 || idx === resultCtn - 1
+                        ? ' noneBorder'
+                        : 'result-horizontal-line'
+                    }`}></div>
                 </div>
-                <div className={`${(idx === (itemsToShow-1) || idx === resultCtn-1) ?' noneBorder' : 'result-horizontal-line'}`}></div>
-              </div>
-            )})
-          }
+              );
+            })}
         </div>
 
-        {(itemsToShow < resultCtn) &&
+        {itemsToShow < resultCtn && (
           <div className="show-more-container">
-            <button className="show-more-button" onClick={this.handleClickShowMore}>
+            <button
+              className="show-more-button"
+              onClick={this.handleClickShowMore}>
               <span className="show-more-text">더보기</span>
             </button>
           </div>
-        }
+        )}
       </div>
-    )
+    );
   }
 }
 
