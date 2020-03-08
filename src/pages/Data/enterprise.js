@@ -490,10 +490,11 @@ const enterprise = {
     name: '하나은행',
     categories: ['채용/노동', '성차별/성범죄'],
     tags: ['은행채용비리', '성차별/성범죄'],
-    desc:
-      "• 하나은행은 2013년 신입행원 채용 최종 합격자 229명 중 특혜 채용자가 32명으로 밝혀졌으며, 채용 계획을 수립할 때부터 남녀 4:1의 비율로 차등 채용했다. 13,14,16년에도 청탁 리스트가 관리되었다. 또한 2018년에는 SKY와 외국대학 출신을 합격시키기 위해 <a href='http://m.kmib.co.kr/view.asp?arcid=0012101293#RedyAi' target='_blank'>면접점수를 조작</a>해 파문이 일기도 했다.",
-    afterIssued:
-      "• 2020년부터 공채에서 수시채용으로 <a href='https://www.hankyung.com/economy/article/2019070422321' target='_blank'>채용 방식을 대폭 개편</a>하기로 했습니다. 대졸 공채를 폐지한 건 은행권에서 첫 사례입니다.",
+    desc: `[시중 은행 채용 비리사태 시리즈 : #6 하나은행]<br/>
+      • 하나은행은 <a href='http://www.hani.co.kr/arti/economy/finance/838793.html' target='_blank'>2013년 신입행원 채용</a>에서 추천에 따른 특혜 채용, 채용 계획 수립부터 면접까지 비율에 차등을 두었다는 것이 밝혀졌어요. (14,16년에도 마찬가지로 청탁 리스트가 관리되었어요).<br/>
+      또한, 2018년에는 SKY와 외국대학 출신을 합격시키기 위해 <a href='http://m.kmib.co.kr/view.asp?arcid=0012101293#RedyAi' target='_blank'>면접점수를 조작</a>하는 구체적인 자료가 공개되기도 했어요. `,
+    afterIssued: `• 2020년부터 공채에서 수시채용으로 <a href='https://www.hankyung.com/economy/article/2019070422321' target='_blank'>채용 방식을 대폭 개편</a>하기로 했습니다. 대졸 공채를 폐지한 건 은행권에서 첫 사례입니다.<br/><br/>
+      • 하지만 하나은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.kebhana.com/',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNRVVl1LvEiV1P40opQHe9e_dfu02g%3A1571538565942&ei=hcarXbWIOe-4mAW9pp3AAw&q=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%ED%95%98%EB%82%98%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i39j0i30.4509.4794..4994...1.0..1.166.634.0j4......0....1..gws-wiz.......35i304i39j0i13i30.quQuR-XgH8c&ved=0ahUKEwj13uSv5anlAhVvHKYKHT1TBzgQ4dUDCAs&uact=5',
@@ -515,10 +516,12 @@ const enterprise = {
     name: 'KB국민은행',
     categories: ['채용/노동', '성차별/성범죄'],
     tags: ['은행채용비리', '성차별/성범죄'],
-    desc:
-      "• KB 국민은행은 2015년 상반기 신입행원 채용 과정에서 남성 합격자 비율을 높일 목적으로 남성 지원자의 서류 전형 평가 점수를 높이고 여성 지원자는 낮추었다. 또한 VIP리스트를 관리하며 채용과정에서 청탁 대상자의 <a href='http://www.newspim.com/news/view/20181026000450' target='_blank'>면접 점수를 조작</a>했는데요.",
-    afterIssued:
-      '• 2019년 <a href=\'https://www.mk.co.kr/news/economy/view/2019/09/688847/\' target=\'_blank\'>하반기 공채</a>는 서류전형과 필기전형, 면접전형으로 구성됩니다. 채용 전 과정에서 지원자의 역량과 무관한 요소들은 평가 배제하고, 외부 전문가의 참여 확대와 인공지능(AI) 분석을 병행해 채용의 공정성을 더욱 강화할 방침이라고 합니다. KB국민은행 채용 담당자는 "창의적인 변화로 은행의 미래를 함께 이끌어갈 우수한 인재들의 많은 관심과 지원을 바란다"며, "앞으로도 일자리 창출 및 지원을 통해 기업의 사회적 책임을 다하겠다"고 덧붙였습니다.',
+    desc: `[시중 은행 채용 비리사태 시리즈 : #7 국민은행]<br/>
+      • KB 국민은행은 2015년 상반기 신입행원 채용 과정에서 남성 지원자의 서류 전형 평가 점수를 높이고 여성 지원자의 점수는 낮추었어요.<br/>
+      또한, '회장님 각별히 신경'이라는 메모가 발견되었고 '<a href='http://www.weeklytoday.com/news/articleView.html?idxno=68975' target='_blank'>VIP리스트</a>' 라는 이름으로 청탁을 관리하며 채용과정에서 대상자의 면접 점수를 조작했다고 해요.`,
+    afterIssued: `• 처음부터 윤종규 KB금융지주 회장과 같은 최고 <a href='http://ilyo.co.kr/?ac=article_view&entry_id=314939' target='_blank'>경영진은 기소조차 되지 않았고,</a> 상무나 팀장 등에게만 처벌이 내려졌다는 것이 밝혀지기도 했어요.<br/>
+      또한, 하나은행은 채용 과정에서 전문가의 참여 확대와 인공지능(AI) 분석을 병행해 채용의 공정성을 더욱 강화하겠다고 밝혔어요.<br/><br/>
+      • 하지만 KB국민은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.kbstar.com/',
     journalUrl:
       'https://www.google.com/search?biw=894&bih=744&sxsrf=ACYBGNTVAu0dc0vxqP-2kvgoAiSD0k6YmQ%3A1571536652654&ei=DL-rXfG9J67xhwO19pfYAg&q=%EA%B5%AD%EB%AF%BC%C2%B7KEB%ED%95%98%EB%82%98%C2%B7%EB%8C%80%EA%B5%AC%C2%B7%EB%B6%80%EC%82%B0%C2%B7%EA%B4%91%EC%A3%BC+%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EA%B5%AD%EB%AF%BC%C2%B7KEB%ED%95%98%EB%82%98%C2%B7%EB%8C%80%EA%B5%AC%C2%B7%EB%B6%80%EC%82%B0%C2%B7%EA%B4%91%EC%A3%BC+%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3...1250.1713..1923...1.0..1.173.662.0j4......0....1..gws-wiz.Xy7mjx9pm0g&ved=0ahUKEwjx87qf3qnlAhWu-GEKHTX7BSsQ4dUDCAs&uact=5',
@@ -540,12 +543,12 @@ const enterprise = {
     name: '임블리',
     categories: ['기타'],
     tags: ['부건에프엔씨', '블리블리', '인플루언서'],
-    desc: `• 19년 4월 쇼핑몰 임블리에서 <a href='https://www.hankyung.com/life/article/2019040367327' target='_blank'>곰팡이 핀 호박즙</a>이 판매되었는데. 임블리 측에서는 소비자의 게시글을 삭제하고, 이미 먹은 것은 어쩔 수 없다며 환불 불가하다는 입장을 밝혔어요. 무책임한 대처에 음식, 의류, 화장품까지 피해를 본 소비자들의 증언이 이어지며 임블리 논란이 시작되었어요.<br/><br/>
-      • 아들을 둔 엄마 A씨는 ’6개월 이상 유아들도 사용할 수 있는 선스틱’광고를 한 블리블리 선스틱을 샀는데, 선스틱을 바르자 아이의 얼굴과 몸에 트러블과 두드러기가 났다고 하네요. 실제 이 상품은 화장품법에 위배되는 표현·과대광고로 식품의약안전처로부터 <a href='https://www.msn.com/ko-kr/news/other/%ED%94%BC%EB%B6%80-%EA%B4%B4%EC%82%AC%C2%B7%EB%91%90%EB%93%9C%EB%9F%AC%EA%B8%B0%E2%80%A6%EC%9E%84%EB%B8%94%EB%A6%AC-%ED%99%94%EC%9E%A5%ED%92%88-%EB%B6%80%EC%9E%91%EC%9A%A9-%EC%9D%98%ED%98%B9-%EB%B4%87%EB%AC%BC/ar-AAAJ3it' target='_blank'>행정처분</a>을 받았습니다.<br/><br/>
-      • 이 밖에도 명품 카피&무성의한 cs, 탈세 등의 <a href='http://www.hani.co.kr/arti/society/society_general/895429.html' target='_blank'>다양한 문제</a>가 있었어요.`,
-    afterIssued: `• ’호박즙 곰팡이’ 논란 이후 고객 응대와 제품 안정성 논란에 대해 공식 사과했는데요. 식품사업을 전면 중단하고 상무직에서도 물러나기로 했습니다. 또한 호박즙을 비롯하여 화장품, 의류 등 환불 조치되었습니다.<br/><br/>
-      • 또한 임 상무의 남편인 박준성 부건에프앤씨 대표 등 임직원들은 서울의 한 복지관에서 <a href='http://www.donga.com/news/article/all/20190620/96083816/2' target='_blank'>무료배식 급식 봉사활동</a>을 했는데요. 고객들이 돌아서면서 매출에 직격탄을 맞았지만, <a href='http://moneys.mt.co.kr/news/mwView.php?no=2019102908588074380&code=&MGSIN' target='_blank'>6주년 오프라인 행사</a>를 통해 역대 최고인 1억2000만원의 매출을 기록했어요.<br/><br/>
-      • 최근에는 감염예방물픔을 구하기 어려운 대구와 경북 지역 저소득층 가정 아동에게 <a href='http://www.dailygrid.net/news/articleView.html?idxno=348368' target='_blank'>손세정제 1만개를 기부</a>하기도했어요.`,
+    desc: `• 19년 4월 쇼핑몰 임블리에서 <a href='https://www.hankyung.com/life/article/2019040367327' target='_blank'>곰팡이 핀 호박즙이 판매</a>되었어요. 임블리 측에서는 소비자의 게시글을 삭제하고, 이미 먹은 것은 어쩔 수 없다며 해당 제품에 대해 환불을 해줄 수 없다는 입장을 밝혔어요.<br/><br/>
+    • 무책임한 대처에 음식, 의류, 화장품까지 피해를 본 소비자들의 증언이 이어지며 임블리 논란이 시작되었어요.<br/>
+    예를 들어 ’6개월 이상 유아들도 사용할 수 있는 선스틱’광고를 한 블리블리 선스틱을 샀는데, 바른 뒤 아이의 얼굴과 몸에 트러블과 두드러기가 났다고 하네요. 실제 이 상품은 화장품법에 위배되는 표현·과대광고로 식품의약안전처로부터 <a href='https://www.msn.com/ko-kr/news/other/%ED%94%BC%EB%B6%80-%EA%B4%B4%EC%82%AC%C2%B7%EB%91%90%EB%93%9C%EB%9F%AC%EA%B8%B0%E2%80%A6%EC%9E%84%EB%B8%94%EB%A6%AC-%ED%99%94%EC%9E%A5%ED%92%88-%EB%B6%80%EC%9E%91%EC%9A%A9-%EC%9D%98%ED%98%B9-%EB%B4%87%EB%AC%BC/ar-AAAJ3it' target='_blank'>행정처분</a>을 받았습니다.<br/><br/>
+    • 이 밖에도 명품 카피&무성의한 cs, 탈세 등의 <a href='http://www.hani.co.kr/arti/society/society_general/895429.html' target='_blank'>다양한 문제</a>로 인해 시민단체의 고발을 받았어요.`,
+    afterIssued: `• 임블리는 ’호박즙 곰팡이’ 논란 이후 고객 응대와 제품 안정성 논란에 대해 <a href='https://www.yna.co.kr/view/MYH20190520014000704' target='_blank'>공식 사과</a>했어요. 임지현은 식품사업을 전면 중단하고 상무직에서도 물러나기로 했습니다. 또한 호박즙을 비롯하여 화장품, 의류 등도 환불 조치되었습니다.<br/><br/>
+    • 이후 고객들이 돌아서면서 매출에 직격탄을 맞았다고 했지만, 6주년 오프라인 행사를 통해 <a href='http://moneys.mt.co.kr/news/mwView.php?no=2019102908588074380&code=&MGSIN' target='_blank'>역대 최고 1억2000만원의 매출을 기록</a>했다는 것이 밝혀지기도 했어요.`,
     productUrl: 'http://imvely.com/',
     journalUrl:
       'https://www.google.com/search?q=%EC%9E%84%EB%B8%94%EB%A6%AC+%EC%82%AC%EA%B1%B4&source=lmns&bih=744&biw=883&hl=ko&ved=2ahUKEwjMlb-OqMHnAhUYA6YKHXKZB9gQ_AUoAHoECAEQAA',
@@ -567,10 +570,9 @@ const enterprise = {
     name: '하늘하늘',
     categories: ['기타', '갑질/언행'],
     tags: ['인플루언서', '학교폭력'],
-    desc: `• 2020년 1월, 속옷 쇼핑몰과 화장품 업체를 운영하는 하늘하늘이 크레딧잡의 <a href='https://news.joins.com/article/23688513' target='_blank'>엄청난 퇴사율</a>(무려 91%)로 이슈가 되었어요. 직원의 머리를 볼펜으로 때리는 등 갑질을 일삼았다고 해요.<br/><br/>
-      • 과거 학교 폭력과 돈을 뺏고 비행을 일삼은 소위 ‘<a href='https://www.insight.co.kr/news/264934' target='_blank'>일진</a>’ 학생이었던 사실이 드러났어요. 이를 폭로한 A씨는 하늘에게 욕설, 돈 뺏긴 경엄, 폭행 등의 사실을 공개했습니다.`,
-    afterIssued: `• 하늘 측은 사실이 아니라고 했는데요. 하반기 퇴사율이 높았던 것은 화장품 제조·판매를 시작하면서 기존 물류 직원들이 다른 업체로 이직하면서 생긴 것이라고 해명했습니다.<br/><br/>
-      • 학교 폭력 논란을 인정하면서 사과하는 취지의 자필 편지를 공개했고 직접 만나 사과하고 싶다고 <a href='https://woman.chosun.com/client/news/viw.asp?cate=C01&mcate=M1001&nNewsNumb=20200163819' target='_blank'>해명</a>했어요. `,
+    desc: `• 2020년 1월, 속옷 쇼핑몰과 화장품 업체를 운영하는 하늘하늘이 크레딧잡에서는 <a href='https://news.joins.com/article/23688513' target='_blank'>엄청난 퇴사율</a>(무려 91%📈)을 기록했다는 것이 알려졌어요. 대중에게 보여준 모습과 달리 직원의 머리를 볼펜으로 때리는 등의 이중적인 모습으로 갑질 논란이 일어났어요.<br/><br/>
+    • 이후, 동창 A 씨를 포함한 <a href='https://www.wikitree.co.kr/articles/499784' target='_blank'>수많은 댓글과 과거 '얼짱 시대'라는 방송에서의 본인의 발언</a>을 통해 하늘이 학교 폭력과 비행을 일삼은 일진 학생이었던 사실이 드러나기도 했어요.`,
+    afterIssued: `• 하늘 측은 하반기 퇴사율이 높았던 것은 화장품 제조·판매를 시작하면서 기존 물류 직원들이 다른 업체로 이직하면서 생긴 것이라고 해명했어요. 또한, 학교 폭력 논란에 대해서는 인정하며 <a href='https://www.ytn.co.kr/_ln/0103_202001251045061812' target='_blank'>사과하는 취지의 자필 편지</a>를 공개하기도 했어요.`,
     productUrl: 'http://www.hn-hn.co.kr/',
     journalUrl:
       'https://www.google.com/search?q=%ED%95%98%EB%8A%98%ED%95%98%EB%8A%98+%EB%85%BC%EB%9E%80&oq=%ED%95%98%EB%8A%98%ED%95%98%EB%8A%98+%EB%85%BC%EB%9E%80&aqs=chrome..69i57j0j69i61.4829j0j7&sourceid=chrome&ie=UTF-8',
