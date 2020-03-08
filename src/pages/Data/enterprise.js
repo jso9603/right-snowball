@@ -249,7 +249,7 @@ const enterprise = {
     productUrl: 'http://fromcare.org/',
     journalUrl:
       'https://www.google.com/search?biw=1011&bih=723&sxsrf=ACYBGNTRbECgqoeEe7ru9sRzHp_DkrZwmQ%3A1575178372092&ei=hFDjXYKiBcLT-Qb2lrCQBA&q=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&oq=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&gs_l=psy-ab.3..0j0i8i30.1057046.1057934..1058138...1.0..1.166.1879.0j12......0....1..gws-wiz.......35i39j0i20i263j0i30.dSChroYzZkQ&ved=0ahUKEwiC9M3a3JPmAhXCad4KHXYLDEI4ChDh1QMICw&uact=5https://www.google.com/search?biw=1011&bih=723&sxsrf=ACYBGNTRbECgqoeEe7ru9sRzHp_DkrZwmQ%3A1575178372092&ei=hFDjXYKiBcLT-Qb2lrCQBA&q=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&oq=%EC%BC%80%EC%96%B4+%EC%95%88%EB%9D%BD%EC%82%AC&gs_l=psy-ab.3..0j0i8i30.1057046.1057934..1058138...1.0..1.166.1879.0j12......0....1..gws-wiz.......35i39j0i20i263j0i30.dSChroYzZkQ&ved=0ahUKEwiC9M3a3JPmAhXCad4KHXYLDEI4ChDh1QMICw&uact=5',
-    imgs: ['http://fromcare.org/wp-content/themes/care/images/fb-image.png'],
+    imgs: ['http://fromcare.org/wp-content/uploads/2020/01/1.jpg'],
     uploadDate: '2019-12-31',
   },
   '12': {

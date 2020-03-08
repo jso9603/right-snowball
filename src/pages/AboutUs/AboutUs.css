@@ -1,4 +1,27 @@
+.about-us-page {
+  padding: 20px 0px;
+}
+
 .about-us-page p {
   margin: 15px 25px;
   font-size: 16px;
+}
+
+.about-us-page p.header {
+  padding: 0px 15px;
+  font-size: 6vw;
+  text-align: center;
+  font-weight: 500;
+}
+
+.about-us-page p.content {
+  margin-top: 30px;
+  padding: 0px 10px;
+  line-height: 150%;
+  color: rgb(113, 113, 113);
+}
+
+.about-us-page hr {
+  width: 5vw;
+  margin: 15px auto;
 }
