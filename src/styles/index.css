@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'PoorStory';
+  src: url('fonts/PoorStory-Regular.ttf') format('truetype');
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,7 +16,9 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -60,7 +67,7 @@ ul {
 }
 
 li {
-  list-style:none;
+  list-style: none;
 }
 
 /* Test */
