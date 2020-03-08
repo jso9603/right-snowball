@@ -257,8 +257,13 @@ const enterprise = {
     name: '포스코',
     categories: ['환경오염'],
     tags: ['조업정지', '유독화학물질', '과징금', '대기오염', '토양오염'],
-    desc:
-      '• 2019년 포스코는 광양, 포항제철소의 고로에서 대기오염 물질을 불법으로 배출해 조업 정지 처분(환경 법규를 위반했을 때 내리는 행정 처분으로 일정 기간동안 일을 못하게 하는 것이에요.)을 받았어요. 고로를 운영하는 과정에서 대기환경보전법(31조)에 따라 비상 시, 화재나 폭발등의 사고를 예방할 필요가 있을 때를 위한 예외조항을 이용해 연간 150차례 이상, 즉 이틀에 한번 꼴로 고로가스를 배출해 대기 환경법을 악용한 것 입니다. 이 고로가스에는 시민의 건강에 악영향을 미치는 오염물질이 포함되어 있었어요.<br/><br/>•하지만, 철강 산업은 후방 산업인 조선, 자동차, 건설 등 모든 사업과 긴밀하게 연결되어 있어 정지 시 우리나라 경제에 큰 영향을 미쳐요. 쇳물이 펄펄 끓던 고로를 중단하면 식어버려 정상 가동에 수개월이 걸리고, 수조원의 손실이 발생하는 것을 감안해 6,000만원의 과징금을 부과받았어요.<br/><br/>•또한, 87년부터 포항 제철소에서 철강 제품을 만드는 과정에서 생산되는 폐기물인 슬래그를 시멘트 회사에 판매했는데, 폐기물 관리법을 따르지 않고 무허가로 진행해 주변 하천과 토양을 오염시킨 전례도 있다고 해요.',
+    desc: `• 2019년 포스코는 광양, 포항제철소의 고로*에서 <a href='http://kfem.or.kr/?p=198395' target='_blank'>대기오염 물질을 불법으로 배출</a>해 <a href='http://www.mediatoday.co.kr/news/articleView.html?idxno=200405' target='_blank'>조업 정지 처분</a>*을 받았어요.<br/>
+      고로를 운영하는 과정에서 비상 시 일어날 수 있는 사고를 예방하기 위한 예외조항을 이용해 연간 150차례 이상(즉 이틀에 한번 꼴), 고로가스를 배출하며 수증기라고 주장해 대기 환경법을 악용했어요. 그리고 고로가스에는 시민의 건강에 악영향을 미치는 오염물질이 포함되어 있었다고 해요.<br/><br/>
+      • 또한, 87년부터 포항 제철소에서 철강 제품을 만드는 과정에서 생산되는 폐기물인 슬래그를 시멘트 회사에 판매했는데, 폐기물 관리법을 따르지 않고 무허가로 진행해 주변 하천과 토양을 오염시킨 전례도 있다고 해요.<br/><br/>
+      *'고로'란? 제철공장에서 철광석에서 주철을 만들어내는 기구에요<br/>
+      *'조업정지처분'이란? 환경 법규를 위반했을 때 내리는 행정 처분으로 일정 기간동안 일을 못하게 하는 것이에요.`,
+    afterIssued: `• 하지만, 철강 산업은 후방 산업인 조선, 자동차, 건설 등 모든 사업과 긴밀하게 연결되어 있어요.. 쇳물이 펄펄 끓던 고로가 식으면 정상 가동에 수개월이 걸리고, 수조원의 손실이 발생해 우리나라 경제에 큰 영향을 미치는 것을 감안해 <a href='http://www.labortoday.co.kr/news/articleView.html?idxno=160297' target='_blank'>조업 정지를 취소</a>했어요.<br/><br/>
+    • 이후 환경부는 오염물질 배출 기준을 새로 만들고, 업계에서는 개방 일시, 오염 물질 저감 조치내역을 보고하고 변경 신고서를 제출하기로 했어요.`,
     productUrl: 'http://www.posco.com/homepage/docs/kor6/jsp/s91a0000001i.jsp',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNQWZuTLdPjjgVQpCWF_TjSqNHweJA%3A1575172653929&ei=LTrjXYuUOIeGoATHg5jgBw&q=%EA%B3%A0%EB%A1%9C%EA%B0%80%EC%8A%A4+%ED%8F%AC%EC%8A%A4%EC%BD%94+%EB%B8%8C%EB%A6%AC%EB%8D%94&oq=%EA%B3%A0%EB%A1%9C%EA%B0%80%EC%8A%A4+%ED%8F%AC%EC%8A%A4%EC%BD%94+%EB%B8%8C%EB%A6%AC%EB%8D%94&gs_l=psy-ab.3...3899.5434..5614...6.0..2.142.1215.0j11......0....1..gws-wiz.......35i39j33i160.QL3K7EIm5hA&ved=0ahUKEwjL3vyzx5PmAhUHA4gKHccBBnwQ4dUDCAs&uact=5',
@@ -520,10 +525,12 @@ const enterprise = {
     name: '임블리(부건에프엔씨)',
     categories: ['기타'],
     tags: ['부건에프엔씨', '블리블리', '인플루언서'],
-    desc:
-      "• 19년 4월 쇼핑몰 임블리에서 곰팡이 핀 호박즙이 판매되었고, 임블리 측에서 소비자의 게시글을 삭제하고, 이미 먹은 것은 어쩔 수 없다며 환불 불가하다는 입장을 밝혔어요. 무책임한 대처에 음식, 의류, 화장품까지 피해를 본 소비자들의 증언이 이어지며 임블리 논란이 시작되었습니다.<br/>• 의류에서는 명품 카피&품질 불량&과도한 가격 책정, 화장품에서는 품질 불량으로 인한 피해, 무성의한 CS, 탈세 등의 <a href='http://www.hani.co.kr/arti/society/society_general/895429.html' target='_blank'>다양한 문제</a>가 있었어요.",
-    afterIssued:
-      "• 호박즘 곰팡이 사태가 벌어지고 난 후 임 상무, 남편인 박준성 부건에프앤씨 대표 등 임직원들은 서울의 한 복지관에서 <a href='http://www.donga.com/news/article/all/20190620/96083816/2' target='_blank'>무료배식 급식 봉사활동</a>을 했는데요. 고객들이 돌아서면서 매출에 직격탄을 맞았지만, <a href='http://moneys.mt.co.kr/news/mwView.php?no=2019102908588074380&code=&MGSIN' target='_blank'>6주년 오프라인 행사</a>를 통해 역대 최고인 1억2000만원의 매출을 기록했네요.",
+    desc: `• 19년 4월 쇼핑몰 임블리에서 <a href='https://www.hankyung.com/life/article/2019040367327' target='_blank'>곰팡이 핀 호박즙</a>이 판매되었는데. 임블리 측에서는 소비자의 게시글을 삭제하고, 이미 먹은 것은 어쩔 수 없다며 환불 불가하다는 입장을 밝혔어요. 무책임한 대처에 음식, 의류, 화장품까지 피해를 본 소비자들의 증언이 이어지며 임블리 논란이 시작되었어요.<br/><br/>
+      • 아들을 둔 엄마 A씨는 ’6개월 이상 유아들도 사용할 수 있는 선스틱’광고를 한 블리블리 선스틱을 샀는데, 선스틱을 바르자 아이의 얼굴과 몸에 트러블과 두드러기가 났다고 하네요. 실제 이 상품은 화장품법에 위배되는 표현·과대광고로 식품의약안전처로부터 <a href='https://www.msn.com/ko-kr/news/other/%ED%94%BC%EB%B6%80-%EA%B4%B4%EC%82%AC%C2%B7%EB%91%90%EB%93%9C%EB%9F%AC%EA%B8%B0%E2%80%A6%EC%9E%84%EB%B8%94%EB%A6%AC-%ED%99%94%EC%9E%A5%ED%92%88-%EB%B6%80%EC%9E%91%EC%9A%A9-%EC%9D%98%ED%98%B9-%EB%B4%87%EB%AC%BC/ar-AAAJ3it' target='_blank'>행정처분</a>을 받았습니다.<br/><br/>
+      • 이 밖에도 명품 카피&무성의한 cs, 탈세 등의 <a href='http://www.hani.co.kr/arti/society/society_general/895429.html' target='_blank'>다양한 문제</a>가 있었어요.`,
+    afterIssued: `• ’호박즙 곰팡이’ 논란 이후 고객 응대와 제품 안정성 논란에 대해 공식 사과했는데요. 식품사업을 전면 중단하고 상무직에서도 물러나기로 했습니다. 또한 호박즙을 비롯하여 화장품, 의류 등 환불 조치되었습니다.<br/><br/>
+      • 또한 임 상무의 남편인 박준성 부건에프앤씨 대표 등 임직원들은 서울의 한 복지관에서 <a href='http://www.donga.com/news/article/all/20190620/96083816/2' target='_blank'>무료배식 급식 봉사활동</a>을 했는데요. 고객들이 돌아서면서 매출에 직격탄을 맞았지만, <a href='http://moneys.mt.co.kr/news/mwView.php?no=2019102908588074380&code=&MGSIN' target='_blank'>6주년 오프라인 행사</a>를 통해 역대 최고인 1억2000만원의 매출을 기록했어요.<br/><br/>
+      • 최근에는 감염예방물픔을 구하기 어려운 대구와 경북 지역 저소득층 가정 아동에게 <a href='http://www.dailygrid.net/news/articleView.html?idxno=348368' target='_blank'>손세정제 1만개를 기부</a>하기도했어요.`,
     productUrl: 'http://imvely.com/',
     journalUrl:
       'https://www.google.com/search?q=%EC%9E%84%EB%B8%94%EB%A6%AC+%EC%82%AC%EA%B1%B4&source=lmns&bih=744&biw=883&hl=ko&ved=2ahUKEwjMlb-OqMHnAhUYA6YKHXKZB9gQ_AUoAHoECAEQAA',
@@ -545,10 +552,10 @@ const enterprise = {
     name: '하늘하늘',
     categories: ['기타', '갑질/언행'],
     tags: ['인플루언서', '학교폭력'],
-    desc:
-      "• 2020년 1월, 속옷 쇼핑몰과 화장품 업체를 운영하는 하늘이 크레딧잡의 <a href='https://news.joins.com/article/23688513' target='_blank'>엄청난 퇴사율</a>(무려 91%)로 이슈가 되었어요. 직원의 머리를 볼펜으로 때리는 등 갑질을 일삼았다고 해요. 그후 과거 학교 폭력과 삥(!)뜯기 등 화려했던 과거가 밝혀졌어요.",
-    afterIssued:
-      "• 하늘 측은 사실이 아니라고 했는데요. 하반기 퇴사율이 높았던 것은 화장품 제조·판매를 시작하면서 기존 물류 직원들이 다른 업체로 이직하면서 생긴 것이고, 학교 폭력 가해자는 인정하면서 직접 만나 사과하고 싶다고 <a href='https://woman.chosun.com/client/news/viw.asp?cate=C01&mcate=M1001&nNewsNumb=20200163819' target='_blank'>해명</a>했어요.",
+    desc: `• 2020년 1월, 속옷 쇼핑몰과 화장품 업체를 운영하는 하늘하늘이 크레딧잡의 <a href='https://news.joins.com/article/23688513' target='_blank'>엄청난 퇴사율</a>(무려 91%)로 이슈가 되었어요. 직원의 머리를 볼펜으로 때리는 등 갑질을 일삼았다고 해요.<br/><br/>
+      • 과거 학교 폭력과 돈을 뺏고 비행을 일삼은 소위 ‘<a href='https://www.insight.co.kr/news/264934' target='_blank'>일진</a>’ 학생이었던 사실이 드러났어요. 이를 폭로한 A씨는 하늘에게 욕설, 돈 뺏긴 경엄, 폭행 등의 사실을 공개했습니다.`,
+    afterIssued: `• 하늘 측은 사실이 아니라고 했는데요. 하반기 퇴사율이 높았던 것은 화장품 제조·판매를 시작하면서 기존 물류 직원들이 다른 업체로 이직하면서 생긴 것이라고 해명했습니다.<br/><br/>
+      • 학교 폭력 논란을 인정하면서 사과하는 취지의 자필 편지를 공개했고 직접 만나 사과하고 싶다고 <a href='https://woman.chosun.com/client/news/viw.asp?cate=C01&mcate=M1001&nNewsNumb=20200163819' target='_blank'>해명</a>했어요. `,
     productUrl: 'http://www.hn-hn.co.kr/',
     journalUrl:
       'https://www.google.com/search?q=%ED%95%98%EB%8A%98%ED%95%98%EB%8A%98+%EB%85%BC%EB%9E%80&oq=%ED%95%98%EB%8A%98%ED%95%98%EB%8A%98+%EB%85%BC%EB%9E%80&aqs=chrome..69i57j0j69i61.4829j0j7&sourceid=chrome&ie=UTF-8',
