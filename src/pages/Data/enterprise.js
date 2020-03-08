@@ -417,7 +417,7 @@ const enterprise = {
       • 2015년 9월 전 국회의원인 조 모씨가 당시 부산은행 경영기획본부장이던 박 씨에게 채용 청탁을 부탁했어요. 조 씨의 딸이 필기시험에서 탈락하자 조 씨가 박 씨에게 다시 전화를 걸어 "내 딸이 외국에서 공부하고 왔는데도 안 되느냐. 다 때려치우라"고 화를 냈다고 해요. ( ...?)<br/>
       그리고 박 씨는 옆에서 전화통화를 듣던 인사담당자 등에게 "다 들었지? 무조건 합격시켜라!!!🤬"고 말했다고 합니다. 인사담당자들은 A씨의 점수를 조작했고, 최종 면접관이던 박 씨는 A 씨에게 높은 면접 점수를 주어 최종 합격시켰어요. 유사하게 전 부산은행 부행장의 외손녀도 청탁을 통해 합격한 것으로 밝혀졌어요.`,
     afterIssued: `• 이러한 혐의로 강동주(59) BNK저축은행 대표와 박재경(56) BNK금융지주 사장이 <a href='https://www.nocutnews.co.kr/news/5005145' target='_blank'>구속기소</a> 되었어요<br/><br/>
-      • 하지만 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
+      • 하지만 부산은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.busanbank.co.kr/ib20/mnu/BHP00001',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNSBBrFDoLsDZY0iMy9lmS0A57L3OA%3A1571538543947&ei=b8arXcC1OYK9mAWDhbbgCg&q=%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..0.5040.5478..5661...1.0..1.181.808.0j5......0....1..gws-wiz.......35i304i39.mRdS8IpMveE&ved=0ahUKEwiAqaal5anlAhWCHqYKHYOCDawQ4dUDCAs&uact=5',
@@ -439,10 +439,11 @@ const enterprise = {
     name: '신한은행',
     categories: ['채용/노동', '성차별/성범죄'],
     tags: ['은행채용비리', '성차별/성범죄'],
-    desc:
-      "• 신한은행은 2013년 상반기부터 2016년 하반기까지 외부청탁 지원자와 신한 은행 임원 자녀 명단을 관리하며 <a href='https://www.yna.co.kr/view/AKR20191218065951004' target='_blank'>은행장의 의사 결정에 따라 합격 여부를 결정</a>하고 합니다. 또한 서류 전형부터 최종합격까지 성비를 3:1로 인위 조작해 154명의 점수를 조작했고, 이후 감사에 대비해 관련 서류를 폐기, 허위자료 작성을 준비했습니다. 또한 2019년 채용비리 피의자인 임직원의 소송비용을 대납해준 것으로 밝혀졌네요.",
-    afterIssued:
-      "• 조 회장을 비롯한 신한은행 인사담당자 7명은 2013년 상반기부터 3년여간 외부청탁 지원자와 신한은행 임원·부서장 자녀 명단을 별도로 관리해 채용에 특혜를 제공한 혐의로 <a href='http://www.sisajournal.com/news/articleView.html?idxno=194994' target='_blank'>기소</a>됐습니다.",
+    desc: `[시중 은행 채용 비리사태 시리즈 : #4 신한은행]<br/>
+      • 신한은행은 2013년 상반기부터 2016년 하반기까지 외부청탁 지원자와 신한 은행 임원 자녀 명단을 관리하며 <a href='https://www.yna.co.kr/view/AKR20191218065951004' target='_blank'>합격 여부를 조작해왔어요.</a> 또한 서류 전형부터 최종합격까지 남녀 성비를 3:1로 인위 조작해 154명의 점수를 바꾸었다고 해요.<br/><br/>
+      • 이후 감사에 대비해 관련 서류를 폐기, 허위자료 작성을 준비한 것 뿐만이 아니라, 2019년 채용비리 피의자인 <a href='http://www.srtimes.kr/news/articleView.html?idxno=48557' target='_blank'>임직원의 소송비용을 대납</a>해준 사실까지 밝혀졌어요.`,
+    afterIssued: `• 조 회장은 업무방해·남녀고용평등법 위반 등 혐의를 받았고 지난 2020년 1월 자신의 판결에 대해 항소 의지를 밝혔어요. 하지만, 여전히 신한 금융그룹의 회장직을 맡고 있으며, 해당 사건 이후로 여성리더 프로그램 <a href='http://www.sisajournal.com/news/articleView.html?idxno=194994' target='_blank'>'쉬어로즈'</a>를 운영하며 여성 인재 육성에 힘쓰고 있다고 해요.<br/><br/>
+      • 하지만 신한 은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.shinhan.com/index.jsp',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNTAOtkWQynbCuGEWr-SCnWLA03qWw%3A1571538550737&ei=dsarXeTRLM-ImAWUmITgBQ&q=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EC%8B%A0%ED%95%9C%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i304i39.5168.6585..6735...3.0..2.167.1085.0j7......0....1..gws-wiz.WlJkmTz9KPQ&ved=0ahUKEwjk5MSo5anlAhVPBKYKHRQMAVwQ4dUDCAs&uact=5',
@@ -464,10 +465,10 @@ const enterprise = {
     name: '우리은행',
     categories: ['채용/노동'],
     tags: ['은행채용비리'],
-    desc:
-      "• 우리은행은 2015년부터 2017년까지 <a href='http://www.donga.com/news/article/all/20190702/96282519/1' target='_blank'>청탁 명부를 관리</a>하며 서류전형 또는 1차 면접 불합격 지원자를 합격시켰다고 합니다.",
-    afterIssued:
-      "• 우리은행 관계자는 서류전형부터 필기시험, 1차면접, 최종면접인 임원면접까지 전 과정 블라인드이며 채용 프로세스 전과정 외부 전문업체 위탁, 채용자문 위원회 신설해 채용 가이드라인 수립,  필기 시험등을 도입하여 <a href='https://news.joins.com/article/23575643' target='_blank'>채용비리를 막겠다</a>고 말했습니다.",
+    desc: `[시중 은행 채용 비리사태 시리즈 : #5 우리은행]<br/>
+      • 우리은행은 2015년부터 2017년까지 고위급 임원들이 받은 채용 청탁을 인사부에 전달해 <a href='http://www.donga.com/news/article/all/20190702/96282519/1' target='_blank'>청탁 명부를 관리</a>하며 서류전형 또는 1차 면접 불합격 지원자를 합격시켰다고 해요.`,
+    afterIssued: `• 우리은행 관계자는 서류전형부터 필기시험, 1차면접, 최종면접인 임원면접까지 전 과정 블라인드이며 채용 프로세스 전과정 외부 전문업체 위탁, 채용자문 위원회 신설해 채용 가이드라인 수립,  필기 시험등을 도입하여 <a href='https://biz.chosun.com/site/data/html_dir/2018/02/16/2018021600022.html' target='_blank'>채용비리를 막겠다</a>고 말했습니다.<br/><br/>
+      • 하지만 우리 은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.wooribank.com/',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNT8NOY4R17W6giELW3_L4J4zOmwBQ%3A1571538558534&ei=fsarXeelIO-umAWX5YnwAg&q=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EC%9A%B0%EB%A6%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i39j0i30.4530.5594..6511...1.0..1.183.1311.0j8......0....1..gws-wiz.......35i304i39.hKP-WjWvkdU&ved=0ahUKEwjn3KCs5anlAhVvF6YKHZdyAi4Q4dUDCAs&uact=5',
