@@ -360,10 +360,11 @@ const enterprise = {
     name: '광주은행',
     categories: ['채용/노동'],
     tags: ['은행채용비리'],
-    desc:
-      "• 광주은행은 2015년 <a href='http://news.jtbc.joins.com/article/article.aspx?news_id=NB11632675' target='_blank'>신입행원 채용</a>에서 인사·채용 부문 임원의 자녀가 자기소개서에 이를 기재하자 서류 전형 점수를 높게 주고, 담당 임원이 직접 2차 임원면접에 직접 참여해 합격시켰다고 합니다.",
-    afterIssued:
-      "• 광주은행은 2018년도부터 <a href='https://jnilbo.com/2018/08/22/2018082218022919163/' target='_blank'>공정한 채용</a>을 위해 노력하고 있어요. 기존 ‘대학추천제’(각 지역 대학들이 우수 학생을 선발해 추천하면 은행이 이들을 대상으로 면접을 해 채용을 결정하는 방식)를 폐지하고, 인터넷 공개채용으로 바꿨으며 직무 수행에 필요한 지원자의 역량을 검증하기 위한 필기시험(NCS·상식)을 도입하며 면접 유형별로 50%이상을 외부면접관이 참여토록 하는 등 과정의 대부분을 외부업체에 위탁해 채용 절차에 공정성 및 투명성을 강화하고 있다고 합니다.",
+    desc: `[시중 은행 채용 비리사태 시리즈 : #1 광주은행]<br/>
+      • 광주은행은 2015년 신입행원 채용에서 응시자의 면접 점수를 조작하고 부당하게 채용에 관여했어요. 부행장보로 있던 임모씨는 직접 2차 임원면접에 직접 참여해 <a href='http://news.jtbc.joins.com/article/article.aspx?news_id=NB11632675' target='_blank'>딸의 면접 점수를 최고점으로 주고 합격</a>을 시켰어요. (아버지가 손에 쥐어주는 합격 목걸이🏅)`,
+    afterIssued: `• 광주은행은 2018년도부터 <a href='https://jnilbo.com/2018/08/22/2018082218022919163/' target='_blank'>공정한 채용</a>을 위해 노력하고 있다고 해요. 기존 ‘대학추천제’(각 지역 대학들이 우수 학생을 선발, 추천하면 은행이 채용을 결정하는 방식)를 폐지하고, 공개채용으로 바꾸었어요.<br/>
+      또한, 역량 검증을 위한 필기시험을 도입, 외부면접관이 참여 등 대부분의 과정을 외부업체에 위탁해 채용 절차에 공정성 및 투명성을 강화했습니다.<br/><br/>
+      • 하지만 광주은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://pib.kjbank.com/ib20/mnu/BPB0000000001',
     journalUrl:
       'https://www.google.com/search?q=%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EA%B4%91%EC%A3%BC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&aqs=chrome..69i57j0l5.3272j0j8&sourceid=chrome&ie=UTF-8',
@@ -385,10 +386,11 @@ const enterprise = {
     name: '대구은행',
     categories: ['채용/노동'],
     tags: ['은행채용비리'],
-    desc:
-      "• 2014년부터 7차례에 걸쳐 시험점수를 조작하는 방법으로 <a href='hani.co.kr/arti/area/area_general/888494.html' target='_blank'>채용 비리</a>를 저질렀으며, 혐의와 관련해 금융감독원의 감사를 피할 목적으로 컴퓨터를 교체하고 채용 관련 서류를 폐기하기도 했어요.",
-    afterIssued:
-      "• 검찰수사가 본격화되자 지난해 3월 DGB금융지주 회장과 대구은행장 자리에서 모두 물러났고 같은 해 4월 말 구속됐습니다. 채용비리와 비자금 조성 등 혐의로 구속기소된 박인규 전 대구은행장이 <a href='https://www.mk.co.kr/news/society/view/2019/04/202249/' target='_blank'>항소심에서도 징역형</a>을 선고받았다. 또한 대구은행의 채용은 <a href='https://www.hankyung.com/society/article/2019082185551' target='_blank'>인공지능(AI) 면접이 도입</a>된다. 필기시험과 AI 면접을 합산해 면접 대상자를 선발할 예정이지만, AI 면접 결과는 참고자료 수준으로 활용하기로 했다.",
+    desc: `[시중 은행 채용 비리사태 시리즈 : #2 대구은행]<br/>
+      • 대구은행은 2014년부터 2017년까지 7번에 걸쳐 시험점수를 조작하는 방법으로 <a href='http://www.wolyo.co.kr/news/articleView.html?idxno=65215' target='_blank'>채용 비리</a>를 저질렀어요. 또한, 혐의와 관련해 금융감독원의 감사를 피하기 위해  컴퓨터를 교체하고 채용 관련 서류를 폐기하기도 했다고 해요.`,
+    afterIssued: `• 검찰수사가 본격화되자 지난해 3월 DGB금융지주 회장과 대구은행장이 자리에서 모두 물러났고 같은 해 4월 말 구속됐어요. 박인규 전 대구은행장은 채용비리뿐만이 아니라 비자금 조성 등 혐의로 <a href='https://www.mk.co.kr/news/society/view/2019/04/202249/' target='_blank'>항소심에서도 징역형</a>을 선고받았고, 2019년 10월 출소했어요.<br/><br/>
+      • 대구은행은 <a href='https://www.hankyung.com/society/article/2019082185551' target='_blank'>인공지능 면접을 도입</a>해 필기시험과 AI 면접을 합산해 면접 대상자를 선발하겠다고 했어요.<br/><br/>
+      •하지만 대구은행을 비롯한 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.dgb.co.kr/dgb_ebz_main.jsp',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNRe6bSGmMhOHRgPLk4c99_r3p33xQ%3A1571538532451&ei=ZMarXcWWG66Jr7wPzIarsAc&q=%EB%8C%80%EA%B5%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EB%8C%80%EA%B5%AC%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..35i39.9736.10049..10228...1.0..1.168.619.0j4......0....1..gws-wiz.......35i304i39.eIyqf-Vrve4&ved=0ahUKEwjF2Oif5anlAhWuxIsBHUzDCnYQ4dUDCAs&uact=5',
@@ -410,10 +412,12 @@ const enterprise = {
     name: '부산은행',
     categories: ['채용/노동'],
     tags: ['은행채용비리'],
-    desc:
-      "• 부산은행은 2012년 신입행원 <a href='https://www.mk.co.kr/news/society/view/2018/03/196061/' target='_blank'>채용 과정</a>에서 채용 청탁을 받고 시험 점수를 조작한 혐의가 있는데요. 다른 은행 중 기소 10명으로 가장 많았어요.",
-    afterIssued:
-      "• 전 국회의원 딸과 전 부산은행장 외손녀를 합격시킨 혐의로 강동주(59) BNK저축은행 대표와 박재경(56) BNK금융지주 사장을 <a href='https://www.nocutnews.co.kr/news/5005145' target='_blank'>구속기소</a>했습니다.",
+    desc: `[시중 은행 채용 비리사태 시리즈 : #3 부산은행]<br/>
+      • 부산은행은 2012년 <a href='https://news.sbs.co.kr/news/endPage.do?news_id=N1004727973&plink=ORI&cooper=NAVER' target='_blank'>신입행원 채용 과정</a>에서 채용 청탁을 받고 시험 점수를 조작했어요. (채용 청탁을 받아 기소 된 사람이 10명으로 가장 많았어요.)<br/><br/>
+      • 2015년 9월 전 국회의원인 조 모씨가 당시 부산은행 경영기획본부장이던 박 씨에게 채용 청탁을 부탁했어요. 조 씨의 딸이 필기시험에서 탈락하자 조 씨가 박 씨에게 다시 전화를 걸어 "내 딸이 외국에서 공부하고 왔는데도 안 되느냐. 다 때려치우라"고 화를 냈다고 해요. ( ...?)<br/>
+      그리고 박 씨는 옆에서 전화통화를 듣던 인사담당자 등에게 "다 들었지? 무조건 합격시켜라!!!🤬"고 말했다고 합니다. 인사담당자들은 A씨의 점수를 조작했고, 최종 면접관이던 박 씨는 A 씨에게 높은 면접 점수를 주어 최종 합격시켰어요. 유사하게 전 부산은행 부행장의 외손녀도 청탁을 통해 합격한 것으로 밝혀졌어요.`,
+    afterIssued: `• 이러한 혐의로 강동주(59) BNK저축은행 대표와 박재경(56) BNK금융지주 사장이 <a href='https://www.nocutnews.co.kr/news/5005145' target='_blank'>구속기소</a> 되었어요<br/><br/>
+      • 하지만 모든 은행에서 부정 채용자의 <a href='http://news.kbs.co.kr/news/view.do?ncd=4348122&ref=A' target='_blank'>입사 취소나 피해 구제는 단 한 건도 이뤄지지 않았어요.</a>`,
     productUrl: 'https://www.busanbank.co.kr/ib20/mnu/BHP00001',
     journalUrl:
       'https://www.google.com/search?sxsrf=ACYBGNSBBrFDoLsDZY0iMy9lmS0A57L3OA%3A1571538543947&ei=b8arXcC1OYK9mAWDhbbgCg&q=%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&oq=%EB%B6%80%EC%82%B0%EC%9D%80%ED%96%89+%EC%B1%84%EC%9A%A9%EB%B9%84%EB%A6%AC&gs_l=psy-ab.3..0.5040.5478..5661...1.0..1.181.808.0j5......0....1..gws-wiz.......35i304i39.mRdS8IpMveE&ved=0ahUKEwiAqaal5anlAhWCHqYKHYOCDawQ4dUDCAs&uact=5',
