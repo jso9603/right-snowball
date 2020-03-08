@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router';
+import React, {Component} from 'react';
+import {withRouter} from 'react-router';
+import {} from 'react-router';
 import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 import CheckIcon from '@material-ui/icons/Check';
 import enterprises from '../Data/enterprise.js';
@@ -12,7 +13,7 @@ import {
   TwitterShareButton,
   FacebookIcon,
   KakaoIcon,
-  TwitterIcon
+  TwitterIcon,
 } from 'react-share-kakao';
 
 import './Detail.css';
@@ -31,55 +32,56 @@ class Detail extends Component {
   currentUrl = window.location.href;
 
   componentWillMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
 
     const entId = this.props.match.params.id;
     const entObject = enterprises[entId];
-    
+
     this.setState({
       ...entObject,
       isModalShow: false,
-      isAfterCopy: false
-    })
+      isAfterCopy: false,
+    });
   }
 
   componentDidMount() {
     // console.log(window.Kakao);
     if (!window.Kakao.isInitialized()) {
-      window.Kakao.init('4d760b3793452051bd4dd9df81c0b63c');// // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+      window.Kakao.init('4d760b3793452051bd4dd9df81c0b63c'); // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
     }
   }
 
   clickCategory = (code) => {
-    this.props.history.push(`/Category/${code}`)
-  }
+    this.props.history.push(`/Category/${code}`);
+  };
 
   renderCategories = () => {
-    const { categories } = this.state;
+    const {categories} = this.state;
     let arrCategories = [];
 
-    for(let i = 0; i< categories.length; i++) {
+    for (let i = 0; i < categories.length; i++) {
       let code;
-      categoriesWithCode.forEach(item => {
+      categoriesWithCode.forEach((item) => {
         if (categories[i] === item.title) {
           code = item.code;
         }
-      })
+      });
 
       arrCategories.push(
-        <span key={i} 
-          className="result-company-category" 
+        <span
+          key={i}
+          className="result-company-category"
           onClick={() => this.clickCategory(code)}>
           &nbsp;{categories[i]}&nbsp;
-        </span>
+        </span>,
       );
     }
 
     return arrCategories;
-  }
+  };
 
   renderTags = () => {
-    const { tags } = this.state;
+    const {tags} = this.state;
     let arrTags = [];
 
     for (let i = 0; i < tags.length; i++) {
@@ -87,65 +89,69 @@ class Detail extends Component {
         <span key={i} className="result-company-tag">
           <CheckIcon className="check-icon" style={{fontSize: 'large'}} />
           {tags[i]}&nbsp;
-        </span>
+        </span>,
       );
     }
 
     return arrTags;
-  }
-  
+  };
+
   toggleModal = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isModalShow: !prevState.isModalShow,
-    }))
-  }
+    }));
+  };
 
   handleClickCopy = () => {
-    this.setState({ isAfterCopy: true })
+    this.setState({isAfterCopy: true});
 
     setTimeout(() => {
-      this.setState({ isAfterCopy: false })
+      this.setState({isAfterCopy: false});
     }, 2000);
 
     var tempElem = document.createElement('textarea');
-    tempElem.value = this.currentUrl;  
+    tempElem.value = this.currentUrl;
     document.body.appendChild(tempElem);
 
     tempElem.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
     document.body.removeChild(tempElem);
-  }
- 
+  };
+
   handleClickKakaoShare = () => {
-    const { name } = this.state;
+    const {name} = this.state;
 
     window.Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
         title: `${document.title} - ${name}`,
         description: '가치소비, 불매운동, 바른눈덩이',
-        imageUrl: 'https://barun-snowball-static-web.s3.ap-northeast-2.amazonaws.com/fb.png',
+        imageUrl:
+          'https://barun-snowball-static-web.s3.ap-northeast-2.amazonaws.com/fb.png',
         link: {
           webUrl: window.location.href,
-          mobileWebUrl: window.location.href
-        }
+          mobileWebUrl: window.location.href,
+        },
       },
       buttons: [
         {
           title: '보러가기 🙂',
           link: {
             mobileWebUrl: window.location.href,
-            webUrl: window.location.href
-          }
-        }  
-      ]
+            webUrl: window.location.href,
+          },
+        },
+      ],
     });
-  }
+  };
 
   handleClickGoBack = () => {
-    this.props.history.goBack();
-    this.props.history.replace('/');
-  }
+    if (this.props.history.length > 2) {
+      this.props.history.goBack();
+    } else {
+      this.props.history.replace('/');
+    }
+  };
 
   render() {
     const {
@@ -157,12 +163,12 @@ class Detail extends Component {
       productUrl,
       chartData,
       isModalShow,
-      isAfterCopy
+      isAfterCopy,
     } = this.state;
 
     return (
       <div className="detail-page">
-        <div className={`overlay ${isModalShow? 'show-modal' : ''}`}/>
+        <div className={`overlay ${isModalShow ? 'show-modal' : ''}`} />
         {/* <CardSlider data={imgs} /> */}
         <div className="back-container" onClick={this.handleClickGoBack}>
           <ArrowBackIos style={{fontSize: 'large', color: 'gray'}} />
@@ -172,39 +178,54 @@ class Detail extends Component {
           <img src={imgs} alt="company-img" />
         </div>
         <div className="header-card" style={{width: '100%'}}>
-          <div className="result-company-categories">{this.renderCategories()}</div>
+          <div className="result-company-categories">
+            {this.renderCategories()}
+          </div>
           <h5 className="company-name">{name}</h5>
-          <div className="share" onClick={this.toggleModal}><ShareOutlinedIcon /></div>
+          <div className="share" onClick={this.toggleModal}>
+            <ShareOutlinedIcon />
+          </div>
         </div>
         <div className="company-info">
           <div className="result-company-tags">{this.renderTags()}</div>
           <div className="company-description">
             <div className="company-issue">무슨 일이 있었을까요?</div>
-              {/* {desc.split('\n').map((item, key) => {
+            {/* {desc.split('\n').map((item, key) => {
                 return <p className="desc-paragraph"key={key}>{item}<br/></p>
               })} */}
-              <div dangerouslySetInnerHTML={ {__html: desc} }></div>
+            <div dangerouslySetInnerHTML={{__html: desc}}></div>
           </div>
           <div className="company-description">
-            <div className="company-after-issue">이후에는 무엇이 변화되었나요?</div>
-              <div dangerouslySetInnerHTML={ {__html: afterIssued} }></div>
+            <div className="company-after-issue">
+              이후에는 무엇이 변화되었나요?
+            </div>
+            <div dangerouslySetInnerHTML={{__html: afterIssued}}></div>
           </div>
           {chartData ? (
             <div>
               <p className="chart-title">매출액/영업이익 추이</p>
-              <div style={{height: '320px', width: '100%', marginBottom: '15px'}}>
+              <div
+                style={{height: '320px', width: '100%', marginBottom: '15px'}}>
                 <BarChart chartData={chartData} />
               </div>
             </div>
           ) : (
             <div></div>
           )}
-          
-          <button className="btn-product-list" onClick={()=> window.open(productUrl, "_blank")}>제품 리스트로 이동하기</button>
-          <button className="btn-news news-last" onClick={()=> window.open(journalUrl, "_blank")}>구글 검색결과 보러가기</button>
+
+          <button
+            className="btn-product-list"
+            onClick={() => window.open(productUrl, '_blank')}>
+            제품 리스트로 이동하기
+          </button>
+          <button
+            className="btn-news news-last"
+            onClick={() => window.open(journalUrl, '_blank')}>
+            구글 검색결과 보러가기
+          </button>
         </div>
-        
-        <div className={`share-container ${isModalShow? 'show-modal' : ''}`}>
+
+        <div className={`share-container ${isModalShow ? 'show-modal' : ''}`}>
           <div className="title">
             <span>공유하기</span>
             <CloseIcon className="close-icon" onClick={this.toggleModal} />
@@ -213,16 +234,18 @@ class Detail extends Component {
           <div className="button-container">
             <div className="button-wrapper" onClick={this.handleClickCopy}>
               <div className="copy-icon-wrapper">
-                {isAfterCopy
-                  ? <CheckIcon className="copy-icon" />
-                  : <FileCopyIcon className="copy-icon" />
-                }
+                {isAfterCopy ? (
+                  <CheckIcon className="copy-icon" />
+                ) : (
+                  <FileCopyIcon className="copy-icon" />
+                )}
               </div>
               <span className="icon-title">
-                {isAfterCopy
-                  ? <span className="icon-title">복사완료!</span>
-                  : <span className="icon-title">링크복사</span>
-                }
+                {isAfterCopy ? (
+                  <span className="icon-title">복사완료!</span>
+                ) : (
+                  <span className="icon-title">링크복사</span>
+                )}
               </span>
             </div>
             <FacebookShareButton
@@ -234,7 +257,7 @@ class Detail extends Component {
                 </div>
               }
             />
-            <div onClick={this.handleClickKakaoShare} >
+            <div onClick={this.handleClickKakaoShare}>
               <div className="button-wrapper">
                 <KakaoIcon size={50} round={true} />
                 <span className="icon-title">카카오톡</span>
@@ -252,7 +275,7 @@ class Detail extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
